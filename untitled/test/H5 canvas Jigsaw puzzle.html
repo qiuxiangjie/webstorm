@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <canvas id="canvas" width="1440" height="900"></canvas>
+    </div>
+<script>
+    window.onload = function (){
+        var canvas = document.getElementById("canvas");
+        var context= canvas.getContext("2d");
+
+        //context.height=1440;
+        //context.width=900;
+
+        var zuoBiao =[
+            {p:[{x:200,y:100},{x:200,y:500},{x:400,y:300}],color:"#F00"},
+            {p:[{x:200,y:100},{x:600,y:100},{x:400,y:300}],color:"#0F0"},
+            {p:[{x:400,y:300},{x:500,y:200},{x:500,y:400}],color:"#00F"},
+            {p:[{x:600,y:100},{x:500,y:200},{x:500,y:400},{x:600,y:300}],color:"#FF0"},
+            {p:[{x:400,y:300},{x:500,y:400},{x:400,y:500},{x:300,y:400}],color:"#000"},
+            {p:[{x:200,y:500},{x:400,y:500},{x:300,y:400}],color:"#F0F"},
+            {p:[{x:400,y:500},{x:600,y:300},{x:600,y:500}],color:"#0FF"}
+        ];
+        for(var i=0; i<zuoBiao.length;i++){
+            drawTest(zuoBiao[i],context);
+        }
+
+        function drawTest(pp,cxt){
+            cxt.beginPath();
+            cxt.moveTo(pp.p[0].x,pp.p[0].y);
+            for(var i=1;i<pp.p.length;i++){
+                cxt.lineTo(pp.p[i].x,pp.p[i].y);
+            }
+            cxt.closePath();
+            cxt.lineWidth=5;
+            cxt.strokeStyle="#DDD";
+            cxt.stroke();
+            cxt.fillStyle=pp.color;
+            cxt.fill();
+
+        }
+
+    };
+</script>
+</body>
+</html>

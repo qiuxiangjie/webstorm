@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        //删除节点
+        function removeOption()
+        {
+            var x=document.getElementById("mySelect");
+            x.remove(x.selectedIndex)
+        }
+        (function () {
+            var arr=[1,2,7,5,5,4,1,2,1,5,5,1];
+            //据说是一种快速的循环
+            for(var i=arr.length;i--;){
+                console.log(arr[i]);
+            }
+        })();
+    </script>
+</head>
+<body>
+<form>
+    <select id="mySelect">
+        <option>苹果</option>
+        <option>桃子</option>
+        <option>香蕉</option>
+        <option>桔子</option>
+    </select>
+    <input type="button" onclick="removeOption()" value="删除被选的选项">
+</form>
+
+</body>
+</html>

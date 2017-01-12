@@ -1,0 +1,30 @@
+{
+
+  "response": {
+    "code": 0,
+    "data": {
+      "reformHist": [
+        {
+          "seqNo": 1,
+          "createTime": "2016.07.15",
+          "roundId": 2
+        },
+        {
+          "seqNo": 2,
+          "createTime": "2016.07.15",
+          "roundId": 1
+        }
+      ],
+      "timeHist": [
+        {
+          "seqNo": 2,
+          "createTime": "2016.07.15",
+          "roundId": 1
+        }
+      ],
+      "reformId": 1
+    },
+    "message": "查询成功"
+  }
+
+}

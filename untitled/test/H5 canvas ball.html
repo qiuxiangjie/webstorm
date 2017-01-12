@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div>
+    <canvas id="canvas" style="border: 1px #ddd solid;display: block; margin: 50px auto;"></canvas>
+</div>
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        var context= canvas.getContext("2d");
+
+        canvas.width =1000;
+        canvas.height =680;
+
+        var ball={x:100,y:100,r:20,g:0.98,vx:2,vy:-12,color:"red"};
+
+        var sss = setInterval(function () {
+            render(context);
+            update();
+        },17);
+        function update(){
+            ball.x += ball.vx;
+            ball.y += ball.vy;
+            ball.vy+= ball.g;
+            if(ball.y>=680-ball.r){
+                ball.y =680-ball.r;
+                ball.vy = -ball.vy*0.6;
+            }
+        }
+
+        function render(cxt){
+            cxt.clearRect(0,0,1440,900);
+            cxt.fillStyle=ball.color;
+            cxt.beginPath();
+            cxt.arc(ball.x,ball.y,ball.r,0,2*Math.PI);
+            cxt.fill();
+        }
+
+        var fda = function() {
+            return arguments[0]+arguments[1]+arguments[2]+"sb";
+        };
+      //  ["1", "2", "3"].map(parseInt);
+     alert(["1", "2", "3"].map(fda));
+
+    }
+</script>
+
+</body>
+</html>

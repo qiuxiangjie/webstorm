@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,form,textarea,p{ margin:0; padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+img{ border:none;}
+.clear {zoom:1;}    /*==for IE6/7 Maxthon2==*/
+.clear:after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}   /*==for FF/chrome/opera/IE8==*/
+body{font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif; font-size:18px; color:#676767; min-width:320px;line-height: 28px;}
+a{text-decoration:none; color:#000; }
+ul{list-style-type:none;}
+.m30{ margin:30px auto;}
+
+.logo{ text-align:center; display:block; margin:10px auto; width:72.8125%;}
+.nav{ }
+.nav li{ width:25%; float:left; text-align:center; font-size:3vw;background:#00a5a4; padding:2vw 0; border:1px solid #FFF; box-sizing:border-box;}
+.nav li a{color:#FFF;}
+.banner img{ width:100%; display:block;}
+
+.box1,.box2,.box3,.box4,.box5,.box6,.box7{ text-align: center; margin: 50px auto;}
+.til{ color:#00a5a4; margin: 30px auto; text-align:center;}
+.til h2{font-size: 40px;}
+.til p{ font-size:12px;}
+.box1>p{ text-align: left; font-size: 20px; text-indent:2em; width: 90%; margin: 30px auto; }
+.bun{ text-align: center;margin: 30px auto;}
+.bun a{ background:#f49f10; color:#FFF; font-size: 24px; border-radius: 30px; padding: 8px 30px; box-shadow: 0 3px 3px #ac874a; }
+
+.box2{}
+.box2 ul{ width: 95%; margin:20px auto;}
+.box2 li{ float: left; width: 33.3%; padding: 0 2%; box-sizing: border-box;}
+.box2 li img{ width: 90%;}
+.box2 li div{  padding: 20px; color: #FFF;}
+.box2 li div h3{ font-weight: bold; font-size: 24px; line-height: 30px;}
+.box2 li div p{ font-size: 18px; }
+.zs{ background: #8095de;}
+.ls{ background: #30c98b;}
+.qs{ background: #53bbc8;}
+.cs{ background: #f49f10;}
+.dcs{background: #fff3df;}
+.dqs{background: #dafafe;}
+.dls{background: #d5ffee;}
+.dzs{ background: #e4eaff;}
+
+.box3{}
+.box3 ul{ margin: 20px auto; width: 95%;}
+.box3 li{ position: relative; margin: 25px auto;}
+.box3 li i{ width: 190px;height: 190px; line-height: 190px; text-align: left; position: absolute;font-size: 133px;border-radius: 50%; border: #FFF solid 10px;color: #FFF; }
+.box3 li.l1 i{top: -10px; left: 0; }
+.box3 li.l2 i{top: -10px; right: 0; }
+.box3 li div{ color: #2c2e2d;  width: 80%; text-align: left; box-sizing: border-box; }
+.box3 li.l1 div{ float: right;padding:35px 10px 35px 120px;}
+.box3 li.l2 div{ float: left;padding:35px 120px 35px 30px;}
+.box3 li div h3{ font-size: 20px; font-weight: normal; line-height: 60px;}
+.box3 li div p{ font-size: 18px;}
+
+.box4{}
+.box4 .yy{ background: url("../images/yy_26.jpg") center no-repeat;width: 328px; height: 168px; margin: 30px auto; padding:30px 20px 30px 240px;}
+.box4 .yy h3{ font-size: 23px; line-height: 40px;}
+.box4 .yy p{ font-size: 18px; text-indent:2em; text-align: left; }
+.yyzs img{ margin: 10px;}
+
+.box6{}
+.box6 li{ float:left; width:33.3%; padding:0 3%;box-sizing:border-box; color:#2c2e2d;}
+.box6 li p{ font-size:18px; }
+.box6 li p.t{ line-height:40px;}
+.box6 li p.t span{font-size:24px;}
+.box6 li a {display:inline-block; color:#FFF; text-align:center; padding:8px 20px; margin:11px auto;}
+
+
+.box8{}
+.info2{ width:88%; margin:0 auto;font-size:2.5vw; padding:2%; text-align:left; text-indent:2em;}
+.red{ color:red;}
+.form{ width:80%; margin:2vw auto;}
+.line{ font-size:2.9vw; margin:1vw auto;}
+.line input,.line select{ border:1px #DDD solid; color:#DDD; line-height:6vw; height:6vw; padding-left:1vw; width:70%; }
+.baomi{ text-align:center; font-size:2.5vw;}
+#post{ border:none; border-radius:4vw; background:#ffa800; text-align:center; color:#FFF; font-weight:bold; font-size:3.5vw; padding:1vw 2vw; cursor:pointer;}
+.post{ text-align:center; padding:2vw 0;}
+
+.foot{ background:#00a5a4; color:#FFF; padding:5vw 0; text-align:center;}
+.foot img{ width:83.28%;}
+.foot p,.foot h3{text-align:left;}
+.fm{padding-left: 16%;background: url(../images/jmqzfy_56.png) 2% center no-repeat; background-size:12vw;height: 12vw;margin: 20px auto;width:70%;}
+.fm p{ font-size:5vw; font-weight:bold;}
+.fm h3{ font-size:3vw;}
+.foot > p {
+    padding-left: 16%;
+    background: url(../images/jmqzfy_59.png) 2% center no-repeat;
+    background-size:12vw;
+    height: 12vw;
+    line-height: 12vw;
+    margin: 20px auto;
+    font-size: 4vw;
+    width:70%;
+
+}

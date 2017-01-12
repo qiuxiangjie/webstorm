@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*******浏览器环境下测试任何对象的某个特性*******/
+    /*
+    function isHostMethod(object, property) {
+        var t = typeof object[property];
+        return t=='function' || (!!(t=='object' && object[property])) || t=='unknown';
+    }
+
+    //可以像下面这样使用这个函数：
+    result1 = isHostMethod(document, "getElementById1");     //true
+    result2 = isHostMethod(xhr, "foo");      //false
+    */
+    /***************************************************************************************/
+/*    var client = function(){
+        var engine = {
+            //呈现引擎
+                ie: 0,
+            gecko: 0,
+            webkit: 0,
+            khtml: 0,
+            opera: 0,
+            //具体的版本号
+        ver: null
+    };
+    var browser = {
+        //浏览器
+            ie: 0,
+        firefox: 0,
+        safari: 0,
+        konq: 0,
+        opera: 0,
+        chrome: 0,
+        //具体的版本号
+    ver: null
+    };
+    var system = {
+        win: false,
+        mac: false,
+        x11: false,
+        //移动设备
+    iphone: false,
+        ipod: false,
+        ipad: false,
+        ios: false,
+        android: false,
+        nokiaN: false,
+        winMobile: false
+    };
+    //在此检测呈现引擎、平台和设备
+    return {
+        engine: engine,
+        browser: browser,
+        system: system
+    };
+    }();
+    console.log(client);*/
+/*********************************************************************************************/
+/*    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var i = 0; i < Agents.length; i++) {
+            if (userAgentInfo.indexOf(Agents[i]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    console.log(IsPC());*/
+    //方法一：判断用户设备是否是pc(用到indexOf()函数，找不到字符返回-1);
+/*************************************************************************************************/
+/*    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+            //window.location.href="";
+        }
+    }
+    browserRedirect();*/
+    //方法二：用match();匹配正则表达式的字符串；
+/*************************************************************************************************/
+    function uaredirect(f) {
+        try {
+//            if (document.getElementById("bdmark") != null) {
+//                return
+//            }
+            var b = false;
+            if (arguments[1]) {
+                var e = window.location.host;
+                var a = window.location.href;
+                if (isSubdomain(arguments[1], e) == 1) {
+                    f = f + "/#m/" + a;
+                    b = true
+                } else {
+                    if (isSubdomain(arguments[1], e) == 2) {
+                        f = f + "/#m/" + a;
+                        b = true
+                    } else {
+                        f = a;
+                        b = false
+                    }
+                }
+            } else {
+                b = true
+            }
+            if (b) {
+                var c = window.location.hash;
+                if (!c.match("fromapp")) {
+                    if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|SymbianOS)/i))) {
+                        location.replace(f)
+                    }
+                }
+            }
+        } catch(d) {}
+    }
+
+    function isSubdomain(c, d) {
+        this.getdomain = function(f) {
+            var e = f.indexOf("://");
+            if (e > 0) {
+                var h = f.substr(e + 3)
+            } else {
+                var h = f
+            }
+            var g = /^www\./;
+            if (g.test(h)) {
+                h = h.substr(4)
+            }
+            return h;
+        };
+        if (c == d) {
+            return 1
+        } else {
+            var c = this.getdomain(c);
+            var b = this.getdomain(d);
+            if (c == b) {
+                return 1
+            } else {
+                c = c.replace(".", "\\.");
+                var a = new RegExp("\\." + c + "$");
+                if (b.match(a)) {
+                    return 2
+                } else {
+                    return 0
+                }
+            }
+        }
+    }
+    //百度判断方式；
+/*************************************************************************************************/
+    var browser_class = navigator.userAgent;
+    var browser_class_name1 = browser_class.match("Mobile");
+    var browser_class_name2 = browser_class.match("mobile");
+    var location_url = window.location.href;
+
+    if (browser_class_name1 != null || browser_class_name2 != null) {
+        if (location_url.match("wap") == null) {
+            window.location.href = "http://wap.xxxx.com";
+        }
+    } else {
+        if (location_url.match("3g") != null || location_url.match("wap") != null) {
+            window.location.href = "http://wap.xxxx.com";
+        }
+    }
+//最后一种不怎么好的方法；
+/*************************************************************************************************/
+
+</script>
+
+</body>
+</html>

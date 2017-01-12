@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/工作/医生轮播/js/CarouselXG.min.js" />
+        <item url="file://$PROJECT_DIR$/test/js/慕课网index.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/工作/痔疮费用/js/CarouselXG.min.js" />
+      <root url="file://$PROJECT_DIR$/工作/医生轮播/js/CarouselXG.min.js" />
+      <root url="file://$PROJECT_DIR$/test/js/慕课网index.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

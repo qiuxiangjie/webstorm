@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        /**************call()继承******************************/
+     /*   function Animal(name){
+            this.name = name;
+            this.sex  ="boy";
+            this.showName = function(){
+                alert(this.name);
+            }
+        }
+        function Cat(name){
+            Animal.call(this, name);//call继承了Animatal
+            this.name="123";//新的属性写在下面
+        }
+        var cat = new Cat("Black Cat");
+        cat.showName();
+        alert(cat.sex);//继承了this.sex  ="boy";
+    */
+     /*******************Get/Set 访问器************************/
+     /*var chenhao = Object.create(null);
+     var  age = 0;
+     Object.defineProperty( chenhao,
+         'age', {
+             get: function() {return age+1;},
+             set: function(value) {age = value;},
+             enumerable : true,
+             configurable : true
+         }
+     );
+     chenhao.age = 100; //调用set
+     alert(chenhao.age); //调用get 输出101（get中+1了）;
+     */
+    /*
+     var chenhao = {
+         name: "Chen Hao",
+         email: "haoel@hotmail.com",
+         website: "http://coolshell.cn",
+         age: 100,
+         get birth_year() {
+             var d = new Date();
+             var y = d.getFullYear();
+             return ( y - this.age );
+         },
+         set birth_year(year) {
+             var d = new Date();
+             var y = d.getFullYear();
+             this.age = y - year;
+         }
+
+     };
+     alert(chenhao.birth_year);//get
+     chenhao.birth_year = 2000;//set
+     alert(chenhao.age);
+     */
+        /*****************call，apply， bind 和 this********************/
+        /*
+        function print(text){
+            document.write(this.value + ' - ' + text+ '<br/>');
+        }
+
+        var a = {value: 10, print : print};
+        var b = {value: 20, print : print};
+
+        print('hello');// this => global, output "undefined - hello"
+
+        a.print('a');// this => a, output "10 - a"
+        b.print('b'); // this => b, output "20 - b"
+        a['print']('a'); // this => a, output "10 - a"
+
+        print.call(a, 'a'); // this => a, output "10 - a"
+        print.call(b, 'b'); // this => b, output "20 - b"
+
+        print.apply(a, ['a']); // this => a, output "10 - a"
+        print.apply(b, ['b']); // this => b, output "20 - b"
+
+        var p = print.bind(a);//在bind后，this指针，可能会有不一样
+        p('a');             // this => a, output "10 - a"
+        p.call(b, 'b');     // this => a, output "10 - b"
+        p.apply(b, ['b']);  // this => a, output "10 - b"
+      */
+       /*
+        function Person(){
+        }
+        var friend = new Person();
+        Person.prototype = {
+            constructor: Person,
+            name : "Nicholas",
+            age : 29,
+            job : "Software Engineer",
+            sayName : function () {
+                alert(this.name);
+            }
+        };
+        friend.sayName();   //error
+        */
+        /***尽管可以随时为原型添加属性和方法，并且修改能够立即在所有对象实例中反映出来，但如果是重
+         写整个原型对象，那么情况就不一样了。我们知道，调用构造函数时会为实例添加一个指向最初原型的
+         [[Prototype]]
+         指针，而把原型修改为另外一个对象就等于切断了构造函数与最初原型之间的联系。
+         请记住：实例中的指针仅指向原型，而不指向构造函数。看下面的例子***/
+       /* function Person(){
+        }
+        var friend = new Person();
+        Person.prototype.sayHi = function(){
+            alert("hi");
+        };//用原型创建函数；
+
+        Person.prototype = {
+            constructor: Person,
+            name: "Nicholas",
+            age: 29,
+            job: "Software Engineer",
+            sayName: function () {
+                alert(this.name);
+            }//重写了原型对象；
+        };
+        friend.sayHi();   //"hi"
+        friend.sayName(); //error；
+      */
+        /***************原型中所有属性都是被很多实例共享的*****************/
+      /*
+       function Person(){
+        }
+        Person.prototype = {
+            constructor: Person,
+            name : "Nicholas",
+            age : 29,
+            job : "Software Engineer",
+            friends : ["Shelby", "Court"],
+            sayName : function () {
+                alert(this.name);
+            }
+        };
+        var person1 = new Person();
+        var person2 = new Person();
+        person1.friends.push("Van");
+       alert(person1.friends);    //"Shelby,Court,Van"
+       alert(person2.friends);    //"Shelby,Court,Van"
+       alert(person1.friends === person2.friends);  //true
+      */
+       /*******由于friends数组存在于Person.prototype而非person1中，所以刚刚提到的修改也会通过person2.friends（与person1.friends指向同一个数组）反映出来******/
+        //person1.name="lusi";
+        //alert(person1.name);//lusi
+        //alert(person2.name);//Nicholas
+
+
+        /*********组合继承:使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承*********/
+        /**组合继承最大的问题就是无论什么情况下，都会调用两次超类型构造函数：一次是在创建子类型原型的时候，另一次是在子类型构造函数内部。**/
+        /*
+        function SuperType(name){
+            this.name = name;
+            this.colors = ["red", "blue", "green"];
+        }
+        SuperType.prototype.sayName = function(){
+            alert(this.name);
+        };//SuperType定义方法；
+
+        function SubType(name, age){
+            SuperType.call(this, name);//call()继承属性;新创建的SubType实例的环境下调用SuperType构造函数。这样一来，就会在新SubType对象上执行SuperType()函数中定义的所有对象初始化代码。结果，SubType的每个实例就都会具有自己的colors属性的副本了。
+            this.age = age;
+        }
+
+        SubType.prototype = new SuperType();//prototype原型链继承方法
+        SubType.prototype.constructor = SubType;//让subType构造函数重新指类本身否则变前继承类构造函数,构造函数没有回调的话，这个没有影响；
+        SubType.prototype.sayAge = function(){
+            alert(this.age);
+        };//SubType定义方法；
+
+        var instance1 = new SubType("Nicholas", 29);
+        instance1.colors.push("black");
+        alert(instance1.colors);      //"red,blue,green,black"
+        instance1.sayName();          //"Nicholas";
+        instance1.sayAge();           //29
+
+        var instance2 = new SubType("Greg", 27);
+        alert(instance2.colors);      //"red,blue,green"
+        instance2.sayName();          //"Greg";
+        instance2.sayAge();           //27
+      */
+
+
+        /*********道格拉斯·克罗克福德*************************/
+      /*function object(o){
+            function F(){}//创建一个临时性的构造函数F（）；
+            F.prototype = o;//然后将传入的对象作为这个构造函数的原型
+            return new F();//返回了这个临时类型的一个新实例
+        }//在object()函数内部，先创建了一个临时性的构造函数，然后将传入的对象作为这个构造函数的原型，最后返回了这个临时类型的一个新实例。从本质上讲，object()对传入其中的对象执行了一次浅复制。来看下面的例子。
+        var person = {
+            name: "Nicholas",
+            friends: ["Shelby", "Court", "Van"]
+        };
+
+        var anotherPerson = object(person);
+        anotherPerson.name = "Greg";
+        anotherPerson.friends.push("Rob");
+
+        var yetAnotherPerson = object(person);
+        yetAnotherPerson.name = "Linda";
+        yetAnotherPerson.friends.push("Barbie");
+
+        alert(person.friends);   //"Shelby,Court,Van,Rob,Barbie"
+       */
+
+
+        /**************Object.create()原型式继承****************************/
+        /*
+        var person = {
+            name: "Nicholas",
+            friends: ["Shelby", "Court", "Van"]
+        };
+
+        var anotherPerson = Object.create(person);
+        anotherPerson.name = "Greg";
+        anotherPerson.friends.push("Rob");
+
+        var yetAnotherPerson = Object.create(person);
+        yetAnotherPerson.name = "Linda";
+        yetAnotherPerson.friends.push("Barbie");
+        alert(person.friends); //"Shelby,Court,Van,Rob,Barbie"//共用值
+     */
+      /*
+        var person = {
+            name: "Nicholas",
+            friends: ["Shelby", "Court", "Van"]
+        };
+        var anotherPerson = Object.create(person, {
+                name: {
+                    value: "Greg"
+                }//Object.create()方法的第二个参数与Object.defineProperties()方法的第二个参数格式相同：每个属性都是通过自己的描述符定义的。以这种方式指定的任何属性都会覆盖原型对象上的同名属性。
+            })
+            ;
+        alert(anotherPerson.name); //"Greg"
+      */
+     /****************寄生式继承***********************/
+     /*
+        function createAnother(original){
+            var clone = Object(original);  //通过调用函数创建一个新对象
+            clone.sayHi = function(){      //以某种方式来增强这个对象
+                alert("hi");
+            };
+            return clone;//返回这个对象
+        }
+        var person = {
+            name: "Nicholas",
+            friends: ["Shelby", "Court", "Van"]
+        };
+        var anotherPerson = createAnother(person);
+            anotherPerson.sayHi(); //"hi"
+            alert(anotherPerson.name);
+
+       */
+        /******寄生组合式继承******/
+        function object(o){
+            function F(){}//创建一个临时性的构造函数F（）；
+            F.prototype = o;//然后将传入的对象作为这个构造函数的原型;
+            return new F();//返回了这个临时类型的一个新实例;
+        }//从本质上讲，object()对传入其中的对象执行了一次浅复制
+
+        function inheritPrototype(subType, superType){
+            var prototype2 = object(superType.prototype);     //创建对象
+            prototype2.constructor = subType;                 //增强对象
+            subType.prototype = prototype2;                   //指定对象
+        }
+
+        function SuperType(name){
+            this.name = name;
+            this.colors = ["red", "blue", "green"];
+        }
+        SuperType.prototype.sayName = function(){
+            alert(this.name);
+        };
+        function SubType(name, age){
+            SuperType.call(this, name);//call()继承：SubType继承了SuperType；
+            this.age = age;
+        }
+        inheritPrototype(SubType, SuperType);
+
+        SubType.prototype.sayAge = function(){
+            alert(this.age);
+        };
+
+        var instance1 = new SubType("Nicholas", 29);
+        instance1.colors.push("black");
+        alert(instance1.colors);  //"red,blue,green,black"
+        instance1.sayName();  //"Nicholas";
+        instance1.sayAge();   //29
+
+
+        var instance2 = new SubType("Greg", 27);
+        alert(instance2.colors);  //"red,blue,green"
+        instance2.sayName();  //"Greg";
+        instance2.sayAge();   //27
+
+
+
+
+
+
+    </script>
+</body>
+</html>

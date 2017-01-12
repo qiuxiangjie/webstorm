@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+<div id="someElement">
+    js高级程序设计-闭包
+</div>
+<ul class="test">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+    <script>
+        /*
+        function aa(){
+            var b=10;
+            return function cc(){
+                b++;
+                alert(b);
+            }
+        }
+       // aa()();//两个括号，第一个是调用aa()函数，第二个是执行cc()函数
+        var dd=aa();
+        dd();
+        */
+        /*
+       function test(){
+           var c=10;
+           (function cc() {
+               c++;
+               alert(c);
+           })();
+       }
+        test();
+        */
+        /*
+        function createFunctions(){
+            var result = new Array();
+            for (var i=0; i < 10; i++){
+                result[i] = function(){
+                    return i;
+                };
+            }
+            return result;
+        }
+
+        var aa=createFunctions();
+        alert(aa);
+        */
+          /*
+        function createFunctions(){
+            var result = new Array();
+            for (var i=0; i < 10; i++){
+                result[i] = function(num){
+                    return function(){
+                        return num;
+                    };
+                }(i);
+            }
+            return result;
+        }
+        var aa=createFunctions();
+        alert(aa);
+          */
+        /*
+        var name = "The Window";
+        var object = {
+            name : "My Object",
+            getNameFunc : function(){
+               // var that = this;
+                return function(){
+                    //return that.name;
+                    return this.name;
+                };
+            }
+        };
+        alert(object.getNameFunc()());//The Window;
+        */
+        /*
+        var name = "The Window";
+        var object = {
+            name : "My Object",
+            getNameFunc : function(){
+                var that = this;//把外部作用域中的this对象保存在一个闭包能够访问到的变量里，就可以让闭包访问该对象了
+                return function(){
+                    return that.name;
+                };
+            }
+        };
+        alert(object.getNameFunc()());//My Object;
+        */
+        /*
+        function assignHandler(){
+            var element = document.getElementById("someElement");
+            element.onclick = function(){
+                alert(element.id);
+            };
+
+        }
+        (function abc () {
+
+        for(var i= 0;i<7;i++){
+            i++;
+            console.log(i);}})();
+
+        alert(i);
+        */
+        /*
+        function MyObject(){
+            //私有变量和私有函数
+            var privateVariable = 10;
+            function privateFunction(){
+                return false;
+            }
+            //特权方法
+            this.publicMethod = function (){
+                privateVariable++;
+                return privateFunction();
+            };
+        }
+        */
+        /************静态私有变量*****************/
+        /*
+        (function(){
+            var name = "";
+            Person = function(value){
+                name = value;
+            };
+            Person.prototype.getName = function(){
+                return name;
+            };
+            Person.prototype.setName = function (value){
+                name = value;
+            };
+        })();
+
+        var person1 = new Person("Nicholas");
+        alert(person1.getName());  //"Nicholas"
+        person1.setName("Greg");
+        alert(person1.getName());  //"Greg"
+
+        var person2 = new Person("Michael");
+        alert(person1.getName()); //"Michael"//共享属性
+        alert(person2.getName()); //"Michael"//共享属性
+        */
+
+
+/*        for(var i = 0; i < 10; i++) {
+            setTimeout(function() {
+                console.log("for1:"+i);
+            }, 1000);
+        }
+
+        for(var i = 0; i < 10; i++) {
+            setTimeout('fun(i)', 2000);
+            function fun(){
+                console.log("for2:"+arguments[0]);
+            }
+        }
+
+
+        for (var i = 0; i < 10; i++) {
+            (function(a) {
+                setTimeout(function() {
+                    console.log("for3:"+a);
+                }, 1000);
+            })(i);
+        }*/
+
+  /*      function createFunctions(){
+            var result = new Array();
+            for (var i=0; i < 3; i++){
+                result[i] = function(){
+                    return i;
+                };
+            }
+            return result;
+        }
+        var ss = createFunctions();
+        for(var i=0; i < 3; i++){
+            console.log(ss[i]());
+        }*/
+        //返回都是3；
+
+/*        function createFunctions(){
+            var result = [];
+            for (var i=0; i < 3; i++){
+                result[i] = function(num){
+                    return function(){
+                        return num;
+                    };
+                }(i);
+            }
+            return result;
+        }
+        var ss = createFunctions();
+        for(var i=0; i < 3; i++) {
+            console.log(ss[i]());
+        }
+        //返回123
+        */
+    /*   function fun(n,o) {
+            console.log(o);
+            return {
+                fun:function(m){
+                    return fun(m,n);
+                }
+            };
+        }
+        var a = fun(0); // a.fun(1);  a.fun(2);  a.fun(3);//undefined,?,?,?
+        //var b = fun(0).fun(1).fun(2).fun(3);//undefined,?,?,?
+        //var c = fun(0).fun(1);  c.fun(2);  c.fun(3);//undefined,?,?,?*/
+        /*function abc(a,b){
+            console.log(b);
+            return{
+                fun:function(){
+                return 4564;
+                }
+            }
+        }
+       var b = abc(1,2);
+        console.log(b.fun());*/
+
+/*        var dom = function(){
+            var Name = "Default";
+            this.Sex = "Boy";
+            this.success = function(){
+                alert("Success");
+            };
+        };
+
+        console.log(dom.Name);
+        console.log(dom.Sex);
+        dom.success();*/
+
+        /////////////////////////////////////闭包缓存//////////////////////////////////////////////
+/*        var CachedSearchBox = (function(){
+            var cache = {},
+                count = [];
+
+            return {
+                attachSearchBox : function(dsid){
+                    if(dsid in cache){                   //如果结果在缓存中
+                        return cache[dsid];              //直接返回缓存中的对象
+                    }
+
+                    var fsb = new uikit.webctrl.SearchBox(dsid);//新建
+                    cache[dsid] = fsb;                         //更新缓存
+                    if(count.length > 100){                    //保正缓存的大小<=100
+                        delete cache[count.shift()];
+                    }
+                    return fsb;
+                },
+
+                clearSearchBox : function(dsid){
+                    if(dsid in cache){
+                        cache[dsid].clearSelection();
+                    }
+                }
+            };
+        })();
+
+        CachedSearchBox.attachSearchBox("input");*/
+
+     ////////////////////////////////////闭包缓存/////////////////////////////////////////////////
+/*        var person = function(){
+            //变量作用域为函数内部，外部无法访问
+            var name = "hell world!";
+
+            return {
+                getName : function(){
+                    return name;
+                },
+                setName : function(newName){
+                    name = newName;
+                }
+            }
+        }();
+
+        console.log(person.name);//直接访问，结果为undefined
+        console.log(person.getName());//hell world!
+        person.setName("abruzzi");   //设置name值,name被改变
+        console.log(person.getName()); //abruzzi*/
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////
+/*        function Person(){
+            var name = "default";
+
+            return {
+                getName : function(){
+                    return name;
+                },
+                setName : function(newName){
+                    name = newName;
+        }
+        }
+        }
+
+        var p = new Person();
+        p.setName("Tom");
+        alert(p.getName());
+
+        var Jack = function(){};
+
+        //继承自Person
+        Jack.prototype = new Person();
+
+        //添加私有方法
+        Jack.prototype.Say = function(){
+            alert("Hello,my name is Jack");
+        };
+        var j = new Jack();
+        j.setName("Jack");
+        j.Say();
+        alert(j.getName());
+        //闭包的继承和派生
+        */
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*        function counter () {
+            var n = 0;
+            return {
+                count: function () {console.log(n+1);return n++;},
+                reset: function () {n = 0;}
+            }
+        }
+        var a = counter(), b = counter();
+        a.count(); // 1
+        b.count(); // 1
+        a.reset(); //
+        a.count(); // 1
+        b.count(); // 2*/
+        /*
+        * 返回的对象包括两个方法，这两个方法都是可以访问私有变量n；
+        * 每次调用counter()都会穿件一个新的作用域链和一个新的私有方法
+        * 因此，如果连次调用了counter()两次，则会得到两个计算器对象，而且批次包含不同的私有变量
+        * 调用其中的一个计数器对象的count() 和 reset() 都不会影响另外一个；
+        *
+        * */
+//////////////////////////////////////////////////////////////////////////////////////
+        /*
+        * 利用闭包缓存变量和参数
+        * */
+        //1:
+ /*       for ( var i = 0 ; i < 5 ; i++) {
+            setTimeout(!function (i) {
+                console.log(i)
+            }(i), 200)
+        }
+
+        // 2:
+        var test = document.getElementsByClassName('test')[0];
+        var li = test.getElementsByTagName('li');
+        for (var i = 0; i < li.length; i++) {
+            !function (i) {
+                li[i].onclick = function () {
+                    console.log(i)
+                }
+            }(i)
+        }*/
+///////////////////////////////////////////////////////////////////////////////////////
+    </script>
+</body>
+</html>

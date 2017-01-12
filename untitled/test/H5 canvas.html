@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <canvas id="canvas"  width="1440" height="900"></canvas>
+</div>
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById('canvas');
+        var context= canvas.getContext('2d');
+/////////////////////////划线条///////////////////////////////
+        context.beginPath();//开始
+        context.moveTo(100,100);
+        context.lineTo(500,400);
+        context.lineTo(500,100);
+        context.lineTo(100,100);
+        context.lineWidth=5;
+        context.strokeStyle="#F00";
+        context.stroke();//绘制线条；
+
+        context.fillStyle="#0F0";
+        context.fill();//渲染背景
+        context.closePath();//结束
+
+        context.beginPath();//开始
+        context.moveTo(600,100);
+        context.lineTo(600,300);
+        context.lineTo(900,300);
+        context.lineWidth=10;
+        context.strokeStyle="#0f0";
+        context.fillStyle="#00F";
+        context.stroke();
+        context.fill();
+/////////////////////////矩形///////////////////////////////
+        context.beginPath();
+        context.fillStyle='rgba(0,0,255)';//填充颜色
+        context.fillRect(100,500,200,150);//绘制矩形，参数：x，y，宽，高
+        context.fillStyle='rgba(0,255,0,0.5)';//填充半透明颜色；
+        context.fillRect(150,550,200,150);
+///////////////////////画圆//////////////////////////////////
+        context.lineWidth=2;
+        context.strokeStyle="red";
+        context.beginPath();
+        context.arc(500,500,50,0,0.5*Math.PI);//x,y,r,
+        context.stroke();
+
+        context.beginPath();
+        context.arc(650,500,50,0,Math.PI);
+        context.stroke();
+
+        context.beginPath();
+        context.arc(800,500,50,0,1.5*Math.PI);
+        context.stroke();
+
+        context.beginPath();
+        context.arc(950,500,50,0,2*Math.PI);
+        context.stroke();
+
+
+
+    };
+</script>
+</body>
+</html>

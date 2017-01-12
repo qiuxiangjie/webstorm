@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js BOM</title>
+</head>
+<body>
+<script>
+    /*var age = 29;
+    window.color = "red";
+
+    delete window.age;//在IE < 9时抛出错误，在其他所有浏览器中都返回false
+    delete window.color; //在IE < 9时抛出错误，在其他所有浏览器中都返回true
+
+    alert(window.age);   //29
+    alert(window.color); //undefined
+    */
+    /***********跨浏览器取得窗口左边和上边的位置**************/
+    var leftPos = (typeof window.screenLeft == "number") ? window.screenLeft : window.screenX;
+    var topPos = (typeof window.screenTop == "number") ? window.screenTop : window.screenY;
+    console.log(leftPos);
+    console.log(topPos);
+
+</script>
+</body>
+</html>

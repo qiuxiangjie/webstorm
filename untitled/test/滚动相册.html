@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .a{width: 1000px; height: 220px; margin: 0 auto;overflow: hidden; position: relative;}
+        .b{ min-width:1000px;margin: 0 auto; height: 250px; position: relative; width: 200%;}
+        .b li{ width:220px; height: 200px; margin: 15px; background: #ff621f; float: left; }
+    </style>
+    <script type="text/javascript" src="http://www.shhkyy.com/include/waike/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="a" id="a">
+    <div class="b" id="b">
+        <ul id="c">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(function(){
+        var a=$("#a");
+        var c=$("#c");
+        function scroll(){
+            $("#a").animate({left:'-=300px'},1000);
+
+            console.log(a.scrollLeft);//0
+            console.log(c.offsetWidth);//2000
+            console.log($("#c").width());//1960
+        }
+        if(a.scrollLeft>c.offsetWidth) {
+            $("#a").animate({left:'0'}, 500);
+        }
+        setInterval(scroll,2000);
+        $(this).addClass().siblings().removeClass()
+    });
+</script>
+</body>
+</html>

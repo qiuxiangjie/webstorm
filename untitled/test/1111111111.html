@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div style='background:red'>
+    <p contenteditable="true" >1231231231231132</p>
+</div>
+<textarea name="mytextarea" style="overflow-y:hidden;" onpropertychange="this.style.height=this.scrollHeight+'px';" oninput="this.style.height=this.scrollHeight+'px';"></textarea>
+</body>
+<script>
+    var aaa = '2016.12.17';
+    var aa = (new Date(aaa.replace(/\./g, '/'))).getTime();
+    console.log(aa)
+</script>
+</html>
+

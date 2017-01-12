@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1, user-scalable=1" />
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <title>整改处罚单</title>
+    <link rel="stylesheet" href="css/styleContent.css" class="css"/>
+    <style>
+        body{background: #4d93fe url("./img/bg_new1.png") no-repeat left top; background-size: 100%;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>基本信息</h2>
+        <ul class="box1">
+            <li>
+                <p class="blue waite point" id="reformState"></p>
+            </li>
+            <li >
+                <p>门店：<span id="shopName"></span></p>
+                <p>整改次数：<span id="reformNum"></span></p>
+            </li>
+            <li class="clear">
+                <p>客户：<span id="clientName"></span></p>
+                <p>合同号：<span id="contractSn"></span></p>
+            </li>
+            <li><p>地址：<span id="address"></span></p></li>
+            <li>
+                <p>队长：<span id="teamAdminName"></span></p>
+                <p>工程管理员：<span id="projAdminName"></span></p>
+            </li>
+            <li class="dateTime">
+                <div class="date-til">
+                    <div class="start-date">
+                        <p id="createTime"></p>
+                        <p>开单日期</p>
+                    </div>
+                    <div class="end-date">
+                        <p id="planFinishTime"></p>
+                        <p>要求完成时期</p>
+                    </div>
+                </div>
+                <ul class="date-list">
+<!--                    <li id="teamSubmitTime">
+                        <p>队长整改完成日期：</p>
+                        <p>2016.06.06</p>
+                    </li>
+                    <li id="checkTime">
+                        <p>工程管理员验收日期：</p>
+                        <p>2016.06.06</p>
+                    </li>
+                    <li id="okTime">
+                        <p>整改合格日期：</p>
+                        <p>2016.06.06</p>
+                    </li>-->
+                </ul>
+            </li>
+            <li class="date-list-control" id="dataListControl"><span>收起</span><img style="width:20px;" src="./img/floor_03.png" alt=""/></li>
+            <li class="level" id="scoreLevelName">优秀</li>
+        </ul>
+        <h2>扣分概况</h2>
+        <ul class="box2">
+            <!--<li ><span>施工质量打分</span><span>72分</span><span>停单两个月</span>
+                <i class="clear alertShow">含超时扣分项</i>
+            </li>
+            <li><span>安全文明打分</span><span>72分</span><span>-200元</span></li>
+            <li><span>工地成品保护检查</span><span>72分</span><span>-200元</span>
+                <i class="clear alertShow">含超时扣分项</i>
+            </li>
+            <li><p>罚款小计算：<span class="red">500元</span></p></li>-->
+        </ul>
+    </div>
+    <div class="footer">
+        <ul class="foot clear">
+            <li><a class="active" href="./punishmentDetail.html"><span>基本概况</span></a></li>
+            <li><a href="./rectificationContent.html"><span>整改内容</span></a></li>
+            <li><a href="./historyList.html"><span>历史记录</span></a></li>
+        </ul>
+    </div>
+    <div class="alertMes">
+        <h3>超时扣分项</h3>
+        <ul id="alertMes">
+<!--            <li>
+                <p>超时扣分项超时扣分项超时扣分项超时扣分项超时扣分项超时扣分项超时扣分项超时扣分项超时扣分项超时扣分项超时扣分项</p>
+                <p class="score">2处</p>
+            </li>-->
+        </ul>
+        <div class="delete"></div>
+    </div>
+</body>
+<script src="./js/zepto.min.js"></script>
+<script src="./js/wxShare2.1.js"></script>
+</html>

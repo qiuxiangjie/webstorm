@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+ <script>
+     //有口井 7米深,有个蜗牛从井底往上爬,白天爬3米 晚上往下坠2米,问蜗牛几天能从井里爬出来？
+     var l =7;
+     var i=0;
+     while(l>=0){
+         i++;
+         l-=3;
+         console.log(l);
+         if(l<=0)break;
+         l+=2;
+         console.log(l);
+         console.log("-------------------");
+     }
+     alert(i);
+
+
+
+ </script>
+
+</body>
+</html>

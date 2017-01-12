@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>123123123123123</title>
+<style type="text/css">
+*{ margin:0; padding:0;}
+body { font:12px/1.8 Arial; color:#666;}
+h1.tit-h1 { font-size:38px; text-align:center; margin:30px 0 15px; color:#f60;}
+.go-back{ text-align:center; border-top:1px dashed #ccc; padding:10px; margin-top:20px; font-size:40px;}
+.wrap{border:1px dashed #ccc; background:#f8f8f8; padding:20px; position: relative;}
+#slide{overflow:hidden;width:900px;margin:100px auto;}
+ul{list-style:none;}
+li{float:left;}
+.li{width: 10px;}
+.slideul1{width:39990px;}
+.pre{position: absolute; width: 50px; height: 200px; top:120px; left: 190px; background: #222222;}
+.next{position: absolute; width: 50px; height: 200px; top:120px; left: 1180px;background: #222222;}
+</style>
+<script type="text/javascript" src="../js/jQrery1.7.2.js"></script>
+
+</head>
+<body>
+
+<div class="wrap">
+<div id="slide">
+	<ul class="slideul1">
+		<li class="slideli1">
+      		<ul class="slideul2">
+				<li><img src="images/1.jpg"/></li>
+				<li><img src="images/2.jpg"/></li>
+				<li><img src="images/3.jpg"/></li>
+				<li><img src="images/4.jpg"/></li>
+				<li><img src="images/5.jpg"/></li>
+			</ul>
+        </li>
+		<li class="slideli2"></li>
+	</ul>
+    <div class="pre"></div>
+    <div class="next"></div>
+</div>
+<script type="text/javascript">
+
+    $(".slideul2 li").click(function (){
+       // this.addClass("li");
+        //$(".slideul2 li").eq($(".slideul2 li").index(this)).hide();
+
+
+    });
+
+	var _speed=2000;
+	var a = $("#slide");
+	var b = $(".slideli1");
+	var c = $(".slideli2");
+	c.html(b.html());
+
+    $(".pre").click(function () {
+        if(a.scrollLeft() >= b.width())
+            a.scrollLeft(0);
+        else{
+            a.animate({scrollLeft:'+=300px'},1000);
+        }
+    });
+    $(".next").click(function () {
+        if(a.scrollLeft()==0)
+            a.scrollLeft(b.width());
+        else{
+            a.stop().animate({scrollLeft:'-=300px'},1000);
+        }
+    });
+	function Marquee(){
+		if(a.scrollLeft() >= b.width())
+			a.scrollLeft(0);
+		else{
+			//a.scrollLeft(a.scrollLeft()+2);
+			a.animate({scrollLeft:'+=300px'},1000);
+            a.removeClass(sd01b);
+		}
+	}
+	$(function(){
+		//两秒后调用
+		var sliding=setInterval(Marquee,_speed);
+		a.hover(function() {
+			//鼠标移动DIV上停止
+			clearInterval(sliding);
+		},function(){
+			//离开继续调用
+			sliding=setInterval(Marquee,_speed);
+		});
+	});
+
+
+
+
+
+
+</script>
+</div>
+
+</body>
+</html>

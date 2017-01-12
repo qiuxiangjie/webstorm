@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var homer = {
+        "name":"Homer Simpson",
+        "age":34,
+        "married":true,
+        "ocuption":"plant operator"
+    };
+
+    homer.setName = function(name){
+        homer.name = name;
+    };
+
+    homer.getName = function(){
+        return homer.name;
+    };
+
+    function Person() {
+        this.name = "Tom";
+        this.age = 20;
+        this.sex = "Female";
+        this.setName = function(name){
+            this.name = name;
+        };
+        this.getName = function(){
+            return this.name;
+        }
+    }
+
+    var preson = new Person();
+        console.log(preson.name);
+        console.log(homer.hasOwnProperty(Preson));
+        console.log(preson.hasOwnProperty);
+        console.log(Preson.hasOwnProperty);
+
+</script>
+</body>
+</html>

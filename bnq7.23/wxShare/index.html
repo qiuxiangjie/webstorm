@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1, user-scalable=1" />
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" CONTENT="-1">
+	<meta http-equiv="Cache-Control" CONTENT="no-cache">
+	<meta http-equiv="Pragma" CONTENT="no-cache">
+	<title></title>
+
+	<link href="css/bs.css" rel="stylesheet"/>
+	<link href="css/amazeui.min.css" rel="stylesheet">
+	<link href="css/swiper.min.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet"/>
+	<link href="css/baguetteBox.css" rel="stylesheet"/>
+	<link href="css/style.css" rel="stylesheet"/>
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/dataSearch.js"></script>
+	<script src="js/baguetteBox.js"></script>
+
+</head>
+<body class="classBody bg-f2">
+<div class="headDiv">
+	<div class="topTitle">
+		<span>施工详情</span>
+	</div>
+	<div class="pubWrap">
+		<span class="pubTitle">基本信息</span>
+		<ul class="messList">
+			<li class="row">
+				<label class="col-md-8">客户姓名：</label>
+				<span id="customName" class="col-md-6"></span>
+			</li>
+			<li>
+				<label class="col-md-8">地　　址：</label>
+				<span id="address" class="col-md-12"></span>
+			</li>
+			<li>
+				<label class="col-md-8">装修风格：</label>
+				<span id="styleName" class="col-md-12"></span>
+			</li>
+			<li>
+				<label class="col-md-8">面　　积：</label>
+				<span id="houseArea" class="col-md-12"></span>
+			</li>
+			<li>
+				<label class="col-md-8">开工日期：</label>
+				<span id="startTimeName" class="col-md-12"></span>
+			</li>
+			<li>
+				<label class="col-md-8">门　　店：</label>
+				<span id="shopName" class="col-md-12"></span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="pubWrap">
+		<span class="pubTitle">施工情况</span>
+		<ul class="messList">
+			<li class="row">
+				<label class="col-md-8">签到时间：</label>
+				<span id="trackTimeStr" class="col-md-12"></span>
+			</li>
+			<li>
+				<label class="col-md-8">当前阶段：</label>
+				<span id="workStateStr" class="col-md-12"></span>
+			</li>
+			<li>
+				<label class="col-md-8">施工队长：</label>
+				<span id="teamAdminName" class="col-md-12"></span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="pubWrap"  id="divDele-2" style="border-bottom:none;">
+		<span class="pubTitle deleBorder">施工综合质量打分 <b class="publicScore" id="quality"></b><a id="dele-a-2" class="switchWrap" href="javascript:void(0);"></a></span>
+		<div class="fraction" style="border-bottom:1px solid #D8D8D8;">
+			<span id="dropScoreSpan"></span>
+
+			<!--<b>电器工程</b>
+            <ul class="fracList">
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>-5</b>
+                </li>
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>-5</b>
+                </li>
+            </ul>
+
+            <b>墙面工程</b>
+            <ul class="fracList">
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>-5</b>
+                </li>
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>-5</b>
+                </li>
+            </ul>
+
+            <b>外单位施工不扣分</b>
+            <ul class="fracList">
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>未完工</b>
+                </li>
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>正常</b>
+                </li>
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>有问题</b>
+                </li>
+            </ul>
+
+            <b>推荐工艺加分项</b>
+            <ul class="fracList">
+                <li>
+                    <span>Q 推荐工艺加分项（动作电流≤MA)</span>
+                    <b>+5</b>
+                </li>
+            </ul>-->
+		</div>
+	</div>
+
+	<div class="pubWrap" id="divDele-1" style="border-bottom:none;margin-top:0px;">
+		<span class="pubTitle deleBorder">安全文明综合打分 <b  class="publicScore" id="civilScore"></b><a id="dele-a-1" class="switchWrap" href="javascript:void(0);"></a></span>
+		<div class="fraction" style="border-bottom:1px solid #D8D8D8;">
+			<span id="pramScoreSpan"></span>
+
+			<!--<b>电器工程</b>
+            <ul class="fracList">
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>-5</b>
+                </li>
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>-5</b>
+                </li>
+            </ul>-->
+
+		</div>
+	</div>
+
+	<div class="pubWrap" id="domThree" style="border-bottom:none;margin-top:0px;" >
+		<span class="pubTitle deleBorder"><span>工地成品保护检查</span> <b class="publicScore" id="protectScore"></b><a class="switchWrap" href="javascript:void(0);"></a></span>
+		<div class="fraction" style="border-bottom:1px solid #D8D8D8;">
+			<ul id="proScoreSpan" class="fracList ulList">
+				<!--<li>-->
+				<!--<span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>-->
+				<!--<b>-5</b>-->
+				<!--</li>-->
+				<!--<li>-->
+				<!--<span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>-->
+				<!--<b>-5</b>-->
+				<!--</li>-->
+			</ul>
+		</div>
+	</div>
+
+	<div class="pubWrap" id="domTwo" style="border-bottom:none;margin-top:0px;">
+		<span class="pubTitle deleBorder"><span>内部交底得分</span><b class="publicScore" id="jiaodiAdminName"></b><a class="switchWrap" href="javascript:void(0);"></a></span>
+		<div class="fraction" style="border-bottom:1px solid #D8D8D8;">
+			<ul id="odaScoreSpan" class="fracList ulList">
+				<!--<li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>-5</b>
+                </li>
+                <li>
+                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
+                    <b>-5</b>
+                </li>-->
+			</ul>
+		</div>
+	</div>
+
+	<div class="pubWrap" id="projectgx" style="border-bottom:none;">
+		<a id="gongxu-a" class="pubTitle deleBorder"><span>工序检核</span><span class="gx-a" href="javascript:void(0);"></span></a>
+	</div>
+
+
+	<div class="pubWrap" id="domOne">
+		<span class="pubTitle">整改方案 </span>
+		<div class="zhenggai">
+			<p id="textStyle">
+				<!--dddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasf-->
+			</p>
+		</div>
+	</div>
+
+
+
+	<div class="pubWrap">
+		<span class="pubTitle">施工图片 </span>
+
+		<!--<div class="container-fluid">-->
+		<!--<div class="row bg-fff personal_x mar-top-10 mar-bot-20">-->
+		<!--<div class="col-xs-12 help_t1  ">-->
+		<!--&lt;!&ndash; 滑动轮播开始&ndash;&gt;-->
+		<!--<div class="swiper-container mar-bot-20 mar-top-20">-->
+		<!--<div class="swiper-wrapper">-->
+		<!-- -->
+		<!-- -->
+		<!--</div>-->
+		<!--</div>-->
+		<!--&lt;!&ndash; 滑动轮播结束&ndash;&gt;-->
+		<!--</div>-->
+		<!--</div>-->
+		<!--</div>-->
+
+		<!-- Demo start -->
+		<div class="waiceng">
+			<div class="photoDivWrap">
+				<div class="baguetteBox">
+					<!--<a href="img/1-1.jpg"><img src="img/thumbs/1-1.jpg"></a>-->
+					<!--<a href="img/1-2.jpg" ><img src="img/thumbs/1-2.jpg"></a>-->
+					<!--<a href="img/1-3.jpg"><img src="img/thumbs/1-3.jpg"></a>-->
+					<!--<a href="img/1-4.jpg"><img src="img/thumbs/1-4.jpg"></a>-->
+					<!--<a href="img/1-5.jpg"><img src="img/thumbs/1-5.jpg"></a>-->
+					<!--<a href="img/1-6.jpg"><img src="img/thumbs/1-6.jpg"></a>-->
+					<!--<a href="img/1-7.jpg"><img src="img/thumbs/1-7.jpg"></a>-->
+					<!--<a href="img/1-8.jpg"><img src="img/thumbs/1-8.jpg"></a>-->
+				</div>
+			</div>
+		</div>
+		<!-- Demo end -->
+
+	</div>
+
+	<div class="pubWrap">
+		<span class="pubTitle">巡检日志 </span>
+		<div class="zhenggai">
+			<p id="inspectionRizhi">
+				<!--dddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasfdddssaafafasf-->
+			</p>
+		</div>
+	</div>
+</div>
+<div class="positionDiv">
+	<div class="positionContent">
+		<div><span class="textLi"></span><b class="scoreLi"></b><div style="clear:both;"></div></div>
+		<p class="contentLi"></p>
+		<i class="scoreDiv"></i>
+	</div>
+	<div class="btWrap">
+		<a href="javascript:void(0);"></a>
+	</div>
+</div>
+
+<!-- 文字显示与展开 -->
+<script>
+
+	window.onload=function()
+	{
+		$('.positionDiv').height($(window).height());
+	};
+</script>
+
+</body>
+</html>

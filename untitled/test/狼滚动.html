@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .a{width: 800px; height: 180px;overflow: hidden; position: relative;float: left; margin:0 30px;}
+        .b{ min-width:1000px;margin: 0 auto; height: 180px; position: relative; width: 3000px; list-style-type: none; }
+        .b li{ width:160px; height: 160px; margin: 15px; background:red; float: left; color:#FFF; text-align: center; line-height: 160px; font-size: 80px;}
+        .left{ height: 160px; width:20px;float:left; background-color: aquamarine;}
+        .right{ height: 160px; width:20px;float:left;background-color: aquamarine;}
+    </style>
+    <script type="text/javascript" src="js/jQrery1.7.2.js"></script>
+</head>
+<body>
+<div class="left"></div>
+<div class="a" id="a">
+    <ul class="b" id="b">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+    </ul>
+    <ul class="b" id="c"></ul>
+</div>
+<div class="right"></div>
+<script>
+    /*$(function(){
+     var scrollTimes = 0;
+     $(".left").click(function(e){
+     scrollTimes -=4;
+     console.log(scrollTimes);
+     $("#b").stop().animate({right:'+=1000px'},1000);
+     if(-($("#b li").length)<-scrollTimes-4){
+     $("#b").animate({right:'0px',opacity:'0'},0);
+     $("#b").animate({opacity:'1'},1000);
+     scrollTimes = 0;
+     }
+     });
+
+     $(".right").click(function(e){
+     clearInterval(sb);
+     scrollTimes -=4;
+     $("#b").stop().animate({right:'-=1000px'},1000);
+     });
+     function ss(){
+     if(scrollTimes < $("#b li").length -4) {
+     $("#b").animate({right:'+=1000'},1000);
+     scrollTimes += 4;
+     }
+     else {
+     $("#b").animate({right:'0px',opacity:'0'},0);
+     $("#b").animate({opacity:'1'},1000);
+     scrollTimes = 0;
+     }
+     }
+     var sb=setInterval(ss,2000);
+     $("#b").mouseover(function(e){clearInterval(sb)});
+     $("#b").mouseleave(function(e){sb=setInterval(ss,2000);});
+     });*///滚动方法一;
+    $(function(){
+        var a=$("#a");
+        var b=$("#b");
+        var c=$("#c");
+        //c.html(b.html());
+
+        function myScroll(){
+            if($("#a").scrollLeft() >= 2000){
+                $("#a").scrollLeft(0);
+
+            }
+            else{
+               // $("#a").scrollLeft($("#a").scrollLeft()+1);
+               $("#a").animate({scrollLeft:'+=1'},0)
+            }
+
+            console.log($("#a").scrollLeft());
+            console.log($("#b").width());
+            $(this).attr('href');
+        }
+        var s=setInterval(myScroll,10);
+        $("#b").mouseover(function(){clearInterval(s)});
+        $("#b").mouseleave(function(){s=setInterval(myScroll,10)});
+    });
+
+</script>
+</body>
+</html>

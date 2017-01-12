@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+        #allmap{width:100%;height:500px;}
+        p{margin-left:5px; font-size:14px;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0bpHQGGmnf1TciHIGHqoGaGcY3pnuCj4"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <title>添加复杂内容的信息窗口</title>
+</head>
+<body>
+<div id="allmap"></div>
+<p>点击标注点，可查看由文本，图片构成的复杂型信息窗口</p>
+</body>
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var aa = '',
+        bb = '',
+        address='',
+    sContent ='';
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.404, 39.915);
+    var marker = new BMap.Marker(point);
+    var geoc = new BMap.Geocoder();
+    map.centerAndZoom(point, 15);
+    map.addOverlay(marker);
+    marker.enableDragging();
+    marker.addEventListener("dragend", function (e) { //监听标注的dragend事件，获取拖拽后地理坐标
+        geoc.getLocation(e.point, function(rs){
+            var addComp = rs.addressComponents;
+            address = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+            aa = e.point.lng;
+            bb = e.point.lat;
+            sContent= "<div><p style=' font-weight:bold'>"+address+"</p>" +
+                            "<p style='width:300px'><span>经度："+aa+"</span> <span>纬度："+bb+"</span></p>"+
+                            "<p style='padding:5px 15px; color:#FFF; background:#FF950C; border-radius:5px; width:35px; text-align:center;cursor:pointer;'>确定</p>"+
+                    "</div>";
+            var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+            this.openInfoWindow(infoWindow);
+        }.bind(this));
+    });
+</script>

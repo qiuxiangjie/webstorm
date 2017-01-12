@@ -1,0 +1,211 @@
+{
+
+  "response": {
+    "code": 0,
+    "data": {
+      "reformId": 1,
+      "reformInfo": {
+        "qualified": {
+          "note": "test",
+          "other": [ ],
+          "civil": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6测试使用6用6"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用3"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 1,
+              "picNum": 1,
+              "content": "测试使用5"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 1,
+              "picNum": 1,
+              "content": "测试使用5"
+            }
+          ],
+          "name": "钱三",
+          "protect": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用4"
+            }
+          ],
+          "title": "管理员验收合格",
+          "quality": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 3,
+              "picNum": 1,
+              "content": "测试使用2"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用2"
+            }
+          ]
+        },
+        "teamReform": {
+          "note": "",
+          "other": [ ],
+          "civil": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用6"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用3"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 1,
+              "picNum": 1,
+              "content": "测试使用5"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 1,
+              "picNum": 1,
+              "content": "测试使用5"
+            }
+          ],
+          "name": "钱二",
+          "protect": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用4"
+            }
+          ],
+          "title": "队长整改内容",
+          "quality": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 3,
+              "picNum": 1,
+              "content": "测试使用2"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用2"
+            }
+          ]
+        },
+        "require": {
+          "note": "test something 管理员整改要求",
+          "other": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 1,
+              "picNum": 1,
+              "content": "测试使用7"
+            }
+          ],
+          "civil": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用3"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 1,
+              "picNum": 1,
+              "content": "测试使用5"
+            },
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用6"
+            }
+          ],
+          "name": "钱三",
+          "protect": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 2,
+              "picNum": 1,
+              "content": "测试使用4"
+            }
+          ],
+          "title": "管理员整改要求",
+          "quality": [
+            {
+              "picUrl": [
+                "http://res.bnq.com.cn/FrCd2xr0GVcwm0CcS-lpVY6VRyJC",
+                "http://res.bnq.com.cn/FjdTF37iO0tD6Ypqkz-VmZM0NPbk"
+              ],
+              "num": 3,
+              "picNum": 2,
+              "content": "测试使用2"
+            }
+          ]
+        }
+      }
+    },
+    "message": "查询成功"
+  }
+
+}

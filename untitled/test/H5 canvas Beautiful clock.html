@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <canvas id="canvas" style="border: solid 1px #DDD; margin: 50px auto; display: block;"></canvas>
+    </div>
+<script src="js/digit.js"></script>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        var context= canvas.getContext("2d");
+        var canvasHeight = 680;
+        var canvasWidth  = 1240;
+        var r = 8;
+        var marginTop = 20;
+        var marginLeft= 100;
+
+        canvas.height = canvasHeight;
+        canvas.width  = canvasWidth;
+        var balls = [];
+        var colors = ["#fff30d","#f9d602","#dbfd10","#1b46c6","#4dbcff","#7c05d9","#cc38fe","#c2165e","#c81d13","#fb4a50","#ec5601","#fe9834"];
+
+       setInterval(function(){
+           upData();
+           render(context);
+
+       },1000);
+        function upData(){
+
+        }
+        function render(cxt){
+            var time =new Date();
+            var h = time.getHours();
+            var m = time.getMinutes();
+            var s = time.getSeconds();
+            cxt.clearRect(0,0,canvasWidth,canvasHeight);
+            var hours   = h,
+                minutes = m,
+                seconds = s;
+            renderDigit(marginLeft,marginTop,parseInt(hours/10),context);
+            renderDigit(marginLeft+15*(r+1),marginTop,parseInt(hours%10),context);
+            renderDigit(marginLeft+30*(r+1),marginTop,10,context);
+            renderDigit(marginLeft+39*(r+1),marginTop,parseInt(minutes/10),context);
+            renderDigit(marginLeft+54*(r+1),marginTop,parseInt(minutes%10),context);
+            renderDigit(marginLeft+69*(r+1),marginTop,10,context);
+            renderDigit(marginLeft+78*(r+1),marginTop,parseInt(seconds/10),context);
+            renderDigit(marginLeft+93*(r+1),marginTop,parseInt(seconds%10),context);
+
+            function renderDigit(x,y,num,cxt){
+                cxt.fillStyle="#f00";
+                for(var i=0; i<digit[num].length;i++){
+                    for(var j= 0;j<digit[num][i].length;j++){
+                        if(digit[num][i][j]==1){
+                            console.log(i,j);
+                            cxt.beginPath();
+                            cxt.arc(x+2*j*(r+1)+r+1,y+2*i*(r+1)+r+1,r,0,2*Math.PI);
+                            cxt.fill();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

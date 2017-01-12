@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link href="#springUrl('/static/css/projectReformList.css')" rel="stylesheet" />
+<script src="#springUrl('/static/js/trackCount.js')" type="text/javascript"></script>
+<div id="trackCountList">
+    <span class="conPubTitile">工地稽查统计报表</span>
+    <div class="conWrap">
+        <div class="top-right">
+            <div class="form-group">
+                <div style="display:inline-block; width:100%; height:40px; line-height:40px;">
+                    <div id="districtDiv" class="sDiv" style="position:relative; display:inline-block; float:left;">
+                        <span id="districtSelBtn" class="selectBtn">
+                            <label id="districtSelLab">区域</label>
+                            <em id="districtSelEm"></em>
+                        </span>
+                        <div style="display:none; z-index:3;">
+                            <ul id="districtUl" class="selectUl">
+                                <li original="all">全国</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="cityDiv" class="sDiv" style="display:none; position:relative; float:left;">
+                        <span id="citySelBtn" class="selectBtn">
+                            <label id="citySelLab">城市</label>
+                            <em id="citySelEm"></em>
+                        </span>
+                        <div style="display:none; z-index:3;">
+                            <ul id="cityUl" class="selectUl">
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="shopDiv" class="sDiv" style="display:none; position:relative; float:left;">
+                        <span id="shopSelBtn" class="selectBtn">
+                            <label id="shopSelLab">门店</label>
+                            <em id="shopSelEm"></em>
+                        </span>
+                        <div style="display:none; z-index:3;">
+                            <ul id="shopUl" class="selectUl">
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="typeDiv" class="sDiv" style="position:relative; display:inline-block; float:left;">
+                        <span id="typeSelBtn" class="selectBtn">
+                            <label id="typeSelLab">周报</label>
+                            <em id="typeSelEm"></em>
+                        </span>
+                        <div style="display:none; z-index:3;">
+                            <ul id="typeUl" class="selectUl">
+                                <li>周报</li>
+                                <li>月报</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input id="datepicker" type="text" style="height:40px; float:left; cursor:pointer;border:1px solid #ddd;text-indent:15px;"/>
+                    <a class="searchBtn" href="javascript:;" style="margin-left:5px;">查询</a>
+                    <a class="downloadBtn" href="javascript:;" style="display: block; float:right; margin-right: 20px;">导出报表</a>
+                </div>
+            </div>
+        </div>
+        <div id="trackCountListTableDiv" style="position:relative;max-width: 1400px;">
+            <table class="altrowstable table table-bordered table-hover" id="trackCountListTable" width="100%" cellspacing="0" cellpadding="0"></table>
+            <table class="altrowstable  pagestyle" id="page" width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="right" style="position: absolute;right:-40px;width:416px;">
+                        <a class="link-a" href="javascript:void(0)" id="prePage" ><span>上一页</span></a>&nbsp;
+                        <a class="link-a" href="javascript:void(0)" id="nextPage" ><span>下一页</span></a>&nbsp;
+                        <a class="link-a" href="javascript:void(0)" id="totalPage" ><span>共<input type="text" id="totalPageNumber" disabled="disabled" size="5" value="1">页</span></a>&nbsp;
+                        <input type="text" id="curPageNumber" style="width:40px;" class="input-page" size="5" value="1">&nbsp;
+                        <a class="link-a" href="javascript:void(0)" id="gotoPage" ><span>跳转</span></a>&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="proptDiv">暂无相关数据</div>
+    </div>
+</div>
+
+<div id="trackCountDetail" style="display:none;">
+    <span class="conPubTitile">工地检查频次</span>
+    <div class="conWrap">
+        <div  style="position:relative;max-width: 1400px;">
+            <table class="altrowstable table table-bordered table-hover" id="trackCountDetailTable" width="100%" cellspacing="0" cellpadding="0"></table>
+        </div>
+    </div>
+    <span class="subFootSpan">
+        <a class="subFootBtn" href="javascript:;">返回上一层</a>
+    </span>
+</div>
+</body>
+</html>

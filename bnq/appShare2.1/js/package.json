@@ -1,0 +1,58 @@
+{
+
+  "response": {
+    "code": 0,
+    "data": {
+      "score": {
+        "scoreLevelName": "合格",
+        "scoreLevel": 2,
+        "scoreArray": [
+          {
+            "title": "施工质量综合打分",
+            "punishTypeStr": "",
+            "doScore": 67,
+            "timeout": [ ]
+          },
+          {
+            "title": "安全文明打分",
+            "punishTypeStr": "",
+            "doScore": 78,
+            "timeout": [ ]
+          },
+          {
+            "title": "工地成品保护检查",
+            "punishTypeStr": "",
+            "doScore": 87,
+            "timeout": [ ]
+          },
+          {
+            "title": "内部交底",
+            "punishTypeStr": "",
+            "doScore": 78,
+            "timeout": [ ]
+          }
+        ],
+        "punishFee": 0
+      },
+      "reformId": 1,
+      "base": {
+        "projAdminName": "钱三",
+        "reformNum": 2,
+        "teamAdminName": "钱二",
+        "address": "北京 东城 东城区 广渠家园5号楼1",
+        "clientName": "郭先生",
+        "confirmTimeout": "1",
+        "shopName": "测试门店",
+        "teamSubmitTime": "2016.06.18",
+        "planFinishTime": "2016.07.29",
+        "checkTime": "2016.06.18",
+        "createTime": "2016.07.15",
+        "contractSn": "BJ_test_1201",
+        "okTime": "2016.10.16",
+        "reformStateStr": "等待队长整改"
+      }
+    },
+    "message": "查询成功"
+  }
+
+}

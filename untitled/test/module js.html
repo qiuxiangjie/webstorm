@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+/*    function MyObject(){
+
+        //私有变量和私有函数
+        var privateVariable = 10;
+        function privateFunction(){
+            return false;
+        }
+
+        //特权方法
+        this.publicMethod = function (){
+            privateVariable++;
+            return privateFunction();
+        };
+    }
+    var sb = new MyObject();//实例化后才可以用
+    sb.publicMethod();*/
+
+   //////////////////////////////////////////////////////////////////////////////////////
+
+/*    function MyObject(){
+        var a = 1;
+            b = 2;
+        return a+b;
+    }
+   MyObject.prototype.c = 3;
+
+    var sb = new MyObject();
+    console.log(sb.c++);
+    console.log(MyObject());*/
+
+////////////////////////////////////////////////////////////////////////////////////////
+/*String.prototype.startsWith = function (text) {
+    return this.indexOf(text) == 0;
+};
+    var sb = "12345sbsbsbs";
+    console.log(sb.startsWith("sb"));
+String.prototype.indexOf = function(){
+    return "sb";
+};
+    console.log(sb.indexOf());*/
+    ///////////////////////////////////////////////////////////////////////////////////////
+/*function SpecialArray(){
+
+    //创建数组
+    var values = new Array();
+
+    //添加值
+    values.push.apply(values, arguments);
+
+    //添加方法
+    values.toPipedString = function(){
+        return this.join("|");
+    };
+
+    //返回数组
+    return values;
+}
+var colors = new SpecialArray("red", "blue", "green");
+alert(colors.toPipedString()); //"red|blue|green"*/
+
+  ////////////////////////////////////////////////////////////////////////////////////////////
+
+    var module1 = (function(){
+        var _count = 0;
+        var m1 = function(){
+            //...
+        };
+        var m2 = function(){
+            //...
+        };
+        return {
+            m1 : m1,
+            m2 : m2
+        };
+    })();//模块
+
+
+
+var module2 = (function (mod){
+    mod.m3 = function () {
+        console.log("sb");
+    };
+    return mod;
+})(module1);//放大模块
+
+    module1.m3();
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/echarts.common.min.js"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height:400px;"></div>
+<div id="main2" style="height:400px;"></div>
+<div id="main3" style="width: 800px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    var myChart2 = echarts.init(document.getElementById('main2'));
+    var myChart3 = echarts.init(document.getElementById('main3'));
+
+    function fetchData(cb) {
+        // 通过 setTimeout 模拟异步加载
+        setTimeout(function () {
+            cb({
+                data: [
+                    {value:335, name:'未开工'},
+                    {value:310, name:'正常'},
+                    {value:234, name:'延期'}
+                ]
+            });
+        }, 800);
+    }
+
+    // 指定图表的配置项和数据
+    option = {
+        title : {
+            text: '工地状态图',
+            x:'left'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c}<br/>占比 :{d}%"
+        },
+        legend: {
+            x : 'center',
+            data:['未开工','正常','延期']
+        },
+
+        series : [
+            {
+                type:'pie',
+                radius : '55%',
+                roseType: 'roseType',
+                data:[
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option);
+    myChart.showLoading();
+    fetchData(function (data) {
+        myChart.hideLoading();
+        myChart.setOption({
+            series: [{
+                // 根据名字对应到相应的系列
+                data: data.data
+            }]
+        });
+    });
+    // 使用刚指定的配置项和数据显示图表。
+
+    /****************************************/
+    option2 = {
+        title : {
+            text: '里程碑延期率占比图',
+        },
+        tooltip : {
+            trigger: 'axis',
+            // formatter: "{b} : {c0 + c1}<br/>{a0} : {c0}<br/>{a1} : {c1}"
+            formatter: function (params) {
+                if (params[1] == undefined) {
+                    return
+                }
+                var name = params[0].name;
+                var d1 = params[0].value;
+                var d2 = params[1].value;
+                var seriesName1 = params[0].seriesName;
+                var seriesName2 = params[1].seriesName;
+                var total = d1 + d2;
+                var per1 = ((d1 / total) * 100).toFixed(2) + '%';
+                var per2 = ((d2 / total) * 100).toFixed(2) + '%';
+                return name + '：' + total + '<br/>' + seriesName1 + '：' + per1 + '<br/>' + seriesName2 + '：' + per2
+            }
+        },
+        legend: {
+            data:['正常','延期']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['隐蔽工程','泥土工程','土木工程','油漆工程','安装工程']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'正常',
+                type:'bar',
+                data:[20, 49, 70, 23, 25],
+                itemStyle: {
+                    normal: {
+                        color: '#39a687',
+                        marginLeft: 100,
+                        label: {
+                            show: true,
+                            position: 'top',
+                            data:"{c}%",
+                        }
+                    }
+                },
+            },
+            {
+                name:'延期',
+                type:'bar',
+                data:[26, 59, 90, 26, 28],
+                itemStyle: {
+                    normal: {
+                        color: '#fe5467',
+                        marginLeft: 100,
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: "{c}"
+                        }
+                    },
+                }
+            }
+
+        ]
+    };
+
+
+    myChart2.setOption(option2);
+    /****************************************/
+    // 初始 option
+    option3 = {
+        title: {
+            x: 'center',
+            text: 'ECharts例子个数统计',
+            subtext: 'Rainbow bar example',
+            link: 'http://echarts.baidu.com/doc/example.html'
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        xAxis: [
+            {
+                type: 'category',
+                show: true,
+                data: ['Line213132', 'Bar', 'Scatter', 'K', 'Pie', 'Radar', 'Chord', 'Force', 'Map', 'Gauge', 'Funnel']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                show: true
+            }
+        ],
+        series: [
+            {
+                name: 'ECharts例子个数统计',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: function(params) {
+                            // build a color map as your need.
+                            var colorList = [
+                                '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                                '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                            ];
+                            return colorList[params.dataIndex]
+                        },
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{b}\n{c}'
+                        }
+                    }
+                },
+                data: [10,21,10,4,12,5,6,5,25,23,7],
+                markPoint: {
+                    tooltip: {
+                        trigger: 'item',
+                        backgroundColor: 'rgba(0,0,0,0)',
+                        formatter: function(params){
+                            return '<img src="'
+                                    + params.data.symbol.replace('image://', '')
+                                    + '"/>';
+                        }
+                    },
+                    data: [
+                    ]
+                }
+            }
+        ]
+    };
+
+
+    myChart3.setOption(option3);
+</script>
+</body>
+</html>

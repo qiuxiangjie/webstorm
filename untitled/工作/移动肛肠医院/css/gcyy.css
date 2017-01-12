@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,form,textarea,p{ margin:0; padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+img{ border:none;}
+.clear {zoom:1;}    /*==for IE6/7 Maxthon2==*/
+.clear:after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}   /*==for FF/chrome/opera/IE8==*/
+body{font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif; font-size:18px; color:#676767; min-width:320px;line-height: 28px;}
+a{text-decoration:none; color:#000; }
+ul{list-style-type:none;}
+.m30{ margin:30px auto;}
+
+.logo{ text-align:center; display:block; margin:10px auto; width:72.8125%;}
+.nav{ }
+.nav li{ width:25%; float:left; text-align:center; font-size:3vw;background:#3da9b2; padding:2vw 0; border:1px solid #FFF; box-sizing:border-box;}
+.nav li a{color:#FFF;}
+.banner img{ width:100%; display:block;}
+.box1,.box2,.box3,.box4,.box5,.box6,.box7{margin: 30px auto; width:92%;}
+.til{color:#FFF; text-align:center; width:100%; height:90px; background:url("../images/gcyy_07.png") center no-repeat; margin-bottom:30px;padding:15px 0;}
+.til > div{position:relative;}
+.til i{width:100%; height:1px; background:#b4dde1; top:49%; left:0; position:absolute;}
+.til h1{ font-size:36px; line-height:40px; background:url("../images/bsbsbs_09.png") center repeat-x; display:inline-block;z-index: 3;position: relative; padding: 0 6px;}
+.til h1::after,.til h1::before{
+    content:"";
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#b3dce1;
+    position:absolute;
+    margin:auto 5px;
+    top:0;
+    bottom:0;
+}
+
+.til h1::before{
+    margin:auto -18px;
+}
+.til p{ font-size:24px;}
+.til p span{color:#fff600; font-weight:bold;}
+.box1{ width:90%; margin:30px auto; }
+.info p{ margin:30px auto; text-indent:2em; font-size:20px; }
+.info a{ color:red;}
+.box1 ul{ position:relative;}
+.box1 li{ position:absolute; text-align:center; color:#FFF;}
+.box1 li img{display:block;}
+.box1 li div{padding-bottom:10px; }
+.box1 li:nth-of-type(1){left:0;top:80px; background:#4980bf;}
+.box1 li:nth-of-type(2){left:200px;top:0;}
+.box1 li:nth-of-type(2) div{ background:#e77841;}
+.box1 li:nth-of-type(2)::after{
+    content:"荣誉资质";
+    font-weight:bold;
+    font-size:25px;
+    color:#545454;
+     padding-top:40px;
+    line-height:90px;
+}
+.box1 li:nth-of-type(3){left:430px;top:80px; background:#7cbb3c;}
+.box1 li:nth-of-type(4){ left:105px;top:300px; background:#40a8b2;}
+.box1 li:nth-of-type(5){left:320px;top:300px; background:#7867c2;}
+.button{ text-align:center;}
+.button a{ background:#f49f10; color:#FFF;font-size:24px; border-radius:5px; display:inline-block; padding:15px 80px 15px 30px; margin:30px auto;}
+.bg a{ background:#f49f10 url("../images/gcyy_29.png") 90% center no-repeat;}
+.box2 li{ float:left; margin:10px 8px;}
+.box2 li:first-child{margin-left:0;}
+.box2 li:last-child{margin-right:0;}
+
+.box3 li{ margin:20px auto;}
+.box3 li img{ float:left;}
+.box3 li p{ padding:20px 30px; background:#eeeeee; width:63%; float:left; font-size:20px;}
+
+.box4 li{ float:left; margin:20px;}
+.bg1 a{ font-size:20px; background:#f49f10 url("../images/gcyy_60.png") 95% center no-repeat; padding:10px 50px 10px 20px;}
+.bg2 a{ font-size:20px; background:#3da8b2 url("../images/gcyy_62.png") 10px center no-repeat; padding:10px 20px 10px 50px;}
+
+.box5 li{ float:left; color:#FFF;}
+.box5 li div{width:147px; height:162px; text-align:center;box-sizing:border-box; padding:50px 0;}
+.box5 li img{display:block;}
+.fh{background:#eea3a4;}
+.zs{background:#9a8dcf;}
+.cs{background:#f89b73;}
+.ls{background:#57cd93;}
+.fh p:first-child{font-size:16px;}
+.zs p:first-child{font-size:28px;}
+.cs p{font-size:21px;}
+
+
+
+
+
+
+
+
+
+
+
+.foot{ background:#3da9b2; color:#FFF; padding:5vw 0; text-align:center;}
+.foot img{ width:83.28%;}
+.foot p,.foot h3{text-align:left;}
+.fm{padding-left: 16%;background: url(../images/gcyy_81.png) 2% center no-repeat; background-size:12vw;height: 12vw;margin: 20px auto;width:70%;}
+.fm p{ font-size:5vw; font-weight:bold;}
+.fm h3{ font-size:3vw;}
+.foot > p {
+    padding-left: 16%;
+    background: url(../images/gcyy_84.png) 2% center no-repeat;
+    background-size:12vw;
+    height: 12vw;
+    line-height: 12vw;
+    margin: 20px auto;
+    font-size: 4vw;
+    width:70%;
+
+}

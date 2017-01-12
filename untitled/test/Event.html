@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="js/jQrery1.7.2.js"></script>
+    <style>
+        .n{ float: left; background: #1d82c8; width: 100px;height: 30px; line-height: 30px; margin: 10px; text-align: center; color: #FFF; cursor:pointer; transition: 0.3s ease 0s;}
+        .n:hover{ background: #ff621f;}
+    </style>
+</head>
+<body style=height:1000px;">
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.one').click(function(e){
+            alert('one');
+        });
+        $('.two').click(function(e){
+            alert('two');
+        });
+        $('.three').click(function(e){
+            alert('three');
+            //阻止起泡取消下面的注释
+            e.stopPropagation();
+        }
+            //,function(event){
+           //event.preventDefault();
+           // return false;
+       // }
+        );
+
+    });
+</script>
+<div class="one" style="width:200px;height:200px;background:green;">
+    one
+    <div class="two" style="width:150px;height:150px;background:yellow;">
+        two
+        <div class="three" style="background: red;height: 100px; width: 100px;">
+            three
+        </div>
+    </div>
+</div>
+
+<div class="n click">click</div>
+<div class="n dblclick">dblclick</div>
+<div class="n mousedown">mousedown</div>
+<div class="n mouseenter">mouseenter</div>
+<div class="n mouseleave">mouseleave</div>
+<div class="n mousemove">mousemove</div>
+<div class="n mouseout">mouseout</div>
+<div class="n mouseover">mouseover</div>
+<div class="n mouseup">mouseup</div>
+<div class="n" id="myBtn">myBtn</div>
+
+<div style="clear:both">
+    <input id="myText" type="text" style="width:100px;height:25px; border: 1px solid #555555;" >
+</div>
+<script>
+    var event1 = document.getElementsByClassName("click");
+    var event2 = document.getElementsByClassName("dblclick");
+    var event3 = document.getElementsByClassName("mousedown");
+    var event4 = document.getElementsByClassName("mouseenter");
+    var event5 = document.getElementsByClassName("mouseleave");
+    var event6 = document.getElementsByClassName("mousemove");
+    var event7 = document.getElementsByClassName("mouseout");
+    var event8 = document.getElementsByClassName("mouseover");
+    var event9 = document.getElementsByClassName("mouseup");
+
+    event1[0].onclick = function () {
+        var myText = this.innerText;
+        //alert(myText);
+        alert("Client coordinates: " + event.clientX + "," + event.clientY);//不包含滚动的距离
+        alert("Page coordinates: " + event.pageX + "," + event.pageY);//包含滚动的距离，指的是页面的位置
+        alert("Screen coordinates: " + event.screenX + "," + event.screenY);//屏幕的距离位置
+    };
+    event2[0].ondblclick = function () {
+        var myText = this.innerText;
+        alert(myText);
+    };
+    event3[0].onmousedown = function () {
+        var myText = this.innerText;
+        alert(myText);
+    };
+    event4[0].onmouseenter = function () {
+        var myText = this.innerText;
+        alert(myText);
+    };
+    event5[0].onmouseleave = function () {
+        var myText = this.innerText;
+        alert(myText);
+    };
+    event6[0].onmousemove = function () {
+        var myText = this.innerText;
+        alert(myText);
+    };
+    event7[0].onmouseout = function () {
+        var myText = this.innerText;
+        alert(myText);
+    };
+    event8[0].onmouseover = function () {
+        var myText = this.innerText;
+        alert(myText);
+    };
+    event9[0].onmouseup = function () {
+        var myText = this.innerText;
+        alert(myText);
+    };
+
+    //检测浏览器是否支持以上DOM2级事件（除dbclick、mouseenter和mouseleave之外）
+    var isSupported = document.implementation.hasFeature("MouseEvents", "2.0");
+    console.log(isSupported);
+
+    var EventUtil = {
+        addHandler: function(element, type, handler){
+            if (element.addEventListener){
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent){
+                element.attachEvent("on" + type, handler);
+            } else {
+                element["on" + type] = handler;
+            }
+        },//所有的浏览器都支持addEventListener()，除了 IE 8 及更早 IE 版本，可以用这个attachEvent（）
+
+        removeHandler: function(element, type, handler){
+            if (element.removeEventListener){
+                element.removeEventListener(type, handler, false);
+            } else if (element.detachEvent){
+                element.detachEvent("on" + type, handler);
+            } else {
+                element["on" + type] = null;
+            }
+        },
+        getEvent: function(event){
+            return event ? event : window.event;
+        },
+        getTarget: function(event){
+            return event.target || event.srcElement;
+        },
+        preventDefault: function(event){
+            if (event.preventDefault){
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }
+        }
+
+    };
+
+        EventUtil.addHandler(document, "mousewheel", function(event){
+            event = EventUtil.getEvent(event);
+            alert(event.wheelDelta);
+            console.log("123");
+        });
+
+    var btn = document.getElementById("myBtn");
+    btn.onclick = function(event){
+        alert(event.type);     //"click"
+    };
+    btn.addEventListener("click", function(event){
+        alert(event.type);     //"click"
+        alert(event.currentTarget===btn);//true
+    }, false);
+
+
+    var textbox = document.getElementById("myText");
+    EventUtil.addHandler(textbox, "textInput", function(event){
+        event = EventUtil.getEvent(event);
+        alert(event.data);
+    });
+</script>
+
+<div id="myDiv">
+    <input type="button" value="Click Me" id="myBtn2">
+</div>
+<script type="text/javascript">
+    var btn = document.getElementById("myBtn2");
+    btn.onclick = function(){
+        //先执行某些操作
+        btn.onclick = null;    //移除事件处理程序,减少内存的占用
+        document.getElementById("myDiv").innerHTML = "Processing..."; //麻烦了！
+    };
+
+    var wid = document.getElementsByTagName(window);
+    wid.beforeunload=function(event){
+        var message = "Im really going to miss you if you go.";
+        event.returnValue = message;
+        return message;
+    };
+</script>
+</body>
+</html>

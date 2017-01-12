@@ -1,0 +1,158 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Boss系统</title>
+    <link href="./stylesheets/bootstrap.css" rel="stylesheet" />
+    <link href="./stylesheets/bosStyle.css" rel="stylesheet" />
+    <link  href="./stylesheets/jquery-accordion-menu.css" rel="stylesheet" />
+    <link href="./stylesheets/font-awesome.css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- 头部布局 -->
+<div class="topTitle">
+    <div class="toplogo"><span>BOS系统</span><b></b></div>
+    <a class="topExit" href="#">退出</a>
+</div>
+
+<!-- 左边布局 -->
+<div id="leftWrap" class="leftDiv">
+    <div class="headPortrait">
+        <div class="headPhoto"><img src="/img/photo.png" /></div>
+        <div class="headMess">
+            <span>张三四</span>
+            <b>18813111922</b>
+        </div>
+    </div>
+
+    <div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+        <ul id="demo-list">
+            <li class="active"><a href="#"><i class="fa fa-home"></i>首页 </a></li>
+            <li>
+                <a href="#"><i class="fa fa-glass"></i>部门管理 </a>
+                <ul class="submenu">
+                    <li><a href="#">新增部门</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-file-image-o"></i>员工管理 </a>
+                <!--<span class="jquery-accordion-menu-label"> 12 </span>-->
+                <ul class="submenu">
+                    <li><a href="#">新增员工信息</a></li>
+                    <li><a href="#">开通员工账号</a></li>
+                    <li><a href="#">关闭员工账号</a></li>
+                    <li><a href="#">员工离职</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-cog"></i>权限组管理 </a>
+                <ul class="submenu">
+                    <li><a href="#">新增角色</a></li>
+                    <!--<li><a href="#">开通员工账号</a>-->
+                    <!--<ul class="submenu">-->
+                    <!--<li><a href="#">Graphics </a></li>-->
+                    <!--<li><a href="#">Vectors </a></li>-->
+                    <!--<li><a href="#">Photoshop </a></li>-->
+                    <!--<li><a href="#">Fonts </a></li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 右边布局 -->
+<div class="rightDiv">
+    <div class="rightContent">
+        <div class="conPubTitile clear">
+            <span>工地地址复查</span>
+        </div>
+        <div class="conWrap">
+            <div class="map-top">
+                <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                    <tr class="tr-title">
+                      <td width="20%" bgcolor="#fff8f0"><div align="center" class="base-mes">基本信息</div></td>
+                      <td width="52%" bgcolor="#fff8f0"><div align="center">合同地址</div></td>
+                        <td width="18%" bgcolor="#fff8f0"><div align="center">坐标</div></td>
+                        <td width="12%" bgcolor="#fff8f0"><div align="center">操作</div></td>
+                    </tr>
+                    <tr>
+                        <td width="20%" rowspan="3">
+                            <P class="orange">订单类型</P>
+                            <P id="setMeal">无</P>
+                            <P class="orange" style="margin-top: 20px;">合同号</P>
+                            <P id="contractSn">无</P>
+                      </td>
+                        <td width="52%"><p class="h65" id="old-Address"></p></td>
+                        <td width="18%">
+                            <p>经度：<span id="old-lonId">无</span></p>
+                            <p>纬度：<span id="old-latId">无</span></p>
+                        </td>
+                        <td width="12%" rowspan="3"><div align="center" class="map-commit">确定</div></td>
+                    </tr>
+                    <tr class="tr-title">
+                      <td width="52%" bgcolor="fff8f0"><div align="center">复查地址</div></td>
+                        <td width="18%" bgcolor="fff8f0"><div align="center">复查坐标</div></td>
+                    </tr>
+                    <tr>
+                        <td width="52%" ><p class="h65 fc-address"  id="fcAddress" >请在下方地址中点选，或手动移动坐标</p></td>
+                        <td width="18%">
+                            <p>经度：<span id="lonId">无</span></p>
+                            <p>纬度：<span id="latId">无</span></p>
+                      </td>
+                    </tr>
+			  </table>
+            </div>
+            <div class="map-search">
+                <div class="map-input clear">
+                    <div>请选择省市</div>
+                    <input type="text" id="inputSearch" placeholder="请输入详细地址"/>
+                    <input type="button" id="btnSearch" value="搜索"/>
+                </div>
+                <div class="map-select">
+                    <div class="city-select clear">
+                        <span class="active">省份</span>
+                        <span>城市</span>
+                        <span>区县</span>
+                    </div>
+                    <div class="city">
+                        <ul class="city-list active clear" id="provinceData"></ul>
+                        <ul class="city-list clear" id="cityData"></ul>
+                        <ul class="city-list clear" id="districtData"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-con clear">
+                <ul class="map-con-left" id="r-result">
+<!--
+                    <li>
+                        <h3>百安居(普陀店)</h3>
+                        <p>上海市浦东新区银霄路393号百安居浦东商务大厦5~7层</p>
+                        <p>经度：31.246625</p>
+                        <p>纬度31.246625</p>
+                    </li>-->
+                </ul>
+                <div class="map-con-right" id="rMap"></div>
+            </div>
+            <a href="javascript:;" class="back">返回订单列表</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./javascripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="./javascripts/jquery-accordion-menu.js" type="text/javascript"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=0bpHQGGmnf1TciHIGHqoGaGcY3pnuCj4"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css"/>
+<script src="./javascripts/bossScript.js" type="text/javascript"></script>
+<script>
+    /*var initDataStr='{"response":{"code":0,"data":{"mapResult":{"code":0,"curPage":1,"totalNum":1,"totalPage":1,"pageSize":20,"results":[{"address":"浦东新区","latitude":31.267542,"name":"川沙","longitude":121.685192}]},"project":{"area":"浦东新区","customMobile":"12345","address":"川沙新流的1254弄12号","city":"上海市","customName":"季海文","projectAdminId":6,"province":"上海市","contractSn":"987654321","contractId":4,"shopId":41,"projectId":7,"adjustState":0}},"message":"查询成功"}}';*/
+
+
+var initDataStr='{"response":{"code":0,"data":{"mapResult":{"msg":"百度返回失败，提示信息:Parameter Invalid","code":1},"project":{"area":"","address":"上海市浦东新区羽山路308弄46号602室","setMealStr":"","city":"","projectAdminId":2132,"province":"","contractSn":"1120146363","contractId":7072,"shopId":3,"projectId":74,"adjustState":0}},"message":"查询成功"}}';
+</script>
+</script>
+<script src="./javascripts/bmap.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .footer{position:fixed; left:0; bottom:0; width:100%;}
+        /*.foot{background:#FFF; margin-top:15px;display:flex; cursor:pointer;}*/
+        .foot li{ float:left; height:46px; line-height:46px; position:relative;}
+        .foot li:after{content:"";display:block;height:30px; width:1px; background:#EEE; position:absolute; right:0; top:9px;}
+        .foot a{display:block;background-size:29px !important;}
+        .foot a:nth-of-type(1){ background:url("../img/basis.png") no-repeat 15% center;}
+        .foot a:nth-of-type(2){ background:url("../img/tool.png") no-repeat 15px center;}
+        .foot a:nth-of-type(3){ background:url("../img/history.png") no-repeat 15px center;}
+        .foot a:nth-of-type(1).active,.foot a:nth-of-type(1):hover{ background:url("../img/basis_active.png") no-repeat 15% center;color:#576e9e;}
+        .foot a:nth-of-type(2).active,.foot a:nth-of-type(2):hover{ background:url("../img/tool_active.png") no-repeat 15px center;color:#576e9e;}
+        .foot a:nth-of-type(3).active,.foot a:nth-of-type(3):hover{ background:url("../img/history_active.png") no-repeat 15px center; color:#576e9e;}
+        .foot span{padding-left:35%;}
+    </style>
+</head>
+<body>
+<div class="footer">
+    <ul class="foot clear">
+        <li><a class="active" href="./punishmentDetail.html"><span>基本概况</span></a></li>
+        <li><a href="./rectificationContent.html"><span>整改内容</span></a></li>
+        <li><a href="./historyList.html"><span>历史记录</span></a></li>
+    </ul>
+    <a class="active" href=""><span>基本概况</span></a>
+    <a class="active" href=""><span>基本概况</span></a>
+    <a class="active" href=""><span>基本概况</span></a>
+
+</div>
+<a class="active" href=""><span>基本概况</span></a>
+<a class="active" href=""><span>基本概况</span></a>
+<a class="active" href=""><span>基本概况</span></a>
+</body>
+</html>

@@ -1,0 +1,250 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,form,textarea,p,input{ margin:0; padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+img{ border:none;}
+.clear {zoom:1;}    /*==for IE6/7 Maxthon2==*/
+.clear:after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
+body{font-family:Microsoft YaHei;}
+ul {list-style:none;}
+a:hover{text-decoration:none;}
+.fa-home{background:url("http://res.bnq.com.cn/img/dms/list_03.png") 10px center no-repeat;height: 22px;}
+.fa-glass{background:url("http://res.bnq.com.cn/img/dms/list_06.png") 10px center no-repeat;height: 22px;}
+.fa-file-image-o{background:url("http://res.bnq.com.cn/img/dms/list_08.png") 10px center no-repeat;height: 22px;}
+.fa-cog{background:url("http://res.bnq.com.cn/img/dms/list_13.png") 10px center no-repeat;height: 22px;}
+.leftDiv {
+    width:250px;
+    background:#2e4050;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    height:100%;
+}
+.headPortrait {
+    width:250px;
+    height:142px;
+    background:#243745;
+    position:relative;
+}
+.headPhoto {
+    width:88px;
+    height:88px;
+    border-radius:88px;
+    overflow:hidden;
+    box-shadow:1px 1px 30px rgba(27,37,44,1);
+    position:absolute;
+    left:30px;
+    top:27px;
+    z-index:1;
+    transition:all .5s;
+}
+.headPhoto > img {
+    width:100%;
+    height:100%;
+}
+.headMess {
+    width:116px;
+    text-align:right;
+    position:absolute;
+    top:70px;
+    right:35px;
+    z-index:2;
+    color:#fff;
+}
+.headMess > span {
+    display:block;
+    font-size:20px;
+    height:24px;
+    margin-bottom:6px;
+    font-family:Microsoft YaHei;
+}
+.headMess > b {
+    display:block;
+    font-weight:normal;
+    font-size:14px;
+}
+.headPortrait:hover > .headPhoto {
+    transform:scale(1.1);
+}
+
+.topTitle {
+    width:100%;
+    height:70px;
+    padding-left:290px;
+    border-bottom:1px solid #cdd7dc;
+    position:fixed;
+    z-index:999;
+    background:#fff;
+    box-shadow:0px 4px 10px rgba(64,65,66,0.07);
+}
+.toplogo {
+    height:44px;
+    line-height:44px;
+    font-size:24px;
+    color:#999999;
+    font-family:Microsoft YaHei;
+    text-indent:55px;
+    background:url(http://res.bnq.com.cn/img/dms/logo.png) no-repeat;
+    margin-top:12px;
+    float:left;
+}
+.toplogo > b {
+    font-weight:normal;
+    margin-left:10px;
+}
+.topExit {
+    display:block;
+    float:right;
+    width:64px;
+    height:24px;
+    text-indent:29px;
+    font-size:16px;
+    line-height:21px;
+    font-family:Microsoft YaHei;
+    color:#999;
+    background:url(http://res.bnq.com.cn/img/dms/exit.png) no-repeat;
+    background-position:0px 3px;
+    margin-right:65px;
+    margin-top:23px;
+
+    transition:background-position 500ms , text-indent 300ms;
+    -webkit-transition:background-position 500ms , text-indent 300ms;
+    -moz-transition:background-position 500ms , text-indent 300ms;
+    -o-transition:background-position 500ms , text-indent 300ms;
+}
+.topExit:hover {
+    text-decoration:none;
+    color:#f08200;
+    background:url(http://res.bnq.com.cn/img/dms/exit.png) no-repeat;
+    background-position:4px 3px;
+    text-indent:27px;
+}
+
+
+
+.rightDiv {
+    width:100%;
+    background:#f3f3f3;
+    padding-left:260px;
+    padding-top:86px;
+    padding-right:10px;
+}
+.rightContent {
+    width:100%;
+    min-height:893px;
+    border-top:3px solid #e6eaec;
+    background:#fff;
+}
+.conPubTitile {
+    display:block;
+    width:100%;
+    height:56px;
+    line-height:56px;
+    font-size:16px;
+    color:#666;
+    text-indent:40px;
+    border-bottom:1px solid #f3f3f3;
+    position:relative;
+}
+.conWrap {
+    width:100%;
+    padding-right:40px;
+    padding-left:40px;
+    padding-top:20px;
+
+}
+
+/*********************地址复查list*********************************************/
+input:focus {outline: none;}
+.search{ float:right; border-radius:50px; border:1px #DDD solid; width:300px;height:35px; padding:0 10px; margin:10px; font-size:12px;}
+.search input.search-input{ border:none;height:33px; float:left; background:none; width:220px; padding-left:10px;}
+.search input.search-button{background:none; border:none; float:left; border-left:1px solid #DDD; height:33px;}
+.search input.search-button:hover{color:#FF950C;}
+.fc-title{border-bottom:2px #FF950C solid;}
+.fc-title > p {display:inline-block; height:36px; line-height:36px; text-align:center;width:117px; margin:0; float:left;cursor:pointer;}
+.fc-title > p.active{background:#FF950C ; color:#FFF; }
+.fc-list{ border:1px solid #DDD; width:100%; height:569px;overflow: hidden;}
+.fc-list-title{color:#32323E;}
+.fc-list-title li{ float:left; border-left:solid #DDD 1px; border-bottom:solid #DDD 1px; height:40px; line-height:40px; text-align:center; overflow:hidden;}
+.fc-list-title li:nth-of-type(1){width:17%;border-left:none;}
+.fc-list-title li:nth-of-type(2){width:28%;}
+.fc-list-title li:nth-of-type(3){width:28%;}
+.fc-list-title li:nth-of-type(4){width:16%;}
+.fc-list-title li:nth-of-type(5){width:11%;}
+.fc-list-con{color:#A4A4A7; transition: all .3s;}
+.fc-list-con li{ height:66px; line-height:66px; padding:8px 15px;  text-align:left;}
+.fc-list-con li p{ line-height:25px;}
+.fc-list-con li:nth-of-type(5){ line-height:50px; text-align:center;}
+.fc-list-con li:nth-of-type(5) a{ display:block; padding-left:10px; background:url("../images/pan.png") left center no-repeat; color:#FF950C; }
+.fc-list-con:hover{background:#6DD36A; color:#FFF;}
+.fc-list-con:hover li a{color:#FFF; background-image:url("http://res.bnq.com.cn/img/dms/pan_hover.png")}
+
+.page{margin-top:20px;}
+.page-list{ float:right;}
+.page-list>div{ float:left; margin:15px 10px; line-height:20px;height:20px;box-sizing:content-box; color:#999999;}
+.page-list .prev,.page-list .next{ border: 1px solid #FF950C; border-radius:3px; padding:2px 15px;color:#FF950C; cursor:pointer;}
+.page-list .prev:hover,.page-list .next:hover{background:#ffe8cc;}
+.select-page input,.select-page-btn{width:40px; height:25px; border:1px #ddd solid; border-radius:3px; text-align:center; }
+.select-page-btn{padding:2px 4px; transition: all .3s;cursor:pointer; }
+.select-page-btn:hover{border:1px #FF950C solid; color:#FF950C;}
+
+
+/*********************地址复查map*********************************************/
+textarea:focus {outline: none;}
+.map-top table{border-top:2px #FF950C solid;}
+.orange{color:#FF950C !important;}
+.map-top td{ border:1px solid #DDD; padding:8px 15px; box-sizing:border-box;}
+.tr-title{ height:30px;}
+.map-top p{ line-height:28px;color:#a4a4a7;}
+.map-commit{ width:90%;min-width: 50px; height:35px; line-height:35px; background:#cacaca; color:#FFF;border-radius:5px;cursor:pointer;}
+.map-commit.active{ background:#FF950C;}
+.h65{height:60px; overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.base-mes{ background:url("http://res.bnq.com.cn/img/dms/msg_03.png") left center no-repeat; padding-left:30px; text-align:left}
+.fc-address{width:100%;height:100%;color: #DDD !important;}
+
+.map-search{margin:20px 0 5px 0; position:relative;}
+.map-input { height:45px; line-height:45px; border:1px solid #DDD;border-radius:5px; margin:5px 0;}
+.map-input div{width:25.5%;height:43px; text-align:center;border-right:1px solid #DDD; padding:0 35px 0 8px; background:url("http://res.bnq.com.cn/img/dms/sj_11.png") 90% center no-repeat;overflow: hidden; white-space: nowrap;text-overflow: ellipsis; cursor:pointer;}
+.map-input div.warning{border: 1px solid #FF950C;}
+.map-input input{height:43px; line-height:43px;}
+.map-input input[type='text']{width:55.5%; border:none; padding-left:20px;}
+.map-input input[type='button']{width:19%; border:1px solid #FF950C;background:#ffe8cc;color:#FF950C; border-bottom-right-radius:5px;border-top-right-radius:5px;}
+.map-input>*{ float:left;}
+.map-select{ border:1px solid #DDD;width:467px;display:none; position:absolute; top:50px; left:0; z-index:10; background:#FFF;}
+.city-select span{display:inline-block; text-align:center;border-right:1px solid #DDD;border-bottom:1px solid #DDD; height:45px; line-height:45px; width:155px; float:left;cursor:pointer;}
+.city-select span:last-child{border-right:none;}
+.city-select span.active{ border-bottom:none;color:#FF950C;}
+.city-list{ padding:15px; display:none}
+.city-list.active{display:block;}
+.city-list li{ padding:3px 10px; margin:8px 19px; float:left; }
+.city-list li:hover{ background:#ffe8cc; border-radius:5px; color:#FF950C}
+.city-list li.active{background:#FF950C; border-radius:5px; color:#FFF}
+.city li{cursor:pointer;}
+
+.map-con-left{ width:25.5%; border:1px #DDD solid; height:500px; float:left; overflow-y:auto;}
+.map-con-right{ width:74.5%; border:1px #DDD solid; height:500px;float:right;}
+
+.alert-bg,.alert-success{ position:absolute;top:0; bottom:0; left:0; right:0;margin:auto;height:100%;width:100%;background:rgba(0,0,0,0.5); z-index:99999;}
+.alert-message{width:370px; height:170px; position:absolute;top:0; bottom:0; left:0; right:0;margin:auto;background:#FFF; border-radius:5px; text-align:center;box-sizing:border-box; padding:30px;}
+.alert-message h3{ font-size:14px;}
+.alert-message p{font-size:25px;margin:10px 0 20px 0;}
+.alert-message span{display:inline-block;*display:block; background:#FF950C; border-radius:5px; color:#FFF; padding:6px 40px;}
+
+.null-search{width:100%;height:100%; background:url("http://res.bnq.com.cn/img/dms/nullsearch_03.png") center no-repeat;}
+.null-data{width:100%;height:100%; background:url("http://res.bnq.com.cn/img/dms/nulldata_03.png") center no-repeat;}
+
+.map-con-left li{ padding:5px 35px; background:url("http://res.bnq.com.cn/img/dms/map_blue.png") 10px 15px no-repeat;cursor:pointer}
+.map-con-left li.active{background:#f6f6f6 url("http://res.bnq.com.cn/img/dms/map_red.png") 10px 15px no-repeat;}
+.map-con-left li:hover{background-color:#f6f6f6;}
+.map-con-left li.no-res{background:none;}
+.map-con-left li.no-res p.no-res-t{font-weight:bold; font-size:14px; padding:15px 0;}
+.map-con-left li.no-res p{ font-size:12px; line-height:22px;}
+.map-con-left h3{font-size:14px; color:#2b81ff; line-height:30px;}
+.map-con-left p{ line-height:25px;}
+.map-con-left p:nth-of-type(1){ padding-bottom:10px;}
+.fc-success{ position:absolute;top:0; bottom:0; left:0; right:0;margin:auto; width:400px; height:185px; background:url('http://res.bnq.com.cn/img/dms/cgtc_03.png') center no-repeat;}
+.fc-success-close{position:absolute; right:0;top:0;width:50px; height:50px; cursor:pointer;}
+.back{ float:right;color:#333}
+.back:hover{color:#FF950C;}
+.all{color:#FF950C;}
+#confirm{ cursor:pointer;}
+

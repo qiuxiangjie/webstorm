@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>无标题文档</title>
+    <script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery.js"></script>
+    <style>
+        .Tab {
+            width: 200px;
+        }
+
+        .tab {
+            height: auto;
+        }
+
+        .til {
+            cursor: pointer;
+        }
+
+        .con {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="Tab">
+    <div class="tab">
+        <div class="til">+</div>
+        <div class="con">内内容内容内</div>
+    </div>
+
+    <div class="tab">
+        <div class="til">+</div>
+        <div class="con">内内容内容内容内容内容内容内容内容内容内容内容内容内容内容内</div>
+    </div>
+
+    <div class="tab">
+        <div class="til">+</div>
+        <div class="con">内内容内容内容内容内容内容内容内容内容内容内容内容内容内容内</div>
+    </div>
+
+    <div class="tab">
+        <div class="til">+</div>
+        <div class="con">内内容内容内容内容内容内容内容内容内容内容内容内容内容内容内</div>
+    </div>
+    
+    <div class="tab">
+        <div class="til">+</div>
+        <div class="con">内内容内容内容内容内容内容内容内容内容内容内容内容内容内容内</div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+       /* $(".tab .til").click(function () {
+            //$(".tab .con").slideUp(300);
+            //$(this).next(".con").slideDown(300);
+
+            //$(".tab .con").slideUp(300);
+            $(this).next(".con").slideToggle(300).parent(".tab").siblings().find(".con").slideUp(300);
+
+
+           $(".tab .til").text("+");
+
+
+
+        });
+        */
+
+        $(".tab .til").toggle(
+                function(){
+                    $(this).next(".con").slideDown(300).parent(".tab").siblings().find(".con").slideUp(300);
+                    $(".til").text("+");
+                    $(this).text("-");
+                },
+                function(){
+                    $(this).next(".con").slideUp(300);
+                    $(this).text("+");
+                }
+        );
+    })
+</script>
+</body>
+</html>

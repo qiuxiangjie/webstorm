@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #myDiv {
+            width: 60px;
+            height:60px;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">点我</div>
+    <div id="myDiv"></div>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div>
+        <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69" />
+    </div>
+    <div style="background: red; width: 100px; height: 40px;">
+    </div>
+
+
+</body>
+<script>
+
+    (function() {
+        console.log(1);
+//        this.bbbbbb = 2
+    }())
+
+
+
+    var myDiv = document.getElementById('myDiv');
+    myDiv.onmousedown = function () {
+        document.onmousemove = function (event) {
+            myDiv.style.left = event.clientX - 30 + 'px';
+            myDiv.style.top = event.clientY - 30 + 'px';
+            myDiv.innerHTML = event.clientX + '=' + event.clientY
+        }
+    };
+    myDiv.onmouseup = function () {
+        document.onmousemove = null
+    }
+
+
+
+    function allowDrop(ev)
+    {
+        ev.preventDefault();
+    }
+
+    function drag(ev)
+    {
+        ev.dataTransfer.setData("Text",ev.target.id);
+    }
+
+    function drop(ev)
+    {
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+
+    var test = document.getElementById('test');
+    test.onclick = doSomething;
+    test.onclick = function () {doSomething()};
+    //doSomething();
+    function doSomething () {
+        alert(this)
+    }
+
+    var test1 = (function(a) {
+        this.a = a;
+        return function(b) {
+            return this.a + b;
+        }
+    } (1));
+
+    console.log(test1(4))
+</script>
+</html>

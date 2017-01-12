@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>123</title>
+    <style>
+        #d0 ul {
+            text-align: left;
+        }
+        #d0 li a {
+            line-height: 2em;
+            padding-left: 1.5em;
+            background: #F7F7F7;
+            display: block;
+            margin-bottom: 1px;
+        }
+
+        #d0 {
+            overflow: hidden;
+            width: 390px;
+            height: 150px;
+            background: #FFF;
+            margin: 5px;
+            float: left;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div id="d0">
+        <ul id="d1">
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+            <li>文字文字文字文字文字文字文字文字文字文字</li>
+        </ul>
+        <ul id="d2"></ul>
+    </div>
+    <div id="arguments" onclick="sayHi('参数一','参数二')">
+        点击：函数的参数是一个数组arguments[]
+    </div>
+    <script>
+        var d0=document.getElementById("d0"),
+            d1=document.getElementById("d1"),
+            d2=document.getElementById("d2");
+            d2.innerHTML=d1.innerHTML;
+        function ddd(){
+            if(d1.offsetHeight<=d0.scrollTop){
+                d0.scrollTop-=d1.offsetHeight;
+                console.log(d1.offsetHeight);
+            }
+            d0.scrollTop++;
+        }
+
+        var aa1= setInterval(ddd, 40);
+        d0.onmouseover=function(){clearInterval(aa1)};
+        d0.onmouseout=function(){aa1=setInterval(ddd, 40);};//如果这里写成{setInterval(ddd,40)}，滚动速度回越来越快！
+        /*
+        for(var aMy in window){
+            document.write(aMy+"<br/>");//for……in
+        }
+        */
+
+
+        function sayHi() {
+            alert("Hello " + arguments[0] + "," + arguments[1]);
+        }//无参数函数
+
+
+
+    </script>
+</body>
+</html>

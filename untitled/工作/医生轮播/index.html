@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>医生滚动</title>
+    <link rel="stylesheet" href="css/CarouselXG.css"/>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/CarouselXG.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="carousel">
+        <ul>
+            <li>
+                <img src="images/wkzj_03.jpg">
+                <dl>
+                    <dd>
+                        <h3>王丰功</h3>
+                        <p>主任医师</p>
+                    </dd>
+                    <dt><a href="#">咨询专家</a></dt>
+                </dl>
+            </li>
+            <li>
+                <img src="images/wkzj_05.jpg">
+                <dl>
+                    <dd>
+                        <h3>宋冠平</h3>
+                        <p>主治医师</p>
+                    </dd>
+                    <dt><a href="#">咨询专家</a></dt>
+                </dl>
+            </li>
+            <li>
+                <img src="images/wkzj_07.jpg">
+                <dl>
+                    <dd>
+                        <h3>林擎天</h3>
+                        <p>主治医师</p>
+                    </dd>
+                    <dt><a href="#">咨询专家</a></dt>
+                </dl>
+            </li>
+            <li>
+                <img src="images/wkzj_09.jpg">
+                <dl>
+                    <dd>
+                        <h3>常德林</h3>
+                        <p>主治医师</p>
+                    </dd>
+                    <dt><a href="#">咨询专家</a></dt>
+                </dl>
+            </li>
+            <li>
+                <img src="images/wkzj_11.jpg">
+                <dl>
+                    <dd>
+                        <h3>马学民</h3>
+                        <p>主治医师</p>
+                    </dd>
+                    <dt><a href="#">咨询专家</a></dt>
+                </dl>
+            </li>
+            <li>
+                <img src="images/wkzj_13.jpg">
+                <dl>
+                    <dd>
+                        <h3>陈小华</h3>
+                        <p>主治医师</p>
+                    </dd>
+                    <dt><a href="#">咨询专家</a></dt>
+                </dl>
+            </li>
+        </ul>
+        <div class="jz-til"><p>推荐专家EXPERTS RECOMMEND</p></div>
+        <div class="prev-btn"><img src="images/expert-prev.png"></div>
+        <div class="next-btn"><img src="images/expert-next.png"></div>
+    </div>
+
+    <script>
+        $(function () {
+           //var sb = new CarouselXG($(".Carousel"));
+            CarouselXG.init($(".carousel"));
+        })
+    </script>
+</body>
+</html>

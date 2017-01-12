@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+    <script>
+        window.onload = function(){
+            var aLi = document.getElementsByTagName('li');
+            for (var i=0;i<aLi.length;i++){
+                aLi[i].onclick = function(){        //当点击时for循环已经结束,需要用闭包重写
+                    alert(i);
+                };
+            }
+        }
+    </script>
+
+</head>
+<body>
+<ul>
+    <li>123</li>
+    <li>456</li>
+    <li>789</li>
+    <li>010</li>
+</ul>
+</body>
+</html>

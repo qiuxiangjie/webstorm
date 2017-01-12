@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script language="javascript">
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+/*    var dom1 = function(){
+        var Name = "Default";
+        this.Sex = "Boy";
+        this.success = function(){
+            alert("Success");
+        };
+    };
+
+    console.log(dom1.Name); //undefined
+    console.log(dom1.Sex);  //undefined
+    dom1.success();         //undefined
+    //    大家先看看，会显示什么呢？ 答案是两个都显示Undefined,为什么呢？这是由于在Javascript中每个function都会形成一个作用域，而这些变量声明在函数中，所以就
+    //    处于这个函数的作用域中，外部是无法访问的。要想访问变量，就必须new一个实例出来。
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
+    //定义一个空类
+    function HelloClass(){
+    }
+    //对类的prototype对象进行修改，增加方法method
+    HelloClass.prototype.method=function(){
+        alert("prototype测试");
+    };
+    var obj=new HelloClass(); //创建类HelloClass的实例
+    console.log(obj.method()); //调用obj的method方法*/
+
+
+<!--***************prototype继承*************************************-->
+/*
+    function HelloClass1(){
+//构造方法
+     }
+    function HelloSubClass(){
+//构造方法
+    }
+    HelloSubClass.prototype=HelloClass.prototype;
+    HelloSubClass.prototype.Propertys="name";
+    HelloSubClass.prototype.subMethods=function(){
+        alert("in Methods");//方法实现代码
+    };
+    var obj2=new HelloSubClass();
+        obj2.subMethods();
+*/
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*    var dom = function(){};
+
+    dom.Show = function(){
+        alert("Show Message");
+    };
+
+    dom.prototype.Display = function(){
+        alert("Property Message");
+    };
+
+    dom.Display(); //error
+    dom.Show();
+    var d = new dom();
+    d.Display();
+    d.Show(); //error*/
+
+    //        我们首先声明一个变量，将一个函数赋给他，因为在Javascript中每个函数都有一个Portotype属性，而对象没有。添加两个方法，分别直接添加和添加打破Prototype上面，来看下调用情况。分析结果如下：
+    //
+    //        1、不使用prototype属性定义的对象方法，是静态方法，只能直接用类名进行调用！另外，此静态方法中无法使用this变量来调用对象其他的属性！
+    //        2、使用prototype属性定义的对象方法，是非静态方法，只有在实例化后才能使用！其方法内部可以this来引用对象自身中的其他属性！
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    var html = {};
+    html.Name = 'Object';
+    html.Success = function() {
+        this.Say = function () {
+            alert("Hello,world");
+        };
+    };
+    console.log(html.Name);//能访问对象每部的属性
+    //console.log(html.Say());//不能访问函数内部的变量
+    var sb2 = new html.Success();
+    sb2.Say();
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,th,td {padding:0;margin:0;-webkit-text-size-adjust:none;}
+body{font-family:"Microsoft Yahei", Arial, Helvetica, sans-serif; color:#595959;font-size:12px; overflow-x:hidden}
+img{border:none;}
+ul,li{list-style: none}
+a{text-decoration:none;color:#000;}
+.clear{zoom:1;}    /*==for IE6/7 Maxthon2==*/
+.clear:after{clear:both;content:'';display:block;width: 0;height: 0;visibility:hidden;}   /*==for FF/chrome/opera/IE8==*/
+.carousel{position:relative;}
+.carousel ul{position:relative;}
+.carousel li{ color:#FFF;text-align:center; position:absolute;font-size:16px;}
+.carousel li img{display:block;border-top:1px #DDD solid;border-left:1px #DDD solid;}
+.carousel li:last-child img{border-right:1px #DDD solid;}
+.carousel li dl{}
+.carousel li dd {float:left;width:106px;height:50px; padding:10px 0;background:#006db8;  }
+.carousel li dd h3{ font-size:22px;}
+.carousel li dt{ background:#005895; float:left; width:40px; height:46px;padding:12px 12px;}
+.carousel li dt a{ color:#FFF;}
+.prev-btn{ position:absolute;left:0;top:0;width:50%; height:80%;cursor:pointer;z-index:99;}
+.prev-btn img{position:absolute;left:50px; top:0; bottom:0; margin:auto;opacity:0; transition:all .5s;}
+.prev-btn:hover img{ opacity:1;left:10px;}
+.next-btn{ position:absolute;right:0;top:0;width:50%; height:80%;cursor:pointer;z-index:99;}
+.next-btn img{position:absolute;right:50px; top:0; bottom:0; margin:auto;opacity:0; transition:all .5s;}
+.next-btn:hover img{ opacity:1;right:10px;}
+.jz-til{ background:rgba(0,109,184,0.5); text-align:center;height:80px;width:100%;color:#FFF;font-size:45px; font-weight:bold; line-height:80px;position:absolute;left:0;bottom:70px;z-index:80;}

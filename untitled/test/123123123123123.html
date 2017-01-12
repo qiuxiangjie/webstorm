@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<input type="text" value="" placeholder="20位以内数字字母或汉字"/>
+</body>
+<script>
+    var test = (function(a) {
+        this.a = a;
+        return function(b) {
+            return this.a + b;
+        }
+    } (function(a, b) {
+        return a;
+    }(1, 2))
+    );
+    console.log(test(4))
+</script>
+</html>

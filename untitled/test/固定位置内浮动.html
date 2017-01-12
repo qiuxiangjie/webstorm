@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定位置内浮动</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+</head>
+<style>
+    .min{ width: 100%;  }
+    .min div{ width: 100%; height: 800px;}
+    .d1{ background:#FF0033;}
+    .d2{ background:#333333;position:relative;}
+    .d3{ background:#FF9900;}
+    .fixed{ width: 200px !important; height: 200px !important; background: yellow; position: absolute; top:0;right:0; }
+</style>
+<body>
+<div class="min">
+    <div class="d1"></div>
+    <div class="d2">
+        <div class="fixed"></div>
+    </div>
+    <div class="d3"></div>
+
+</div>
+</body>
+<script>
+    $(function(){
+        var getFixed = $(".fixed").offset().top;
+        $(window).scroll(function(){
+            var myTop = getFixed - $(window).scrollTop();
+            console.log(myTop);
+        })
+    })
+</script>
+</html>
