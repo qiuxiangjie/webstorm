@@ -362,6 +362,41 @@
             }(i)
         }*/
 ///////////////////////////////////////////////////////////////////////////////////////
+
+        function showMoney( ) {
+            return this.money
+        }
+
+        var personA = {};
+        var personB = {};
+
+        personA.money= "100";
+        personB.money= "150";
+        var person = {
+            money : '00',
+            fun: showMoney
+        };
+
+        personA.showMoney= showMoney;
+        personB.showMoney= showMoney;
+
+
+
+        console.log(personA.showMoney( )); //"100"
+        console.log(personB.showMoney( )); //"150"
+        console.log(person.fun());
+        console.log(showMoney())
+
+
+
+        function sum () {
+            var arg = arguments;
+            var eq = 0;
+            for (var a in arg) {
+                eq += parseInt(arg[a]) ? parseInt(arg[a]) : 0
+            }
+            return eq
+        }
     </script>
 </body>
 </html>
