@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head id="Head1" runat="server">
+    <title></title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#upload').click(function () {
+                $.ajax({
+                    url: 'http://192.168.251.16:8080/dms_bos/wms/so/upload.do',
+                    type: 'POST',
+                    cache: false,
+                    data: new FormData($('#uploadForm')[0]),
+                    processData: false,
+                    contentType: false
+                }).done(function(res) {
+                }).fail(function(res) {});
+            })
+        })
+    </script>
+</head>
+<body>
+<form id="uploadForm" enctype="multipart/form-data">
+    <input id="file" type="file" name="file"/>
+    <button id="upload" type="button">upload</button>
+</form>
+</body>
+</html>

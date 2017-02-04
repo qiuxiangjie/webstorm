@@ -33,9 +33,12 @@ h2{ color:#FFF; font-size:16px; line-height:30px;}
 .box1 li:after,.box1 li:before{clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
 .box1 li>p:nth-of-type(1){ float:left;}
 .box1 li>p:nth-of-type(2){ float:right;}
-.box1>li:nth-of-type(4)>p,.box1>li:nth-of-type(3)>p:first-child,.box1>li:nth-of-type(2)>p:first-child{ line-height:25px;margin: 10px 0;}
+.box1>li:nth-of-type(5)>p,.box1>li:nth-of-type(4)>p:first-child,.box1>li:nth-of-type(3)>p:first-child{ line-height:25px;margin: 10px 0;}
 .box1 span{ font-size:16px; color:#333;}
-.box1>li:nth-of-type(6),.box1 li:nth-of-type(7){ border:none !important;}
+.box1>li:nth-of-type(8),.box1 li:nth-of-type(9){ border:none !important;}
+.stick-check{ background: url("../img/head_portrait1.png") no-repeat left center; background-size: 30px; line-height: 45px;}
+.stick-check p{ padding-left: 40px; line-height: 45px; color:#6f73ca }
+
 .date-til{ background:url("../img/tool_bg.png") no-repeat center; height:60px !important; border-bottom:1px solid #eee !important; box-sizing:border-box; padding:10px 0; background-size:120px;margin-bottom: 5px;}
 .date-til div{text-align:center; padding:0 10px;}
 .date-til p{line-height:21px;}

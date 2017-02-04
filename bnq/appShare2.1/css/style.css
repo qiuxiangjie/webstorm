@@ -352,6 +352,9 @@ a:hover, a:focus {color: #333; text-decoration: none;}
 	margin-top:1em;
 }
 
+.stick-check{ background: url("../img/head_portrait1.png") no-repeat 10px center; background-size: 30px; line-height: 45px;}
+.stick-check p{ padding-left: 48px; line-height: 45px; color:#6f73ca }
+
 @media screen and(max-width:350px){
 	.time{background-size: 130px;}
 }

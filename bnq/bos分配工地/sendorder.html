@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Boss系统</title>
+    <link href="./stylesheets/bootstrap.css" rel="stylesheet" />
+    <link href="./stylesheets/bosStyle.css" rel="stylesheet" />
+    <link  href="./stylesheets/jquery-accordion-menu.css" rel="stylesheet" />
+    <link href="./stylesheets/font-awesome.css" rel="stylesheet" />
+    <link href="./stylesheets/sendlist.css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- 头部布局 -->
+<div class="topTitle">
+    <div class="toplogo"><span>BOS系统</span><b></b></div>
+    <a class="topExit" href="#">退出</a>
+</div>
+
+<!-- 左边布局 -->
+<div id="leftWrap" class="leftDiv">
+    <div class="headPortrait">
+        <div class="headPhoto"><img src="/img/photo.png" /></div>
+        <div class="headMess">
+            <span>张三四</span>
+            <b>18813111922</b>
+        </div>
+    </div>
+
+    <div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+        <ul id="demo-list">
+            <li class="active"><a href="#"><i class="fa fa-home"></i>首页 </a></li>
+            <li>
+                <a href="#"><i class="fa fa-glass"></i>部门管理 </a>
+                <ul class="submenu">
+                    <li><a href="#">新增部门</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-file-image-o"></i>员工管理 </a>
+                <!--<span class="jquery-accordion-menu-label"> 12 </span>-->
+                <ul class="submenu">
+                    <li><a href="#">新增员工信息</a></li>
+                    <li><a href="#">开通员工账号</a></li>
+                    <li><a href="#">关闭员工账号</a></li>
+                    <li><a href="#">员工离职</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-cog"></i>权限组管理 </a>
+                <ul class="submenu">
+                    <li><a href="#">新增角色</a></li>
+                    <!--<li><a href="#">开通员工账号</a>-->
+                    <!--<ul class="submenu">-->
+                    <!--<li><a href="#">Graphics </a></li>-->
+                    <!--<li><a href="#">Vectors </a></li>-->
+                    <!--<li><a href="#">Photoshop </a></li>-->
+                    <!--<li><a href="#">Fonts </a></li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 右边布局 -->
+<div class="rightDiv">
+    <div class="rightContent">
+        <div class="conPubTitile clear">
+            <span>本周派单／下周派单</span>
+        </div>
+        <div class="conWrap">
+            <div class="send-order-main">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="./javascripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="./javascripts/jquery-accordion-menu.js" type="text/javascript"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./javascripts/bossScript.js" type="text/javascript"></script>
+<script src="./javascripts/sendlist.js" type="text/javascript"></script>
+</html>

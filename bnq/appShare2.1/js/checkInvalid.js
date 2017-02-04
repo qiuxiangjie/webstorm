@@ -139,6 +139,12 @@
     } else {
       $('#proAdminName').text(data.projAdminName);
     }
+    //铁面二人组
+    if(!isNotNull(data.projAdminName)){
+      $('#stickAdminName').parent().remove();
+    } else {
+      $('#stickAdminName').text(data.projAdminName);
+    }
 
     if (data.isValid === 1) {
       $("#quality").text(data.qualityScore + "分");
@@ -334,12 +340,10 @@
 
 
       //巡检日志
-      if (data.note == "undefined" || data.note === null){
-        $("#inspectionRizhi").text("");
-      } else {
-        var rizhiplayDom = data.note;
-        $("#inspectionRizhi").text(rizhiplayDom);
-      }
+        $("#inspectionRizhi").text(isNotNull(data.note) ? data.note : '暂无' );
+      //业主回访
+      $("#ownerCallback").text(isNotNull(data.note) ? data.note : '暂无' );
+
 
       //图片路径等
 /*      if(data.lastSubmitTrack.trackPicList.length > 0) {

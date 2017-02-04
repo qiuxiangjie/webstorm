@@ -1,0 +1,22 @@
+.pd-title{border-bottom:2px #FF950C solid;}
+.pd-title > p {display:inline-block; height:36px; line-height:36px; text-align:center;width:117px; margin:0; float:left;cursor:pointer;}
+.pd-title > p.active{background:#FF950C ; color:#FFF; }
+.pd-list{ border:1px solid #DDD; width:100%; height:496px;overflow: hidden; margin-top: 20px;}
+.pd-list-title{color:#32323E;}
+.pd-list-title li{ float:left; border-left:solid #DDD 1px; border-bottom:solid #DDD 1px; height:45px; line-height:45px; text-align:center; overflow:hidden;}
+.pd-list-title li:nth-of-type(1){width:15%;border-left:none;}
+.pd-list-title li:nth-of-type(2){width:11%;}
+.pd-list-title li:nth-of-type(3){width:12%;}
+.pd-list-title li:nth-of-type(4){width:12%;}
+.pd-list-title li:nth-of-type(5){width:25%;}
+.pd-list-title li:nth-of-type(6){width:25%;}
+.pd-list-con{color:#A4A4A7; transition: all .3s;}
+.pd-list-con li{ height:45px; line-height:45px; padding:8px 15px;  text-align:left;}
+.pd-list-con li p{ line-height:25px; text-align: center;}
+.pd-list-con li:nth-of-type(6){ line-height:25px; padding: 2px}
+.pd-list-con li:nth-of-type(6) p{line-height: 20px;}
+.pd-list-con li a{color: #FF950C}
+.pd-list-con li a:hover{text-decoration: underline;}
+.pd-list-con:hover{background: #EEE;}
+
+.send-order-main {}

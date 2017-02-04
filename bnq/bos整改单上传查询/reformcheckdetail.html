@@ -1,0 +1,163 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Boss系统</title>
+    <link href="./stylesheets/bootstrap.css" rel="stylesheet" />
+    <link href="./stylesheets/bosStyle.css" rel="stylesheet" />
+    <link  href="./stylesheets/jquery-accordion-menu.css" rel="stylesheet" />
+    <link href="./stylesheets/font-awesome.css" rel="stylesheet" />
+    <link href="./stylesheets/reformcheck.css" rel="stylesheet" />
+    <link href="./stylesheets/datepicker_default.css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- 头部布局 -->
+<div class="topTitle">
+    <div class="toplogo"><span>BOS系统</span><b></b></div>
+    <a class="topExit" href="#">退出</a>
+</div>
+
+<!-- 左边布局 -->
+<div id="leftWrap" class="leftDiv">
+    <div class="headPortrait">
+        <div class="headPhoto"><img src="/img/photo.png" /></div>
+        <div class="headMess">
+            <span>张三四</span>
+            <b>18813111922</b>
+        </div>
+    </div>
+
+    <div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+        <ul id="demo-list">
+            <li class="active"><a href="#"><i class="fa fa-home"></i>首页 </a></li>
+            <li>
+                <a href="#"><i class="fa fa-glass"></i>部门管理 </a>
+                <ul class="submenu">
+                    <li><a href="#">新增部门</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-file-image-o"></i>员工管理 </a>
+                <!--<span class="jquery-accordion-menu-label"> 12 </span>-->
+                <ul class="submenu">
+                    <li><a href="#">新增员工信息</a></li>
+                    <li><a href="#">开通员工账号</a></li>
+                    <li><a href="#">关闭员工账号</a></li>
+                    <li><a href="#">员工离职</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-cog"></i>权限组管理 </a>
+                <ul class="submenu">
+                    <li><a href="#">新增角色</a></li>
+                    <!--<li><a href="#">开通员工账号</a>-->
+                    <!--<ul class="submenu">-->
+                    <!--<li><a href="#">Graphics </a></li>-->
+                    <!--<li><a href="#">Vectors </a></li>-->
+                    <!--<li><a href="#">Photoshop </a></li>-->
+                    <!--<li><a href="#">Fonts </a></li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 右边布局 -->
+<div class="rightDiv">
+    <div class="rightContent">
+        <div class="conPubTitile clear">
+            <span>整合单详情</span>
+        </div>
+        <div class="conWrap">
+            <div class="zhd-detail">
+                <div class="box">
+                    <h2>基本信息</h2>
+                    <ul>
+                        <li><p><span>整合单号：</span><span id="integrationBillNumber">暂无</span></p></li>
+                        <li><p><span>交货单号：</span><span id="deliveryBillNumbers">暂无</span></p></li>
+                        <li><p><span>上传人员姓名：</span><span id="uploadPersonName">暂无</span></p></li>
+                        <li><p><span>上传人员工号：</span><span id="uploadPersonBadgeNumber">暂无</span></p></li>
+                        <li><p><span>过账日期：</span><span id="postingDatetime">暂无</span></p></li>
+                        <li><p><span>上传时间：</span><span id="uploadDatetime">暂无</span></p></li>
+                        <li><p><span>签收时间：</span><span id="signDatetime">暂无</span></p></li>
+                        <li><p><span>签收人姓名：</span><span id="signPersonName">暂无</span></p></li>
+                        <li><p><span>签收人工号：</span><span id="signPersonBadgeNumber">暂无</span></p></li>
+                        <li><p><span>签收状态：</span><span id="signStatus">暂无</span></p></li>
+                        <li><p><span>签收图片：</span><span class='signImgs'>暂无</span></p></li>
+                    </ul>
+
+
+                    <ul>
+                        <li> <p><span>签收人姓名：</span><span id="signerName">暂无</span></p></li>
+                        <li> <p><span>签收人工号：</span><span id="signerBadgeNumber">暂无</span></p></li>
+                        <li><p><span>签收时间：</span><span id="signTime">暂无</span></p></li>
+                        <li> <p><span>签收图片：</span><span id="imgs">暂无</span></p></li>
+                        <li><p><span>签收图片：</span><span class='imgs' >暂无</span></p></li>
+                    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <p><span>整合单号：</span><span id="integrationBillNumber">123456</span></p>
+                    <p><span>交货单号：</span><span id="deliveryBillNumber">123456</span></p>
+                    <p><span>上传人员姓名：</span><span id="uploadPersonName">123456</span></p>
+                    <p><span>上传人员工号：</span><span id="uploadPersonBadgeNumber">123456</span></p>
+                    <p><span>过账日期：</span><span id="postingDatetime">123456</span></p>
+                    <p><span>上传时间：</span><span id="uploadDatetime">123456</span></p>
+                    <p><span>签收时间：</span><span id="signDatetime">123456</span></p>
+                    <p><span>签收人姓名：</span><span id="signPersonName">123456</span></p>
+                    <p><span>签收人工号：</span><span id="signPersonBadgeNumber">123456</span></p>
+                    <p><span>签收状态：</span><span id="signStatus">123456</span></p>
+                    <p><span>签收图片：</span><span></span></p>
+                    <ul id="signImgs" class="zhd-img-list clear">
+                        <li><img src="/" ></li>
+                        <li><img src="/" ></li>
+                        <li><img src="/" ></li>
+                        <li><img src="/" ></li>
+                        <li><img src="/" ></li>
+                        <li><img src="/" ></li>
+                        <li><img src="/" ></li>
+                        <li><img src="/" ></li>
+                        <li><img src="/" ></li>
+                    </ul>
+
+                </div>
+                <div class="box">
+                    <h2>物流信息</h2>
+                    <p><span>签收人姓名：</span><span id="signerName">123456</span></p>
+                    <p><span>签收人工号：</span><span id="signerBadgeNumber">123456</span></p>
+                    <p><span>签收时间：</span><span id="signTime">123456</span></p>
+                    <p><span>签收图片：</span><span id="imgs">123456</span></p>
+                </div>
+            </div>
+            <div class="big-img">
+                <img src="/" >
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="./javascripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="./javascripts/jquery-accordion-menu.js" type="text/javascript"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./javascripts/bossScript.js" type="text/javascript"></script>
+<script src="./javascripts/zebra_datepicker.src.js" type="text/javascript"></script>
+<script src="./javascripts/reformcheckDetail.js" type="text/javascript"></script>
+</html>

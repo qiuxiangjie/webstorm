@@ -38,7 +38,7 @@ $(function () {
 
         //超时显示
         if(isNotNull(base.confirmTimeout)){
-            $('.box1 li:first-child').append('<p class="red over-time" id="overTime">超时'+base.confirmTimeout+'小时</p>')
+            $('.box1 li').eq(1).append('<p class="red over-time" id="overTime">超时'+base.confirmTimeout+'小时</p>')
         }
         //基本信息
         document.title = base.shopName +'整改处罚单';
@@ -61,6 +61,8 @@ $(function () {
             timeUl += '<li id="checkTime"><p>工程管理员验收日期：</p><p>'+base.checkTime+'</p></li>';
         if(isNotNull(base.okTime))
             timeUl += '<li id="okTime"><p>整改合格日期：</p><p>'+base.okTime+'</p></li>';
+        if(isNotNull(base.okTime))
+            timeUl += '<li id="okTime"><p>铁面验收日期：</p><p>'+base.okTime+'</p></li>';
         $('.date-list').html(timeUl);
 
         //扣分概况

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<ul class="aa clear">
+    <li><img src="./img/1 (1).jpg" alt=""></li>
+    <li><img src="./img/1 (2).jpg" alt=""></li>
+    <li><img src="./img/1 (3).jpg" alt=""></li>
+    <li><img src="./img/1 (4).jpg" alt=""></li>
+    <li><img src="./img/1 (5).jpg" alt=""></li>
+</ul>
+
+
+
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+<script src="./js/xianggeScrollImg.js"></script>
+<script>
+    $(function () {
+        var s1 = new xgScroll({
+            domId: '.aa',
+            domScroll: 'scrollImg',
+            data: [
+                './img/1 (1).jpg',
+                './img/1 (2).jpg',
+                './img/1 (3).jpg',
+                './img/1 (4).jpg',
+                './img/1 (5).jpg'
+            ]
+        })
+    })
+</script>
+</html>
