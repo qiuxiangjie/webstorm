@@ -16,7 +16,8 @@ a:active{color:#576e9e;}
 a{ -webkit-tap-highlight-color: rgba(255,255,255,0.5);}
 ul,li,span,div{ -webkit-tap-highlight-color: transparent;}/***去除手机连接点击有边框*****/
 /**********************整改概况******************************/
-.main{ margin-top:75px; padding:0 5%;}
+.main{ margin-top:75px; padding:0 5%; position: relative;}
+.contractTypeStr{display:none; position: absolute; top: 4px; left: 120px; width: 80px; background: #ff8e00; color: #FFF; font-size: 14px; border-radius: 2px; text-align: center;}
 h2{ color:#FFF; font-size:16px; line-height:30px;}
 .box1,.box2{ background:#FFF; border-radius:5px; padding:15px; position:relative;margin-bottom: 10px;}
 
@@ -36,7 +37,7 @@ h2{ color:#FFF; font-size:16px; line-height:30px;}
 .box1>li:nth-of-type(5)>p,.box1>li:nth-of-type(4)>p:first-child,.box1>li:nth-of-type(3)>p:first-child{ line-height:25px;margin: 10px 0;}
 .box1 span{ font-size:16px; color:#333;}
 .box1>li:nth-of-type(8),.box1 li:nth-of-type(9){ border:none !important;}
-.stick-check{ background: url("../img/head_portrait1.png") no-repeat left center; background-size: 30px; line-height: 45px;}
+.stick-check{ background: url("../img/head_portrait1.png") no-repeat 5px center; background-size: 30px; line-height: 45px; display: none;margin-bottom: -.6em;}
 .stick-check p{ padding-left: 40px; line-height: 45px; color:#6f73ca }
 
 .date-til{ background:url("../img/tool_bg.png") no-repeat center; height:60px !important; border-bottom:1px solid #eee !important; box-sizing:border-box; padding:10px 0; background-size:120px;margin-bottom: 5px;}

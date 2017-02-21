@@ -8,7 +8,7 @@ $(function () {
         method:'get',
         success:function(data){
             if(data.response.code===0){
-                var newPicData = renderTabDOM(data.response.data.reformInfo);
+                var newPicData = renderTabDOM(data.response.data.reformInfo, data.response.data.base.creatorType);
                 renderDOMCallBack();
                 renderPic(newPicData);
                 if(isNotNull(window.sessionStorage.shopName))

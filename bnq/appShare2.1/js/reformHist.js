@@ -1,11 +1,10 @@
 $(function () {
     /******请求数据*********/
-
     var reformId = getUrlArg('reformId') ;
     var seqNo = getUrlArg('seqNo') ;
 
     $.ajax({
-        url:'http://192.168.251.81:8080/dms/project/reform/histDetail.share?reformId='+reformId+'&seqNo='+seqNo,
+        url:'http://192.168.251.16:8080/dms/project/reform/histDetail.share?reformId='+reformId+'&seqNo='+seqNo,
         //url:'./js/firstRectification.json',
         dataType:'json',
         method:'get',
@@ -40,7 +39,7 @@ $(function () {
         }
     });
     function renderBaseDOM(data){
-        ['seqNo','roundStartTime','planFinishTime','teamSubmitTime','checkTime'].forEach(function (item) {
+        ['seqNo','roundStartTime','planFinishTime','teamSubmitTime','checkTime', 'checkerCheckTime'].forEach(function (item) {
             $("#"+item).text(data[item]);
         });
         document.title='第'+data.seqNo+'次整改';

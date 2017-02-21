@@ -19,7 +19,6 @@ $(function () {
             }else{
                 alert(data.response.message);
                 $('body').html('').addClass('no-search').height($(window).height());
-
             }
         },
         error:function(){

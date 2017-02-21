@@ -6,10 +6,10 @@ function isEmptyObject(o){
     return true;
 }
 
-//取URL参数
-function renderTabDOM(data){
+function renderTabDOM(data, creatorType){
+    var creator = creatorType === 2 ? '二人铁面组' : '工程管理员';
     return [
-        !isEmptyObject(data.require)?renderTabItem(data.require,false,'工程管理员','picR',1):'',
+        !isEmptyObject(data.require)?renderTabItem(data.require,false,creator,'picR',1):'',
         !isEmptyObject(data.teamReform)?renderTabItem(data.teamReform,false,'施工队长','picT',2):'',
         !isEmptyObject(data.qualified)?renderTabItem(data.qualified,true,'工程管理员','picQ',1):''
     ]
@@ -19,9 +19,9 @@ function renderTabItem(data,state,post,pid,picId){
     var picsID = 0;
     var newPicData = [];
     //头部渲染
-    $('.top-nav').append('<li '+(data.title==='管理员整改要求' ? 'class="active"' : '')+' >'+data.title+'</li>');
+    $('.top-nav').append('<li '+(data.title==='整改要求' ? 'class="active"' : '')+' >'+data.title+'</li>');
     //内容渲染
-    var boxDOM = '<div class="box" '+(data.title==='管理员整改要求' ? 'style="display:block;"' : '')+'>';
+    var boxDOM = '<div class="box" '+(data.title==='整改要求' ? 'style="display:block;"' : '')+'>';
     boxDOM +='<div class="box-title"><div class="box-title-pic"><img src="http://res.bnq.com.cn/img/head_portrait'
         + picId
         + '.png" alt=""/></div><div class="box-name"><h3>'
@@ -90,6 +90,7 @@ function renderDOMCallBack(){
         $(this).addClass('active').siblings().removeClass('active');
         $('.box').eq($(this).index()).show().siblings('.box').hide();
     });
+
 }
 
 /*******************相册组件***************************/

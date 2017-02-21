@@ -354,6 +354,7 @@ a:hover, a:focus {color: #333; text-decoration: none;}
 
 .stick-check{ background: url("../img/head_portrait1.png") no-repeat 10px center; background-size: 30px; line-height: 45px;}
 .stick-check p{ padding-left: 48px; line-height: 45px; color:#6f73ca }
+.contractTypeStr{ display: none; position: absolute; top: 10px !important; left: 120px; padding: 5px 10px; color: #FFF; background:#ff8203; border-radius: 2px !important; width: 80px !important; font-size: 14px; }
 
 @media screen and(max-width:350px){
 	.time{background-size: 130px;}

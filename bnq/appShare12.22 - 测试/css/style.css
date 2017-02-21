@@ -61,7 +61,7 @@ a:hover, a:focus {color: #333; text-decoration: none;}
 }
 .messList > li > label {
 	display:table-cell;
-	width:8.5em;
+	width:8.2em;
 	font-weight:normal;
 	color:#666;
 	padding-right:0;
@@ -81,7 +81,7 @@ a:hover, a:focus {color: #333; text-decoration: none;}
 .start-date{ float:left;}
 .end-date{float:right;}
 .days{ font-size:18px; color:#a3baef;line-height: 39px;}
-.delayDays{position: absolute; color: red; bottom: 0; margin: auto; left: 0;right: 0;font-size: 12px;padding-left: 10px;}
+.delayDays{position: absolute; color: red; bottom: 0; margin: auto; left: 0;right: 0;}
 
 .fraction{
 	padding-left:1.5em;font-size:0.75em;
@@ -351,6 +351,10 @@ a:hover, a:focus {color: #333; text-decoration: none;}
 	text-align:justify;
 	margin-top:1em;
 }
+
+.stick-check{ background: url("../img/head_portrait1.png") no-repeat 10px center; background-size: 30px; line-height: 45px;}
+.stick-check p{ padding-left: 48px; line-height: 45px; color:#6f73ca }
+.contractTypeStr{ display: none; position: absolute; top: 10px !important; left: 120px; padding: 5px 10px; color: #FFF; background:#ff8203; border-radius: 2px !important; width: 80px !important; font-size: 14px; }
 
 @media screen and(max-width:350px){
 	.time{background-size: 130px;}

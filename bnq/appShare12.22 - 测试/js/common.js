@@ -6,10 +6,10 @@ function isEmptyObject(o){
     return true;
 }
 
-//取URL参数
-function renderTabDOM(data){
+function renderTabDOM(data, creatorType){
+    var creator = creatorType === 2 ? '二人铁面组' : '工程管理员';
     return [
-        !isEmptyObject(data.require)?renderTabItem(data.require,false,'工程管理员','picR',1):'',
+        !isEmptyObject(data.require)?renderTabItem(data.require,false,creator,'picR',1):'',
         !isEmptyObject(data.teamReform)?renderTabItem(data.teamReform,false,'施工队长','picT',2):'',
         !isEmptyObject(data.qualified)?renderTabItem(data.qualified,true,'工程管理员','picQ',1):''
     ]
@@ -19,40 +19,40 @@ function renderTabItem(data,state,post,pid,picId){
     var picsID = 0;
     var newPicData = [];
     //头部渲染
-    $('.top-nav').append('<li '+(data.title==='管理员整改要求' ? 'class="active"' : '')+' >'+data.title+'</li>');
+    $('.top-nav').append('<li '+(data.title==='整改要求' ? 'class="active"' : '')+' >'+data.title+'</li>');
     //内容渲染
-    var boxDOM = '<div class="box" '+(data.title==='管理员整改要求' ? 'style="display:block;"' : '')+'>';
+    var boxDOM = '<div class="box" '+(data.title==='整改要求' ? 'style="display:block;"' : '')+'>';
     boxDOM +='<div class="box-title"><div class="box-title-pic"><img src="http://res.bnq.com.cn/img/head_portrait'
-        + picId
-        + '.png" alt=""/></div><div class="box-name"><h3>'
-        + post
-        + '</h3><p>'
-        + data.name
-        + '</p></div><p class="box-title-con clear">'
-        + data.note
-        + '</p></div><ul class="list">';
+      + picId
+      + '.png" alt=""/></div><div class="box-name"><h3>'
+      + post
+      + '</h3><p>'
+      + data.name
+      + '</p></div><p class="box-title-con clear">'
+      + data.note
+      + '</p></div><ul class="list">';
     //渲染打分项
     function renderScoreDOM(data,name){
         var qualityDOM = '';
         qualityDOM += ' <li><h4>'+name+'</h4><ul class="list-con clear">';
         data.forEach(function (item,i) {
             qualityDOM += '<li class="clear '+(item.isOpen ? 'padding' : '')+'"><div class="listLeft"><p>'
-                +item.content
-                + '</p><i'
-                + (state?' class="qualified"':'')
-                +'>'
-                + item.num
-                + '处'
-                + (state?'/整改合格':'')
-                +'</i></div><div class="pics '
-                + pid
-                +'" id="'
-                + pid+(picsID)
-                +'"><img src="'
-                + item.picUrls[0].picUrl
-                +'"/>'
-                +(item.picNum>1?('<i>'+item.picNum+'</i>'):'')
-                +'</div><div class="bottomTip '+(!item.isOpen ?'hidden' : '')+' ">'+openTip+'</div></li>';
+              +item.content
+              + '</p><i'
+              + (state?' class="qualified"':'')
+              +'>'
+              + item.num
+              + '处'
+              + (state?'/整改合格':'')
+              +'</i></div><div class="pics '
+              + pid
+              +'" id="'
+              + pid+(picsID)
+              +'"><img src="'
+              + item.picUrls[0].picUrl
+              +'"/>'
+              +(item.picNum>1?('<i>'+item.picNum+'</i>'):'')
+              +'</div><div class="bottomTip '+(!item.isOpen ?'hidden' : '')+' ">'+openTip+'</div></li>';
             //保存图片数据
             item.picUrls.forEach(function (picItem) {
                 newPicData.push({
@@ -90,6 +90,7 @@ function renderDOMCallBack(){
         $(this).addClass('active').siblings().removeClass('active');
         $('.box').eq($(this).index()).show().siblings('.box').hide();
     });
+
 }
 
 /*******************相册组件***************************/
@@ -121,12 +122,12 @@ var $winH = $(window).height();
             var liDOMs='';
             data.forEach(function(item,i){
                 liDOMs += '<li style="transform:translate3d('
-                    + i*winW
-                    + 'px,0px,0px);width:'
-                    + winW
-                    + 'px"><img src="'
-                    + item.picURL
-                    + '"/></li>';
+                  + i*winW
+                  + 'px,0px,0px);width:'
+                  + winW
+                  + 'px"><img src="'
+                  + item.picURL
+                  + '"/></li>';
             });
             this.doc.html(liDOMs);
         },
@@ -163,8 +164,8 @@ var $winH = $(window).height();
             //抬起事件（根据滑动方向和距离，判断滚动方式）
             this.picScrollUl.addEventListener('touchend', function () {
                 self.offsetX>60?self.goIndex('prev')
-                    :self.offsetX<-60?self.goIndex('next')
-                    :self.goIndex(self.pid);
+                  :self.offsetX<-60?self.goIndex('next')
+                  :self.goIndex(self.pid);
             },false);
 
             //单击事件(退出图片浏览)
@@ -209,8 +210,8 @@ var $winH = $(window).height();
                 cid = n;
                 for(var i = 0; i < lis.length ; i++){
                     /*
-                    * 设置当前页前面的图片都是负值，当前页后面的图片都是正值
-                    * */
+                     * 设置当前页前面的图片都是负值，当前页后面的图片都是正值
+                     * */
                     lis[i].style.transitionDuration='0ms';
                     if(i<n){
                         lis[i].style.webkitTransform = 'translate3d(-' + (self.winW) +'px,0px,0px)';
@@ -225,19 +226,19 @@ var $winH = $(window).height();
 
             //设置翻页图片文描
             self.Doc.children('p').html('<span>'+(1+cid)+'/'+self.list.length+'</span>'+self.list[cid].content);
-/*
-*按需加载，发现影响动画效率，暂不运用
-* *
-            lis[cid].getElementsByTagName('img')[0].setAttribute('src',data[cid].picURL);
-            lis[cid].style.webkitTransition = '-webkit-transform .2s ease-out';
-            if(lis[cid-1]){
-                lis[cid-1].getElementsByTagName('img')[0].setAttribute('src',data[cid-1].picURL);
-                lis[cid-1].style.webkitTransition = '-webkit-transform .15s ease-out';
-            }
-            if(lis[cid+1]){
-                lis[cid+1].getElementsByTagName('img')[0].setAttribute('src',data[cid+1].picURL);
-                (lis[cid+1].style.webkitTransition = '-webkit-transform .15s ease-out');
-            }*/
+            /*
+             *按需加载，发现影响动画效率，暂不运用
+             * *
+             lis[cid].getElementsByTagName('img')[0].setAttribute('src',data[cid].picURL);
+             lis[cid].style.webkitTransition = '-webkit-transform .2s ease-out';
+             if(lis[cid-1]){
+             lis[cid-1].getElementsByTagName('img')[0].setAttribute('src',data[cid-1].picURL);
+             lis[cid-1].style.webkitTransition = '-webkit-transform .15s ease-out';
+             }
+             if(lis[cid+1]){
+             lis[cid+1].getElementsByTagName('img')[0].setAttribute('src',data[cid+1].picURL);
+             (lis[cid+1].style.webkitTransition = '-webkit-transform .15s ease-out');
+             }*/
 
             //添加动画
             lis[cid-1] && (lis[cid-1].style.webkitTransition = '-webkit-transform .15s ease-out');
@@ -274,10 +275,10 @@ function renderPic(list){
             var cPicId= parseInt($(this).attr('id').replace(/[^0-9]/ig,""));//获取id数字
             picScroll.goIndex(cPicId);//跳转到响应的图片
             topP = $(this).offset().top-$(window).scrollTop()+35-$winH/2;
-                $('#picScroll'+(i+1)).addClass('active').css({
-                    transition:'opacity 300ms,transform 0s',
-                    transform: 'scale(1) translate3d(0px, 0px, 0px)'
-                });
+            $('#picScroll'+(i+1)).addClass('active').css({
+                transition:'opacity 300ms,transform 0s',
+                transform: 'scale(1) translate3d(0px, 0px, 0px)'
+            });
         });
     });
 }

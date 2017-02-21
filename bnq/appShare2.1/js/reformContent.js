@@ -2,13 +2,13 @@ $(function () {
     var reformId = getUrlArg('reformId') ;
     /*数据加载*/
     $.ajax({
-        url:'http://192.168.251.81:8080/dms/project/reform/detail.share?reformId='+reformId,
+        url:'http://192.168.251.16:8080/dms/project/reform/detail.share?reformId='+reformId,
        // url:'./js/package2.json',
         dataType:'json',
         method:'get',
         success:function(data){
             if(data.response.code===0){
-                var newPicData = renderTabDOM(data.response.data.reformInfo);
+                var newPicData = renderTabDOM(data.response.data.reformInfo, data.response.data.base.creatorType);
                 renderDOMCallBack();
                 renderPic(newPicData);
                 if(isNotNull(window.sessionStorage.shopName))

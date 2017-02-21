@@ -1,0 +1,76 @@
+input[type="file"] {
+     display: inline-block !important;
+}
+::-webkit-scrollbar {
+     width: 15px;
+     background-color: #999;
+}
+/*搜索列表*/
+.check-warning{  color: red;}
+.check-upload {background: #EEE; border: 1px #DDD solid; color: #888; padding: 5px 20px; }
+.check-upload.active {background: #337ab7;color: #FFF;border: 1px #337ab7 solid;}
+.search-zhd { margin-bottom: 15px;}
+.search-zhd-til { color: #337ab7; font-size: 16px; line-height: 45px; }
+.search-zhd-main input, .search-zhd-main select, .zhd-detail .box input {margin-right: 10px; padding: 0 8px; border: 1px solid #DDD;height: 30px; line-height: 30px;transition: all .3s; border-radius: 2px;}
+.search-zhd-main input:focus, .search-zhd-main select:focus, .zhd-detail .box input:focus{border: 1px solid #FF950C}
+.line-input{ margin: 15px 0;  width: 50%;float: left; min-width: 495px;}
+.line-input input{width: 150px;}
+.label-right {width: 149px; text-align: right;}
+.line-input span{ padding: 0 8px;}
+.line-input label {text-align: right;}
+.zhd-search{ background: #FF950C; color: #FFF; padding: 0 30px !important;border: 1px solid #FF950C !important;border-radius: 5px;}
+.zhd-search:hover{ opacity: .8;}
+.zhd-search:active{ opacity: 0.6}
+#postTimeStart, #uploadTimeStart, #signTimeStart{margin-right:0;}
+.line-btn { margin: 10px 0; text-align: center;float: left;  width: 100%;}
+.zhd-list{ border:1px solid #DDD; width:100%; height:440px;overflow: hidden; display: none}
+.zhd-list-title{color:#32323E;}
+.zhd-list-title li{ float:left; border-left:solid #DDD 1px; border-bottom:solid #DDD 1px; height:40px; line-height:40px; text-align:center; overflow:hidden; width: 10%;}
+
+.zhd-list-title li:nth-of-type(3) {width: 15%;}
+.zhd-list-title li:nth-of-type(5), .zhd-list-title li:nth-of-type(8) {width: 5%;}
+.zhd-list-title li:nth-of-type(2), .zhd-list-title li:nth-of-type(7) {width: 12.5%;}
+.zhd-list-con{color:#A4A4A7; transition: all .3s;}
+.zhd-list-con li{ text-align:center; height:40px; line-height:40px;}
+.zhd-list-con li a{color: #FF950C}
+.zhd-list-con li a:hover{ text-decoration: underline;}
+.zhd-list-con:hover { background: #EEE;}
+.zhd-list-con li p{ line-height:25px;white-space:nowrap; text-align: center; font-size: 12px;}
+.page{display: none;}
+.arrow-down, .arrow-up {  position: relative;  width: auto;  height: auto;  z-index: 1;  right: 0;  top: 0;  background: none;  } /*屏蔽这两个类*/
+.prev.disabled, .next.disabled, .prev.disabled:hover, .next.disabled:hover { background: #EEE;  border: 1px #DDD solid;  color: #888;}
+
+/*详情*/
+.zhd-detail {font-size: 14px; color: #333}
+.zhd-detail p{line-height: 45px; }
+.zhd-detail span, .zhd-detail label {width: 180px; display: inline-block;_zoom:1;*display:inline;}
+.zhd-detail .box p span:first-of-type, .zhd-detail label{ text-align: right; padding-right: 20px;}
+.zhd-detail .box p span:last-of-type{ text-align: left;}
+.zhd-detail .box{ border: 1px solid #eee; padding: 30px; margin-bottom: 30px;}
+.zhd-detail .box h2 {font-size: 16px; color:#337ab7; padding-bottom: 20px; }
+
+.zhd-img-list {width: 80%; margin: 0 auto;}
+.zhd-img-list li{text-align: center;  display: inline-block;_zoom:1;*display:inline; width: 150px;height: 120px; margin: 10px; }
+.zhd-img-list li img{width: 100%; height: 100%;}
+.list-msg li { float: left; width: 50%;}
+
+.export{ width: 90px; height: 30px; line-height: 30px; display: inline-block; color: #FFF; background: #337ab7; text-align: center;border-radius: 2px;}
+.export:hover{color: #FFF;  opacity: .8;}
+.export:active{ opacity: 0.6}
+
+/*相册*/
+.scroll { width: 60%; height: 80%; background: rgba(0,0,0,.8); position: fixed;top: 0; bottom: 0; left: 0; right: 0;margin: auto; display: none; z-index: 99999;}
+.scroll li{ float: left; opacity: 0;}
+.scroll li img{max-width:100%;  max-height: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0;margin: auto;}
+.scroll .prev, .scroll .next{ width: 50px; height: 80px;  position: absolute; top: 0; bottom: 0;margin: auto; opacity: .5; transition: all .3s}
+.scroll:hover .prev,.scroll:hover .next{opacity: 1;}
+.scroll:hover .prev{ left: 15px;}
+.scroll:hover .next{ right: 15px;}
+.scroll .prev{left: 0; background: url("../images/arrows.png") no-repeat 0 0;border-radius: 0 4px 4px 0;}
+.scroll .next{right: 0; background: url("../images/arrows.png") no-repeat 100% 0;border-radius: 4px 0 0 4px;}
+.scroll .close{ position: absolute; top: 0; right: 0; width: 50px; height: 50px; background: url("../images/close.png") no-repeat center; transition: all .5s}
+.scroll .close:hover{background:red url("../images/close.png") no-repeat center; transform:rotate(90deg)}
+
+.zhd-img-list, .prev, .next, .close, .export{ cursor: pointer;}
+
+.up-data{margin-left: 50px;  margin-top: 20px;}

@@ -19,7 +19,11 @@
 <body>
     <div class="main">
         <h2>基本信息</h2>
+        <i class="contractTypeStr"></i>
         <ul class="box1">
+            <li class="stick-check" style="margin-bottom: 0">
+                <p>二人铁面组巡检</p>
+            </li>
             <li>
                 <p class="blue waite point" id="reformState"></p>
             </li>
@@ -27,7 +31,7 @@
                 <p>门店：<span id="shopName"></span></p>
                 <p>整改次数：<span id="reformNum"></span></p>
             </li>
-            <li class="clear" id="client">
+            <li class="clear" id="client" >
                 <p>客户：<span id="clientName"></span></p>
                 <p>合同号：<span id="contractSn"></span></p>
             </li>
@@ -35,6 +39,9 @@
             <li>
                 <p>队长：<span id="teamAdminName"></span></p>
                 <p>工程管理员：<span id="projAdminName"></span></p>
+            </li>
+            <li id="stickAdminName" class="checker">
+                <p>二人铁面组：<span ></span></p>
             </li>
             <li class="dateTime">
                 <div class="date-til">
@@ -50,7 +57,7 @@
                 <ul class="date-list">
                 </ul>
             </li>
-            <li class="date-list-control" id="dataListControl"><span>收起</span><img style="width:20px;" src="http://res.bnq.com.cn/img/floor_03.png" alt=""/></li>
+            <li class="date-list-control" id="dataListControl"><span>收起</span><img style="width:20px;" src="./img/floor_03.png" alt=""/></li>
             <li class="level" id="scoreLevelName"></li>
         </ul>
         <h2>扣分概况</h2>

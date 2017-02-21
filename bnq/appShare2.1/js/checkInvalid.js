@@ -22,7 +22,7 @@
     var data = {};
     $.ajax({
       //url:"http://dms.bnq.com.cn/dms/project/track/detail.share?trackId=" + trackId,
-      url:"http://192.168.251.81:8080/dms/project/track/getDetail.share?trackId=" + trackId,
+      url:"http://192.168.251.16:8080/dms/project/track/getDetail.share?trackId=" + trackId,
 //		url:"http://139.196.169.119:8080/dms/project/track/detail.share?trackId=" + trackId,
 //		url:"http://192.168.251.16:8080/dms/project/track/detail.share?trackId=" + trackId
       //url:'http://192.168.251.16:8080/dms/project/reform/originDetail.share?trackId=158',
@@ -52,6 +52,11 @@
   }
 
   function getDataCallback(data){
+
+    //套餐类型
+    if (  data.contractTypeStr &&　 isNotNull(data.contractTypeStr) ) {
+      $('.contractTypeStr').text(data.contractTypeStr).show();
+    }
 
     //基本信息--客户姓名
     if(data.customerName == null){
@@ -140,17 +145,29 @@
       $('#proAdminName').text(data.projAdminName);
     }
     //铁面二人组
-    if(!isNotNull(data.projAdminName)){
-      $('#stickAdminName').parent().remove();
+
+    //是否是铁面二人
+    if (data.submitterRole === 'checker') {
+      $('.stick-check').show();
+      if(!isNotNull(data.checkerName)){
+        $('#stickAdminName').parent().remove();
+      } else {
+        $('#stickAdminName').text(data.checkerName);
+      }
+      $('#ownerCallback > p').text(isNotNull(data.userFeedback) ? data.userFeedback : '暂无回访');
+
     } else {
-      $('#stickAdminName').text(data.projAdminName);
+      $('#stickAdminName, #ownerCallback').parent().remove();
     }
 
     if (data.isValid === 1) {
-      $("#quality").text(data.qualityScore + "分");
-      $("#civilScore").text(data.civilScore + "分");
-      $("#protectScore").text(data.protectScore + "分");
-      $("#jiaodiAdminName").text(data.confirmScore + "分");
+      function checkScore (key) {
+        return isNotNull(data[key].score) ? (data[key].score + "分") : data[key].scoreTag
+      }
+      $("#quality").text(checkScore('quality'));
+      $("#civilScore").text(checkScore('civil'));
+      $("#protectScore").text(checkScore('protect'));
+      $("#jiaodiAdminName").text(checkScore('internal'));
       if(!data.hasReform) {
         $('#hasReform').hide()
       }
@@ -220,12 +237,12 @@
       setLevel(avgScoreLevel);
 
       //施工综合质量打分
-      if (data.score.quality.segList.length > 0) {
-        var stageAddList = data.score.quality.segList;
+      if (data.quality.categoryList　&& data.quality.categoryList.length > 0) {
+        var stageAddList = data.quality.categoryList;
         for (var i = 0, len = stageAddList.length; i < len; i++) {
           var ulAddDomItem = '';
           ulAddDomItem += '<b>'
-            + stageAddList[i].segName
+            + stageAddList[i].categoryName
             + '</b>'
             + '<ul class="fracList">';
           for (var j = 0, len1 = stageAddList[i].itemList.length; j < len1; j++) {
@@ -234,7 +251,7 @@
               + ' '
               + stageAddList[i].itemList[j].content
               + '</span><b>'
-              + stageAddList[i].itemList[j].doScore
+              + stageAddList[i].itemList[j].valueStr
               + '</b></li>';
 
             ulAddDomItem += liAddDomItem;
@@ -247,12 +264,12 @@
 
 
       //文明工程扣分项
-      if (data.score.civil.segList.length > 0) {
-        var gramAddList = data.score.civil.segList;
+      if (data.civil.categoryList &&　data.civil.categoryList.length > 0) {
+        var gramAddList = data.civil.categoryList;
         for (var i = 0, len = gramAddList.length; i < len; i++){
           var ulgramAddDomItem = '';
           ulgramAddDomItem += '<b>'
-            + gramAddList[i].segName
+            + gramAddList[i].categoryName
             + '</b>'
             + '<ul class="fracList">';
           for (var j = 0, len1 = gramAddList[i].itemList.length; j < len1; j++) {
@@ -261,7 +278,7 @@
               + ' '
               + gramAddList[i].itemList[j].content
               + '</span><b>'
-              + gramAddList[i].itemList[j].doScore
+              + gramAddList[i].itemList[j].valueStr
               + '</b></li>';
 
             ulgramAddDomItem += ligramAddDomItem;
@@ -273,21 +290,21 @@
       }
       $('#pramScoreSpan').after(ulgramDomList);
       //工地成品保护检查
-      var proAddList = data.score.protect.itemList;
-      if(proAddList.length == 0){
+      var proAddList = data.protect.itemList;
+      if(!proAddList || proAddList.length == 0){
         $('#domThree').find('.switchWrap').remove();
-      } else if (proAddList.length > 0) {
+      } else if (proAddList && proAddList.length > 0) {
 
         for (var i = 0, len = proAddList.length; i < len; i++){
           var liproAddDomItem = '';
           liproAddDomItem += '<li>'
             + '<span>'
-            + proAddList[i].seqNo
+            + proAddList[i].mark
             + ' '
             + proAddList[i].content
             + '</span>'
             + '<b>'
-            + proAddList[i].isOkStr
+            + proAddList[i].valueStr
             + '</b>'
             + '</li>';
           ulproDomList += liproAddDomItem;
@@ -297,22 +314,22 @@
 
 
       //内部交底得分
-      var scoAddList = data.score.internal.itemList;
-      if(scoAddList.length == 0){
+      var scoAddList = data.internal.itemList;
+      if(!scoAddList || scoAddList.length == 0){
         $('#domTwo').find('.switchWrap').remove();
-      } else if (scoAddList.length > 0) {
+      } else if (scoAddList && scoAddList.length > 0) {
 
 
         for (var i = 0, len = scoAddList.length; i < len; i++){
           var liscoAddDomItem = '';
           liscoAddDomItem += '<li>'
             + '<span>'
-            + scoAddList[i].seqNo
+            + scoAddList[i].mark
             + ' '
             + scoAddList[i].content
             + '</span>'
             + '<b>'
-            + scoAddList[i].isOkStr
+            + scoAddList[i].valueStr
             + '</b>'
             + '</li>';
           ulscoDomList += liscoAddDomItem;
@@ -341,9 +358,6 @@
 
       //巡检日志
         $("#inspectionRizhi").text(isNotNull(data.note) ? data.note : '暂无' );
-      //业主回访
-      $("#ownerCallback").text(isNotNull(data.note) ? data.note : '暂无' );
-
 
       //图片路径等
 /*      if(data.lastSubmitTrack.trackPicList.length > 0) {
@@ -490,9 +504,6 @@
     $(".baguetteBox").css("width", widthval +"px");
   }
 
-  function bageBox(){
-    baguetteBox.run('.baguetteBox');
-  }
 
   function deteDivone(){
     if($('#divDele-2 li').length == 0){
@@ -512,8 +523,5 @@
       :i===3? e.text('不合格')
       :e.text('差');
   }
-
-
-
 
 })();

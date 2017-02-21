@@ -41,7 +41,7 @@ $(function () {
         }
     });
     function renderBaseDOM(data){
-        ['seqNo','roundStartTime','planFinishTime','teamSubmitTime','checkTime'].forEach(function (item) {
+        ['seqNo','roundStartTime','planFinishTime','teamSubmitTime','checkTime', 'checkerCheckTime'].forEach(function (item) {
             $("#"+item).text(data[item]);
         });
         document.title='第'+data.seqNo+'次整改';

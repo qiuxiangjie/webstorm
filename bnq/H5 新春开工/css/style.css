@@ -1,0 +1,122 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,form,textarea,p{ margin:0; padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+img{ border:none;}
+.clear {zoom:1;}    /*==for IE6/7 Maxthon2==*/
+.clear:after,.clear:before {content:".";display:block;height:0;clear:both;visibility:hidden;line-height:0;font-size:0;}   /*==for FF/chrome/opera/IE8==*/
+body{font:14px/1.5em "Microsoft YaHei",Arial,Helvetica,sans-serif; color:#666; width:100%; height:100%; min-width:320px; background:#efeff4;-webkit-overflow-scrolling:touch;}
+a{text-decoration:none; color:#000; outline:none}
+ul{list-style-type:none;}
+.main{background: #e4203b;}
+.page {position: relative; z-index: 22}
+.page > li {}
+.page> li > img {width: 100%; height: 100%;}
+.icon > li > img{width: 100%;}
+.icon > li{position: absolute; opacity: 0;animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;}
+.icon > li:nth-of-type(1) {top: 56%;  width: 20%; left: 16%;}
+.icon > li:nth-of-type(2) {top: 63%;  width: 20%; left: 16%}
+.icon > li:nth-of-type(3) {top: 70%;  width: 12%; left: 21%;}
+.icon > li:nth-of-type(4) {top: 78%; width: 12%; left: 21%;}
+.note > li > img{width: 100%;}
+.note > li{position: absolute; left: 31%; opacity: 0;animation-fill-mode: forwards;  -webkit-animation-fill-mode: forwards;}
+.note > li:nth-of-type(1) {top: 58%; width: 44%;}
+.note > li:nth-of-type(2) {top: 65%;  width: 44%;}
+.note > li:nth-of-type(3) {top: 73%;  width: 30%;}
+.note > li:nth-of-type(4) {top: 80%;  width: 30%;}
+.down{ position: absolute; right: 0; left: 0; margin: auto; bottom: 50px; width: 15%; animation: down 1.3s linear infinite; -webkit-animation: down 1.3s linear infinite}
+.down img {width: 100%;}
+.bb{position: absolute;right: 0; left: 0; margin: auto; bottom:0; z-index: 11;}
+.down-div{height: 18%; width: 100%; position: absolute; bottom: 0; left: 0;}
+.music-c{ display: block; width: 50px; height: 50px; position: absolute; right: 5px; top: 0; background: url("../img/music-icon.png") center no-repeat; background-size: 40px; animation: music 2s linear .5s infinite ; -webkit-animation: music 2s linear .5s infinite ; z-index: 9999}
+
+.a-icon1 {
+    animation: icon .5s linear .5s ;
+    -webkit-animation: icon .5s linear .5s ;
+}
+.a-icon2 {
+    animation: icon .5s linear 1s ;
+    -webkit-animation: icon .5s linear 1s ;
+}
+.a-icon3 {
+    animation: icon2 .5s linear 1.5s ;
+    -webkit-animation: icon .5s linear 1.5s ;
+}
+.a-icon4 {
+    animation: icon2 .5s linear 2s ;
+    -webkit-animation: icon .5s linear 2s ;
+}
+
+.a-note1 {
+    animation: note .5s linear .5s ;
+    -webkit-animation: note .5s linear .5s ;
+}
+.a-note2 {
+    animation: note .5s linear 1s ;
+    -webkit-animation: note .5s linear 1s ;
+}
+.a-note3 {
+    animation: note .5s linear 1.5s ;
+    -webkit-animation: note .5s linear 1.5s ;
+}
+.a-note4 {
+    animation: note .5s linear 2s ;
+    -webkit-animation: note .5s linear 2s ;
+}
+@keyframes music {
+    0% {
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes music {
+    0% {-webkit-transform:rotate(0deg)  }
+    100%{-webkit-transform:rotate(360deg) }
+}
+
+@keyframes icon {
+    0% {opacity: 0; margin-top: 80px;}
+    100% {opacity: 1; margin-top: 0; }
+}
+@-webkit-keyframes icon {
+    0% {opacity: 0; margin-top: 80px;}
+    100% {opacity: 1; margin-top: 0;}
+}
+
+@keyframes icon2 {
+    0% {opacity: 0; margin-top: 80px;}
+    100% {opacity: 1; margin-top: 0;}
+}
+@-webkit-keyframes icon2 {
+    0% {opacity: 0; margin-top: 80px;}
+    100% {opacity: 1; margin-top: 0;}
+}
+
+@keyframes note {
+    0% {opacity: 0; right: 0; margin-top: 80px;}
+    100% {opacity: 1;  margin-top: 0;}
+}
+@-webkit-keyframes note {
+    0% {opacity: 0; right: 0;margin-top: 80px;}
+    100% {opacity: 1; margin-top: 0;}
+}
+
+@keyframes down {
+    0% {opacity: 1; top: 0; transform:scale(1)}
+    20% {opacity: .5; top: 20%; transform:scale(.8)}
+    40% {opacity: .8; top: 40%; transform:scale(.8)}
+    60% {opacity: .4; top: 60%; transform:scale(.6)}
+    80% {opacity: .2; top: 80%; transform:scale(.6)}
+    100% {opacity: 0; top: 100%; transform:scale(.4)}
+}
+@-webkit-keyframes down {
+    0% {opacity: 1; top: 0; transform:scale(1)}
+    20% {opacity: .5; top: 20%; transform:scale(.8)}
+    40% {opacity: .8; top: 40%; transform:scale(.8)}
+    60% {opacity: .4; top: 60%; transform:scale(.6)}
+    80% {opacity: .2; top: 80%; transform:scale(.6)}
+    100% {opacity: 0; top: 100%; transform:scale(.4)}
+}

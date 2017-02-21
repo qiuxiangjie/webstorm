@@ -20,34 +20,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plusview.js" pinned="false" current-in-tab="true">
-        <entry file="file://D:/迅雷下载/jiaoben3078/jiaoben3078/js/plusview.js">
+      <file leaf-file-name="changeList.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/changeList.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="119" column="46" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://D:/迅雷下载/jiaoben1565/jiaoben1565/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reformcheckDetail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/javascripts/reformcheckDetail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#45#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -58,66 +36,66 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Html5" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/untitled/test/webpack/public/bundle.js" />
-        <option value="$PROJECT_DIR$/untitled/test/webpack/webpack.config.js" />
-        <option value="$PROJECT_DIR$/untitled/test/webpack/app/config.json" />
-        <option value="$PROJECT_DIR$/untitled/test/webpack/app/Greeter.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/openToOwners.html" />
-        <option value="$PROJECT_DIR$/untitled/test/1111111111.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/dataSearch.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/openToOwners.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/reformPlan.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/checkInvalid.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/openToOwners.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/reformPlan.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/openToOwners.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/trackDetail.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/checkInvalid.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/css/style.css" />
-        <option value="$PROJECT_DIR$/untitled/test/arguments.html" />
-        <option value="$PROJECT_DIR$/untitled/test/算法排序.js" />
-        <option value="$PROJECT_DIR$/untitled/test/算法排序.html" />
-        <option value="$PROJECT_DIR$/untitled/test/bind.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/reformPlan.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformPlan.js" />
-        <option value="$PROJECT_DIR$/untitled/test/继生组合式继承.html" />
-        <option value="$PROJECT_DIR$/untitled/test/滚动相册.html" />
-        <option value="$PROJECT_DIR$/untitled/test/拖放.html" />
-        <option value="$PROJECT_DIR$/untitled/test/js闭包.html" />
-        <option value="$PROJECT_DIR$/untitled/test/123123123123123.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/css/style.css" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/checkInvalid.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/trackDetail.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/reformDetail.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/css/reformStyle.css" />
-        <option value="$PROJECT_DIR$/untitled/test/图片上传.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/reformDetail.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/reformHist.html" />
-        <option value="$PROJECT_DIR$/bnq/bos分配工地/sendhit.html" />
-        <option value="$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendlist.js" />
-        <option value="$PROJECT_DIR$/untitled/test/5.html" />
-        <option value="$PROJECT_DIR$/bnq/bos整改单上传查询/reformcheck.html" />
-        <option value="$PROJECT_DIR$/bnq/bos整改单上传查询/javascripts/reformcheck.js" />
-        <option value="$PROJECT_DIR$/bnq/bos分配工地/sendlist.html" />
-        <option value="$PROJECT_DIR$/bnq/bos分配工地/sendorder.html" />
-        <option value="$PROJECT_DIR$/bnq/bos分配工地/stylesheets/sendlist.css" />
-        <option value="$PROJECT_DIR$/bnq/bos整改单上传查询/stylesheets/reformcheck.css" />
-        <option value="$PROJECT_DIR$/bnq/bos整改单上传查询/javascripts/reformcheckDetail.js" />
         <option value="$PROJECT_DIR$/bnq/bos整改单上传查询/reformcheckdetail.html" />
         <option value="D:/迅雷下载/jiaoben1565/jiaoben1565/index.html" />
         <option value="D:/迅雷下载/jiaoben1565/jiaoben1565/js/zoom.min.js" />
         <option value="$PROJECT_DIR$/untitled/pc只适应相册/index.html" />
         <option value="$PROJECT_DIR$/untitled/pc只适应相册/css/style.css" />
         <option value="$PROJECT_DIR$/untitled/pc只适应相册/js/xianggeScrollImg.js" />
+        <option value="$PROJECT_DIR$/bnq/bos分配工地/sendlist.html" />
+        <option value="$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendlist.js" />
+        <option value="$PROJECT_DIR$/untitled/test/查接口.html" />
+        <option value="$PROJECT_DIR$/bnq/bos分配工地/sendorder.html" />
+        <option value="$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendorder.js" />
+        <option value="$PROJECT_DIR$/bnq/bos分配工地/stylesheets/sendlist.css" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/reformContent.js" />
+        <option value="$PROJECT_DIR$/bnq/markdown/javascripts/markdownlist.js" />
+        <option value="$PROJECT_DIR$/bnq/markdown/markdownlist.html" />
+        <option value="$PROJECT_DIR$/bnq/markdown/markdowndetail.html" />
+        <option value="$PROJECT_DIR$/bnq/markdown/javascripts/markdowndetail.js" />
+        <option value="$PROJECT_DIR$/bnq/markdown/markdownupdata.html" />
+        <option value="$PROJECT_DIR$/bnq/markdown/stylesheets/markdown.css" />
+        <option value="$PROJECT_DIR$/untitled/本机图片显示.html" />
+        <option value="$PROJECT_DIR$/untitled/图片文件上传插件/jQuery多张图片批量上传插件.htm" />
+        <option value="$USER_HOME$/Desktop/七牛云存储 - JavaScript SDK.htm" />
+        <option value="$PROJECT_DIR$/untitled/七牛/七牛.html" />
+        <option value="$PROJECT_DIR$/untitled/七牛传图/七牛云存储 - JavaScript SDK_files/main.js" />
+        <option value="$PROJECT_DIR$/untitled/七牛传图/七牛云存储 - JavaScript SDK.htm" />
+        <option value="$USER_HOME$/Desktop/归档(1)/a.html" />
+        <option value="$USER_HOME$/Desktop/归档(2)/a.html" />
+        <option value="$USER_HOME$/Desktop/4444/a.html" />
+        <option value="$PROJECT_DIR$/bnq/H5 新春开工/css/style.css" />
+        <option value="$PROJECT_DIR$/bnq/H5 新春开工/js/js.js" />
+        <option value="$PROJECT_DIR$/bnq/H5 新春开工/index.html" />
+        <option value="$PROJECT_DIR$/untitled/test/radio  默认选中.html" />
+        <option value="$PROJECT_DIR$/untitled/test/js 原生事件委托.html" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/trackDetail.html" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/css/style.css" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/css/reformStyle.css" />
+        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/reformHist.html" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/reformHist.html" />
+        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/reformDetail.html" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/reformDetail.html" />
+        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/trackDetail.html" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/reformPlan.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/common.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/common.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformContent.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/reformHist.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformHist.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/checkInvalid.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/checkInvalid.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/reformDetail.js" />
+        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformDetail.js" />
       </list>
     </option>
   </component>
@@ -305,6 +283,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -347,7 +327,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="untitled" />
+              <option name="myItemId" value="bnq" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,29 +341,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="untitled" />
+              <option name="myItemId" value="bnq" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc只适应相册" />
+              <option name="myItemId" value="appShare2.1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,11 +359,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="untitled" />
+              <option name="myItemId" value="bnq" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pc只适应相册" />
+              <option name="myItemId" value="appShare2.1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -409,86 +371,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc只适应相册" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc只适应相册" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bnq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bnq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bos分配工地" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -496,7 +380,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="D:/work/dms" />
+    <property name="last_opened_file_path" value="D:/work/dms-markdown" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -509,16 +393,17 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
-      <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地\css" />
-      <recent name="D:\Webstorm\WebstormProjects\untitled\test\echarts\js" />
-      <recent name="D:\Webstorm\WebstormProjects\bnq\appShare2.1 - 测试7.29\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
       <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\http" />
       <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Webstorm\WebstormProjects\bnq\markdown\stylesheets" />
+      <recent name="D:\Webstorm\WebstormProjects\bnq\markdown\javascripts" />
+      <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
+      <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地\css" />
+      <recent name="D:\Webstorm\WebstormProjects\untitled\test\echarts\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -655,25 +540,38 @@
       <workItem from="1484721450907" duration="12771000" />
       <workItem from="1484795888899" duration="3413000" />
       <workItem from="1484880641319" duration="11153000" />
-      <workItem from="1486175532894" duration="3272000" />
+      <workItem from="1486175532894" duration="21949000" />
+      <workItem from="1486344279180" duration="19080000" />
+      <workItem from="1486432476911" duration="23500000" />
+      <workItem from="1486518320789" duration="19592000" />
+      <workItem from="1486604391300" duration="27589000" />
+      <workItem from="1486691525317" duration="18651000" />
+      <workItem from="1486951053800" duration="3983000" />
+      <workItem from="1486968567873" duration="3701000" />
+      <workItem from="1487037243037" duration="17567000" />
+      <workItem from="1487124724258" duration="6588000" />
+      <workItem from="1487211031914" duration="1865000" />
+      <workItem from="1487315121309" duration="3481000" />
+      <workItem from="1487555609619" duration="11331000" />
+      <workItem from="1487642265664" duration="5591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341015000" />
+    <option name="totallyTimeSpent" value="522211000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1673774" sideWeight="0.8582251" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13486141" sideWeight="0.8582251" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5660173" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22121535" sideWeight="0.1417749" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -682,7 +580,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -718,376 +616,378 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="14" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/untitled/test/拖放.html">
+    <entry file="file://$PROJECT_DIR$/bnq/markdown/javascripts/markdownlist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+        <state relative-caret-position="714">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/继生组合式继承.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/js闭包.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6647">
-          <caret line="391" column="8" selection-start-line="391" selection-start-column="8" selection-end-line="398" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/123123123123123.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/4545645645646.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/reformContent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/checkInvalid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="344" column="63" selection-start-line="344" selection-start-column="63" selection-end-line="344" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/reformContent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/医生滚动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/加减折叠页面.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/狼滚动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/算法排序.html">
+    <entry file="file://$PROJECT_DIR$/bnq/markdown/javascripts/markdowndetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/点击找到自己的索引.html">
+    <entry file="file://$PROJECT_DIR$/bnq/markdown/stylesheets/markdown.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="140" selection-start-line="39" selection-start-column="140" selection-end-line="39" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/markdown/markdownlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="2" selection-start-line="76" selection-start-column="2" selection-end-line="87" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/markdown/markdowndetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/图片文件上传插件/jQuery多张图片批量上传插件_files/webuploader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3777">
+          <caret line="0" column="2386" selection-start-line="0" selection-start-column="2386" selection-end-line="0" selection-end-column="2386" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/七牛云存储 - JavaScript SDK.htm" />
+    <entry file="file://$PROJECT_DIR$/untitled/图片文件上传插件/jQuery多张图片批量上传插件_files/diyUpload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="224" column="4" selection-start-line="224" selection-start-column="4" selection-end-line="224" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/图片文件上传插件/jQuery多张图片批量上传插件.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="85" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/本机图片显示.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="103" selection-start-line="12" selection-start-column="103" selection-end-line="12" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/markdown/markdownupdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="109" column="14" selection-start-line="61" selection-start-column="8" selection-end-line="109" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/七牛传图/七牛云存储 - JavaScript SDK_files/highlight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1006">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/七牛传图/七牛云存储 - JavaScript SDK_files/qiniu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3366">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/七牛传图/七牛云存储 - JavaScript SDK_files/plupload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4437">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/七牛传图/七牛云存储 - JavaScript SDK_files/moxie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/滚动相册.html">
+    <entry file="file://$USER_HOME$/Desktop/归档(1)/a.html" />
+    <entry file="file://$USER_HOME$/Desktop/归档(2)/a.html" />
+    <entry file="file://$PROJECT_DIR$/untitled/七牛传图/七牛云存储 - JavaScript SDK.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        <state relative-caret-position="291">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/安卓手机按钮垂直居中问题.html">
+    <entry file="file://$PROJECT_DIR$/untitled/七牛传图/七牛云存储 - JavaScript SDK_files/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2000">
+          <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/下拉刷新1.html">
+    <entry file="file://$PROJECT_DIR$/untitled/七牛/七牛.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="104" />
+        <state relative-caret-position="17">
+          <caret line="50" column="68" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/sendorder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="125" column="39" selection-start-line="125" selection-start-column="39" selection-end-line="125" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/4444/a.html" />
+    <entry file="file://$PROJECT_DIR$/bnq/H5 新春开工/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/H5 新春开工/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/test/radio  默认选中.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="64" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendorder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="136" column="95" selection-start-line="136" selection-start-column="95" selection-end-line="136" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/test/事件冒泡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/test/js 原生事件委托.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/css/reformStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="354" column="0" selection-start-line="354" selection-start-column="0" selection-end-line="355" selection-end-column="70" />
+        <state relative-caret-position="671">
+          <caret line="356" column="32" selection-start-line="356" selection-start-column="32" selection-end-line="356" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/H5 新春开工/js/js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/reformHist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/reformHist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="51" />
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/reformHist.js">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/reformDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/reformDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        <state relative-caret-position="223">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/reformDetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="28" />
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/javascripts/bmap.js">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/trackDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/stylesheets/jquery-accordion-menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/stylesheets/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/stylesheets/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/css/reformStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendlist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="563">
+          <caret line="191" column="61" selection-start-line="191" selection-start-column="61" selection-end-line="191" selection-end-column="61" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/trackDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="231" column="9" selection-start-line="231" selection-start-column="6" selection-end-line="231" selection-end-column="9" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="191" selection-end-column="61" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/sendhit.html">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        <state relative-caret-position="4811">
+          <caret line="283" column="1" selection-start-line="283" selection-start-column="1" selection-end-line="283" selection-end-column="1" />
+          <folding>
+            <marker date="1487655045908" expanded="true" signature="4006:4146" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/stylesheets/bosStyle.css">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <marker date="1487655046048" expanded="true" signature="4054:4202" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/javascripts/zebra_datepicker.src.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/stylesheets/bosStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="176" column="140" selection-start-line="176" selection-start-column="134" selection-end-line="176" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos地址复查/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="220" column="18" selection-start-line="79" selection-start-column="12" selection-end-line="220" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/sendlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1243">
-          <caret line="139" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/sendorder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="72" column="39" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/stylesheets/sendlist.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/javascripts/reformcheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/tool.js">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformContent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/javascripts/reformcheckDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/迅雷下载/jiaoben1565/jiaoben1565/js/zoom.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/迅雷下载/jiaoben1565/jiaoben1565/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="22" />
+          <caret line="10" column="112" selection-start-line="10" selection-start-column="112" selection-end-line="10" selection-end-column="112" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/test/图片上传.html">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/reformContent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/pc只适应相册/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+        <state relative-caret-position="170">
+          <caret line="10" column="112" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="112" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/stylesheets/reformcheck.css">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformHist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="731">
+          <caret line="43" column="99" selection-start-line="43" selection-start-column="99" selection-end-line="43" selection-end-column="99" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/reformcheck.html">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/reformHist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        <state relative-caret-position="697">
+          <caret line="41" column="99" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="99" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/pc只适应相册/index.html">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/checkInvalid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/checkInvalid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="527" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/reformDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="168" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformPlan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="14" selection-end-column="5" />
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/pc只适应相册/js/xianggeScrollImg.js">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/reformPlan.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/reformcheckdetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="97" selection-end-column="25" />
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/迅雷下载/jiaoben3078/jiaoben3078/js/plusview.js">
+    <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/changeList.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="119" column="46" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>

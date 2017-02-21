@@ -1,10 +1,12 @@
 $(function () {
     /*数据加载*/
     var reformId = getUrlArg('reformId'),
-        scoreArray = [],
-        errorMsg;
+      scoreArray = [],
+      errorMsg;
     $.ajax({
+        //url:'http://192.168.251.16:8080/dms/project/reform/baseInfo.share?reformId='+reformId,
         url:'http://dms.bnq.com.cn/dms/project/reform/baseInfo.share?reformId='+reformId,
+        //url:'./js/package.json',
         dataType:'json',
         method:'get',
         success:function(data){
@@ -24,8 +26,13 @@ $(function () {
     });
     //数据渲染函数
     function renderDOM(data){
-        var score = data.score,
-            base  = data.base;
+        var score = data.score;
+        var base  = data.base;
+
+        //套餐
+        if (  base.contractTypeStr &&　 isNotNull(base.contractTypeStr) ) {
+            $('.contractTypeStr').text(base.contractTypeStr).show();
+        }
 
         //状态显示
         $('#reformState').text(base.reformStateStr);
@@ -37,7 +44,7 @@ $(function () {
 
         //超时显示
         if(isNotNull(base.confirmTimeout)){
-            $('.box1 li:first-child').append('<p class="red over-time" id="overTime">超时'+base.confirmTimeout+'小时</p>')
+            $('.box1 li').eq(1).append('<p class="red over-time" id="overTime">超时'+base.confirmTimeout+'小时</p>')
         }
         //基本信息
         document.title = base.shopName +'整改处罚单';
@@ -49,6 +56,7 @@ $(function () {
         $('#address').text(base.address);
         $('#teamAdminName').text(base.teamAdminName);
         $('#projAdminName').text(base.projAdminName);
+        $('#stickAdminName span').text( isNotNull(base.checkerName) ? base.checkerName : '暂无' );
 
         //整改时间
         $('#createTime').text(base.createTime);
@@ -60,6 +68,7 @@ $(function () {
             timeUl += '<li id="checkTime"><p>工程管理员验收日期：</p><p>'+base.checkTime+'</p></li>';
         if(isNotNull(base.okTime))
             timeUl += '<li id="okTime"><p>整改合格日期：</p><p>'+base.okTime+'</p></li>';
+        timeUl += '<li class="checker" id="checkerCheckTime"><p>铁面验收日期：</p><p>'+ (isNotNull(base.checkerCheckTime) ? base.checkerCheckTime : '暂无') +'</p></li>';
         $('.date-list').html(timeUl);
 
         //扣分概况
@@ -70,8 +79,8 @@ $(function () {
             scoreUl += '<li ><span>'
               + item.title
               + '</span><span class="doScore">'
-              + item.doScore
-              + '分</span>'
+              + ( isNotNull(item.doScore) ? (item.doScore + '分') : item.doScoreTag)
+              + '</span>'
               + (item.punshFeeStr==='扣除成品保护费'?'<span class="f12">':'<span>')
               + item.punshFeeStr
               + '</span>'
@@ -85,6 +94,16 @@ $(function () {
         if(classFlag){
             $('.doScore').addClass('right')
         }
+
+        //是否是铁面二人
+        if (base.creatorType === 2) {
+            //是铁面
+            $('.stick-check').show();
+        }else {
+            $('#stickAdminName').hide();
+            $('.checker').hide()
+        }
+
         renderDOMCallback();
     }
     function renderDOMCallback(){

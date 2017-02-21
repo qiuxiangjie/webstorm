@@ -27,9 +27,12 @@
     <div class="topTitle">
         <span>跟进详情</span>
     </div>
+    <div class="stick-check">
+        <p>二人铁面组巡检</p>
+    </div>
     <div class="pubWrap">
         <div class="check-invalid"></div>
-        <span class="pubTitle">基本信息</span>
+        <span class="pubTitle">基本信息<i class="contractTypeStr"></i></span>
         <ul class="messList">
             <li class="row">
                 <label class="col-md-8">客户姓名：</label>
@@ -89,102 +92,42 @@
                 <label class="col-md-8">工程管理员：</label>
                 <span id="proAdminName" class="col-md-12"></span>
             </li>
+            <li>
+                <label class="col-md-8">二人铁面组：</label>
+                <span id="stickAdminName" class="col-md-12"></span>
+            </li>
         </ul>
     </div>
     <div class="pubWrap isValid" id="divDele-2" style="border-bottom:none;">
         <span class="pubTitle" id="avgScoreLevel">综合评级<i></i></span>
-        <span class="pubTitle deleBorder">施工综合质量打分 <b class="publicScore" id="quality"></b><a id="dele-a-2"
-                                                                                              class="switchWrap"
-                                                                                              href="javascript:void(0);"></a></span>
+        <span class="pubTitle deleBorder">施工综合质量打分 <b class="publicScore" id="quality"></b>
+            <a id="dele-a-2" class="switchWrap" href="javascript:void(0);"></a>
+            <b class="note"></b>
+        </span>
 
         <div class="fraction" style="border-bottom:1px solid #D8D8D8;">
             <span id="dropScoreSpan"></span>
-            <!--<b>电器工程</b>
-            <ul class="fracList">
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>-5</b>
-                </li>
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>-5</b>
-                </li>
-            </ul>
-
-            <b>墙面工程</b>
-            <ul class="fracList">
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>-5</b>
-                </li>
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>-5</b>
-                </li>
-            </ul>
-            <b>外单位施工不扣分</b>
-            <ul class="fracList">
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>未完工</b>
-                </li>
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>正常</b>
-                </li>
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>有问题</b>
-                </li>
-            </ul>
-
-            <b>推荐工艺加分项</b>
-            <ul class="fracList">
-                <li>
-                    <span>Q 推荐工艺加分项（动作电流≤MA)</span>
-                    <b>+5</b>
-                </li>
-            </ul>-->
         </div>
     </div>
 
     <div class="pubWrap isValid" id="divDele-1" style="border-bottom:none;margin-top:0px;">
-        <span class="pubTitle deleBorder">安全文明综合打分 <b class="publicScore" id="civilScore"></b><a id="dele-a-1"
-                                                                                                 class="switchWrap"
-                                                                                                 href="javascript:void(0);"></a></span>
-
+        <span class="pubTitle deleBorder">安全文明综合打分 <b class="publicScore" id="civilScore"></b>
+            <a id="dele-a-1" class="switchWrap" href="javascript:void(0);"></a>
+             <b class="note"></b>
+        </span>
         <div class="fraction" style="border-bottom:1px solid #D8D8D8;">
             <span id="pramScoreSpan"></span>
-
-            <!--<b>电器工程</b>
-            <ul class="fracList">
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>-5</b>
-                </li>
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>-5</b>
-                </li>
-            </ul>-->
-
         </div>
     </div>
 
     <div class="pubWrap isValid" id="domThree" style="border-bottom:none;margin-top:0px;">
         <span class="pubTitle deleBorder"><span>工地成品保护检查</span> <b class="publicScore" id="protectScore"></b><a
-                class="switchWrap" href="javascript:void(0);"></a></span>
+                class="switchWrap" href="javascript:void(0);"></a>
+            <b class="note"></b>
+        </span>
 
         <div class="fraction" style="border-bottom:1px solid #D8D8D8;">
             <ul id="proScoreSpan" class="fracList ulList">
-                <!--<li>-->
-                <!--<span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>-->
-                <!--<b>-5</b>-->
-                <!--</li>-->
-                <!--<li>-->
-                <!--<span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>-->
-                <!--<b>-5</b>-->
-                <!--</li>-->
             </ul>
 
         </div>
@@ -192,18 +135,12 @@
 
     <div class="pubWrap isValid" id="domTwo" style="border-bottom:none;margin-top:0px;">
         <span class="pubTitle deleBorder"><span>内部交底得分</span><b class="publicScore" id="jiaodiAdminName"></b><a
-                class="switchWrap" href="javascript:void(0);"></a></span>
+                class="switchWrap" href="javascript:void(0);"></a>
+        <b class="note"></b>
+        </span>
 
         <div class="fraction" style="border-bottom:1px solid #D8D8D8;">
             <ul id="odaScoreSpan" class="fracList ulList">
-                <!--<li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>-5</b>
-                </li>
-                <li>
-                    <span>A1 室内配电箱应设置电保护器（动作电流≤MA）A1 室内配电箱应设置电保护器（动作电流≤MA)</span>
-                    <b>-5</b>
-                </li>-->
             </ul>
 
         </div>
@@ -223,8 +160,6 @@
             </p>
         </div>
     </div>
-
-
     <div class="pubWrap no-mark">
         <span class="pubTitle">标记无效 </span>
         <div class="open-box" style="margin-top:0" >
@@ -232,6 +167,12 @@
             <div class="open-img">
                 <ul class="clear" id="working" ></ul>
             </div>
+        </div>
+    </div>
+    <div class="pubWrap">
+        <span class="pubTitle">业主回访 </span>
+        <div class="zhenggai " id="ownerCallback">
+            <p></p>
         </div>
     </div>
 </div>
