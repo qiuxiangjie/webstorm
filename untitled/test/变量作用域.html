@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var scope = 'outer';
+    !function () {
+        console.log(scope); //  这里的scope是指内部的，因为，首先会找当前作用域时候有scope变量，如果有，就不会往外找了，虽然内部的才、scope变量定义在后面，但是js的变量有提前声明的特性，所以相当于内部的scope已经在内部的最前面声明了，但是并没有赋值，所以打印出来的scope就是undefined
+        var scope = 'inner';
+        console.log(scope);
+    }();
+    console.log(scope)
+</script>
+</body>
+</html>
