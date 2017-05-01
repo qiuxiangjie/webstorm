@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    var img=new Image();
+    img.src='http://106.14.251.99:8080/wms/warehouse/list.do?pageSize=10&curPage=1';
+    img.onerror=function(){
+        alert('error');
+    };
+    img.onload=function(){
+        alert('success');
+    }
+</script>
+</html>
