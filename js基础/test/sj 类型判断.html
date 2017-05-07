@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    *方法一：typeof 返回的是字符串，有六种可能："number"、"string"、"boolean"、"object"、"function"、"undefined"
+    * */
+
+    /*方法二：instanceof  判断是否是它的实例；（可以判断自定义的类）
+     * [] instanceof Array 返回 true // 说明 [] 是 Array的实例；
+    * */
+
+    /*
+    * 方法三：constructor 返回对象相对应的构造函数
+    *   (a.constructor == Array)  // a实例所对应的构造函数是否为Array? true or false
+    * */
+
+    /*
+    * 使用instaceof和construcor,被判断的array必须是在当前页面声明的！
+    * 比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个array，并将其赋值给父页面的一个变量，
+    * 这时判断该变量，Array == object.constructor;会返回false；
+    *
+     原因：
+     1、array属于引用型数据，在传递过程中，仅仅是引用地址的传递。
+     2、每个页面的Array原生对象所引用的地址是不一样的，在子页面声明的array，所对应的构造函数，是子页面的Array对象；
+     父页面来进行判断，使用的Array并不等于子页面的Array；切记，不然很难跟踪问题！
+    * */
+
+    /*方法四：Object.prototype.toString*/
+
+    console.log(Object.prototype.toString.call(123)); //[object Number]
+
+    console.log(Object.prototype.toString.call('123')); //[object String]
+
+    console.log(Object.prototype.toString.call(undefined)); //[object Undefined]
+
+    console.log(Object.prototype.toString.call(true)); //[object Boolean]
+
+    console.log(Object.prototype.toString.call({})); //[object Object]
+
+    console.log(Object.prototype.toString.call([])); //[object Array]
+
+    console.log(Object.prototype.toString.call(function(){})); //[object Function]
+
+    console.log(Object.prototype.toString.call(null)); //[object Null]
+
+    console.log(Object.prototype.toString.call(NaN)); //[object Number]
+
+    var test = {a:123};
+    console.log(Object.prototype.toString.call(test.b)); //[object Undefined]
+
+
+
+    /*区别
+
+    * 自定义类型
+     function Person(name, age) {
+     this.name = name;
+     this.age = age;
+     }
+     var person = new Person("Rose", 18);
+     Object.prototype.toString.call(arr); //”[object Object]”
+     很明显这种方法不能准确判断person是Person类的实例，而只能用instanceof 操作符来进行判断，如下所示：
+
+     console.log(person instanceof Person);//输出结果为true
+
+    * */
+
+    isNaN(NaN); // 判断NaN类型
+</script>
+</html>

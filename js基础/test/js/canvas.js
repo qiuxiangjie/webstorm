@@ -14,8 +14,8 @@ function init(){
     w   = can.width;
     h   = can.height;
     gameLoop();
-    girlImg.src = '/untitled/test/images/banner2.jpg';
-    starImg.src = '/untitled/test/images/star.png';
+    girlImg.src = '/js基础/test/images/banner2.jpg';
+    starImg.src = '/js基础/test/images/star.png';
 
 /*    for(var i = 0; i < mun; i++){
         stars[i] = new StarsObj();
