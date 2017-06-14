@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1153d85-07ce-40bc-a4dc-f677a0c47760" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js基础/test/数组去重.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js基础/test/区分slice(),splice(),split(),substring(),substr()使用方法.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebstormProjects.iws" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state relative-caret-position="-493">
+              <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
               <folding>
                 <marker date="1496645683135" expanded="true" signature="4054:4202" ph="..." />
               </folding>
@@ -50,18 +48,28 @@
       <file leaf-file-name="sendorder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendorder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="442">
               <caret line="98" column="14" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="数组去重.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="数组去重.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js基础/test/数组去重.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="391">
+              <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="区分slice(),splice(),split(),substring(),substr()使用方法.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js基础/test/区分slice(),splice(),split(),substring(),substr()使用方法.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -85,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/untitled/test/查接口.html" />
         <option value="$PROJECT_DIR$/bnq/bos分配工地/sendorder.html" />
         <option value="$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendorder.js" />
         <option value="$PROJECT_DIR$/bnq/bos分配工地/stylesheets/sendlist.css" />
@@ -136,6 +143,7 @@
         <option value="$PROJECT_DIR$/js基础/test/sj 类型判断.html" />
         <option value="$PROJECT_DIR$/js基础/test/安卓手机按钮垂直居中问题.html" />
         <option value="$PROJECT_DIR$/js基础/test/数组去重.html" />
+        <option value="$PROJECT_DIR$/js基础/test/区分slice(),splice(),split(),substring(),substr()使用方法.html" />
       </list>
     </option>
   </component>
@@ -612,12 +620,12 @@
       <workItem from="1487555609619" duration="11331000" />
       <workItem from="1487642265664" duration="6898000" />
       <workItem from="1496645748373" duration="1617000" />
-      <workItem from="1497350418202" duration="1623000" />
+      <workItem from="1497350418202" duration="4940000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="526758000" />
+    <option name="totallyTimeSpent" value="530075000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,7 +646,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17631225" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23149395" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22121535" sideWeight="0.1417749" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -693,13 +701,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js基础/七牛传图/七牛云存储 - JavaScript SDK_files/plupload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js基础/七牛传图/七牛云存储 - JavaScript SDK_files/moxie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1032,8 +1033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bnq/appShare2.1/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="-493">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding>
             <marker date="1496645683135" expanded="true" signature="4054:4202" ph="..." />
           </folding>
@@ -1042,7 +1043,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/javascripts/sendorder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="442">
           <caret line="98" column="14" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="14" />
           <folding />
         </state>
@@ -1050,8 +1051,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js基础/test/数组去重.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="391">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js基础/test/区分slice(),splice(),split(),substring(),substr()使用方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding />
         </state>
       </provider>
