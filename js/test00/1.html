@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{padding: 0;margin: 0}
+        ul{
+            position: relative;}
+        li{
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            padding: 15px 15px 0 0;
+        }
+        img{
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="https://ocnvyuf4n.qnssl.com/user-app/pictures/min_5e7ac3a0-6e58-11e6-a818-fb70b81f3236.jpg" alt="123"/></li>
+    <li><img src="https://ocnvyuf4n.qnssl.com/user-app/pictures/min_5e9a0b70-6e58-11e6-a818-fb70b81f3236.jpg"
+             alt="456"/></li>
+    <input type="search">
+
+</ul>
+</body>
+<script>
+  const creatList2 = (obj, list) => obj.reduce((p, c, idx) => {
+    p.push({
+      text: c.name,
+      value: idx
+    });
+    return p
+  }, list);
+
+  function creatList(obj, list){
+    obj.forEach(function(item, index, arr){
+      list.push({
+        text: item.name,
+        value: index
+      });
+    })
+  }
+</script>
+</html>

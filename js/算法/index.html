@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    * Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+    *
+    * */
+  /**
+   * @param {string} s
+   * @return {string}
+   */
+  var longestPalindrome = function(s) {
+/*    var sArray = s.split('');
+    var sLength = s.length;
+    var maxArray = [0, 0];
+
+    for (var i = 0; i < sLength - 1; i++) {
+      if (sArray[i] === sArray[i+1]) {
+        var t = i + 2;
+        if (t > sLength - 1 && maxArray[1] - maxArray[0] < 1) {
+          maxArray[0] = i ;
+          maxArray[1] = i + 1;
+        }
+        for (var j = i - 1; j >= 0 && t <= sLength - 1; j--) {
+          if (sArray[j] !== sArray[t]) {
+            if (t - j -2 > maxArray[1] - maxArray[0]) {
+              maxArray[0] = j +1 ;
+              maxArray[1] = t -1;
+              console.log(maxArray[0], maxArray[1])
+            }
+            break;
+          }
+          t = t + 1;
+        }
+      }
+
+      var t = i + 1;
+      for (var j = i - 1; j >= 0 && t <= sLength - 1; j--) {
+        if (sArray[j] !== sArray[t] ) {
+          if (t - j -2 > maxArray[1] - maxArray[0]) {
+            maxArray[0] = j +1 ;
+            maxArray[1] = t -1;
+            console.log(maxArray[0], maxArray[1])
+          }
+          break;
+        }
+        t = t + 1;
+      }
+    }
+    return s.substring(maxArray[0], maxArray[1] + 1);*/
+    var len = s.length
+    if(len < 2) return s
+    var minStart = 0
+    var maxLen = 1
+    for(var i = 0; i < len - 1;) {
+      var prev = i
+      var next = i
+      while(next < len - 1 && s[next + 1] === s[next]) ++next // Skip dunplicate characters
+      i = next + 1
+      while(next < len - 1 && prev > 0 && s[prev-1] === s[next+1]) {
+        next++
+        prev--
+      }
+      var curLen = next - prev + 1
+      if(curLen > maxLen) {
+        minStart = prev
+        maxLen = curLen
+      }
+    }
+    return s.substr(minStart, maxLen)
+  };
+</script>
+</html>
