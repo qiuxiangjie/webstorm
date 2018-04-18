@@ -12,7 +12,6 @@
     "gulp-load-plugins": "^0.10.0",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.5.3",
-    "jquery": "1.11.3",
     "jshint-stylish": "^1.0.1",
     "jsx-loader": "^0.13.2",
     "mocha": "^2.2.4",
