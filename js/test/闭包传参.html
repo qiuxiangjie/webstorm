@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var i = 0;
+    function domes(fn) {
+      var n = 200;
+      setTimeout(function () {
+        fn(n);
+      }, 1000)
+    }
+
+    (function (fn, ii) {
+      var n = 100;
+      console.log(1);
+      console.log(i);
+      console.log(ii);
+      domes(function (s) {
+        console.log(n);
+        fn(s);
+      })
+    })(
+      function (b) {
+        console.log(b)
+      },
+      i++
+    )
+
+
+
+</script>
+</html>
