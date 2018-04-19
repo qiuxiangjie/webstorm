@@ -1,28 +1,23 @@
 /**
  * Created by Zhoujianxiang on 2018/4/18.
  */
-var app = require('http').createServer(handler)
+var app = require('http').createServer();
 var io = require('socket.io')(app);
-var fs = require('fs');
+var PORT = 3000;
 
-app.listen(80);
+var clientCount= 0;
 
-function handler (req, res) {
-  fs.readFile(__dirname + '/index.html',
-    function (err, data) {
-      if (err) {
-        res.writeHead(500);
-        return res.end('Error loading index.html');
-      }
-
-      res.writeHead(200);
-      res.end(data);
-    });
-}
+app.listen(PORT);
 
 io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
+  console.log(clientCount);
+  clientCount++;
+  socket.clientName = 'user' + clientCount;
+  io.emit('enter', socket.clientName + 'come in');
+  socket.on('message', function (str) {
+    io.emit('message', socket.clientName + ':' + str);
   });
+  socket.on('disconnect', function () {
+    io.emit('leave', socket.clientName + 'left');
+  })
 });

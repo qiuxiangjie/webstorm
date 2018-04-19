@@ -5,15 +5,45 @@
     <title>Title</title>
 </head>
 <body>
-
+<input type="text" id="sendTxt">
+<button id="sendBtn">发送</button>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 <script>
-  var socket = io('http://localhost');
-  socket.on('news', function (data) {
+  var socket = io('http://localhost:3000');
+  function showMsg(str, type) {
+    var div = document.createElement('div');
+    div.innerHTML = str;
+    if(type === 'enter') {
+      div.style.color = 'blue';
+    } else if (type === 'leave') {
+      div.style.color = 'red'
+    }
+    document.body.appendChild(div);
+  }
+
+  document.getElementById('sendBtn').onclick = function () {
+    var txt = document.getElementById('sendTxt').value;
+    if(txt) {
+      socket.emit('message', txt);
+    }
+  }
+  socket.on('enter', function (data) {
     console.log(data);
-    socket.emit('my other event', { my: 'data1' });
+    showMsg(data, 'enter');
   });
+
+  socket.on('message', function (data) {
+    console.log(data);
+    showMsg(data, 'message');
+  });
+
+  socket.on('leave', function (data) {
+    console.log(data);
+    showMsg(data, 'leave');
+  });
+
+
 </script>
 </html>
