@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head >
     <meta charset="UTF-8">
-    <title></title>
-    <style>
-        *{padding: 0;margin: 0}
-        ul{
-            position: relative;}
-        li{
-            float: left;
-            width: 50%;
-            box-sizing: border-box;
-            padding: 15px 15px 0 0;
-        }
-        img{
-            width: 100%;
-            margin: 0 auto;
-            display: block;
-        }
-    </style>
-</head>
+    <title>定义标题名字</title>
+    <link rel="stylesheet" href="./style.css">
 <body>
-<ul>
-    <li><img src="https://ocnvyuf4n.qnssl.com/user-app/pictures/min_5e7ac3a0-6e58-11e6-a818-fb70b81f3236.jpg" alt="123"/></li>
-    <li><img src="https://ocnvyuf4n.qnssl.com/user-app/pictures/min_5e9a0b70-6e58-11e6-a818-fb70b81f3236.jpg"
-             alt="456"/></li>
-    <input type="search">
+<div>
 
-</ul>
+    <ul>
+        <li class="l1"><img class="img1" src="https://ocnvyuf4n.qnssl.com/user-app/pictures/min_5e7ac3a0-6e58-11e6-a818-fb70b81f3236.jpg" alt="123"/></li>
+        <li><img class="img2" src="https://ocnvyuf4n.qnssl.com/user-app/pictures/min_5e9a0b70-6e58-11e6-a818-fb70b81f3236.jpg" alt="456"/>
+            <b>jhjghjhgjhg</b><br>
+            <p>gggggg</p>
+    </ul>
+
+</div>
+
 </body>
 <script>
   var aﾠ = 1;
@@ -36,5 +24,31 @@
   if(aﾠ==1 && a== 2 &&ﾠa==3) {
     console.log("Why hello there!")
   }
+
+  function getFileType(file, type) {
+    if (type.indexOf('image') !== -1) {
+      return 'image';
+    }
+    let suf = file.slice(file.lastIndexOf(".")).toLowerCase();
+    if(/\.(doc|docx)$/.test(suf)){
+      return 'word';
+    } else if(/\.(xls|xlsx)$/.test(suf)) {
+      return 'excel'
+    } else if(/\.(pdf)$/.test(suf)) {
+      return 'pdf'
+    } else {
+      return 'image';
+    }
+  }
+
+  function tt() {
+    console.log(aaa);
+    aaa = '1234';
+    var aaa;
+    console.log(aaa);
+  }
+  tt();
+  console.log(aaa);
+
 </script>
 </html>

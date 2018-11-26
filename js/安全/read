@@ -1,0 +1,9 @@
+https://www.cnblogs.com/Erik_Xu/p/5481441.html
+
+CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比XSS更具危险性。
+
+防止CSRF
+
+　　CSRF能成功是因为同一个浏览器会共享Cookies，也就是说，通过权限认证和验证是无法防止CSRF的。那么应该怎样防止CSRF呢？其实防止CSRF的方法很简单，只要确保请求是自己的站点发出的就可以了。那怎么确保请求是发自于自己的站点呢？ASP.NET以Token的形式来判断请求。
+
+　　我们需要在我们的页面生成一个Token，发请求的时候把Token带上。处理请求的时候需要验证Cookies+Token。

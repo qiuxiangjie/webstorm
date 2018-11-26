@@ -1,0 +1,25 @@
+*{padding: 0;margin: 0}
+body{
+
+}
+ul{
+  position: relative;}
+li{
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 15px 15px 0 0;
+}
+img{
+  width: 100px;
+  margin: 0 auto;
+
+}
+.img1{
+  display:block;
+
+}
+.img2{
+  display:block;
+}
+p{ color:red;}

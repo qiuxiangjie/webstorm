@@ -55,7 +55,7 @@
       }
     }
     return s.substring(maxArray[0], maxArray[1] + 1);*/
-    var len = s.length
+/*    var len = s.length
     if(len < 2) return s
     var minStart = 0
     var maxLen = 1
@@ -74,7 +74,29 @@
         maxLen = curLen
       }
     }
-    return s.substr(minStart, maxLen)
+    return s.substr(minStart, maxLen)*/
   };
+
+
+  function test(n) {
+    if(n > 1) {
+      return n + test(n-1)
+    } else {
+      return 1
+    }
+  }
+  test(10);
+
+
+  function sum (n) {
+    var s = 0;
+    for (var i = 0 ; n > i; n -- ) {
+      s += n;
+    }
+    return s;
+  }
+
+    (function(){Array.prototype.random=function(){return this[math.floor(math.random()*this.length)]};var a=document.queryselectorall('[title="综合素质得分"');var e=document.queryselectorall('[title="精神作风得分"');var d=document.queryselectorall('[title="工作业绩得分"');for(var b=0;b<a.length;b++){var c=a[b];c.value=[39,40,38].random();c.onfocus()}for(var b=0;b<e.length;b++){var c=e[b];c.value=[30,29].random();c.onfocus()}for(var b=0;b<d.length;b++){var c=d[b];c.value=[30,29].random();c.onfocus()}})();
+
 </script>
 </html>
