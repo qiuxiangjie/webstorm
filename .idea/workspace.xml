@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1153d85-07ce-40bc-a4dc-f677a0c47760" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/test/node/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/test/vue/Object.defineProperty.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/test/跨域/浮点数的计算.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/test00/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/安全/read" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bnq.rar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/test/111.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/test/1111111111.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/test/123.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/test/123123123123123.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/test/4545645645646.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/test/5.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/test/原型链，原型继承，借用构造函数继承，组合继承.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bnq/bos整改单上传查询/reformcheck.html" afterPath="$PROJECT_DIR$/bnq/bos整改单上传查询/reformcheck.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test.html" afterPath="$PROJECT_DIR$/js/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test/闭包传参.html" afterPath="$PROJECT_DIR$/js/test/闭包传参.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test00/1.html" afterPath="$PROJECT_DIR$/js/test00/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/算法/index.html" afterPath="$PROJECT_DIR$/js/算法/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/test/跨域/浮点数的计算.html" afterPath="$PROJECT_DIR$/js/test/浮点数的计算.html" />
     </list>
     <ignored path="WebstormProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +37,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/算法/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
+            <state relative-caret-position="382">
               <caret line="98" column="333" lean-forward="false" selection-start-line="98" selection-start-column="324" selection-end-line="98" selection-end-column="333" />
               <folding>
                 <element signature="e#364#2027#0" expanded="false" />
@@ -61,10 +46,50 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="继生组合式继承.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test/继生组合式继承.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-153">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="数组去重.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test/数组去重.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="原型链，原型继承，借用构造函数继承，组合继承.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test/原型链，原型继承，借用构造函数继承，组合继承.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sj 类型判断.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test/sj 类型判断.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-828">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/test00/1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
+            <state relative-caret-position="277">
               <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="50" selection-end-column="19" />
               <folding />
             </state>
@@ -92,10 +117,10 @@
         </entry>
       </file>
       <file leaf-file-name="浮点数的计算.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/test/跨域/浮点数的计算.html">
+        <entry file="file://$PROJECT_DIR$/js/test/浮点数的计算.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="68" column="3" lean-forward="false" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
+            <state relative-caret-position="1501">
+              <caret line="142" column="3" lean-forward="false" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -119,8 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/reformHist.html" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/reformDetail.html" />
         <option value="$PROJECT_DIR$/bnq/appShare2.1/reformDetail.html" />
         <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/trackDetail.html" />
         <option value="$PROJECT_DIR$/bnq/appShare2.1/js/reformPlan.js" />
@@ -170,6 +193,8 @@
         <option value="$PROJECT_DIR$/js/算法/index.html" />
         <option value="$PROJECT_DIR$/js/test00/2.html" />
         <option value="$PROJECT_DIR$/js/test/跨域/浮点数的计算.html" />
+        <option value="$PROJECT_DIR$/js/test/原型链，原型继承，借用构造函数继承，组合继承.html" />
+        <option value="$PROJECT_DIR$/js/test/浮点数的计算.html" />
       </list>
     </option>
   </component>
@@ -404,28 +429,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webstorm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="跨域" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -450,17 +453,18 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/js/test/node/npm-debug.log" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\webstorm\js\test" />
+      <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
+      <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\http" />
+      <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\github\webstorm\untitled\test" />
       <recent name="D:\Webstorm\WebstormProjects\bnq\markdown\stylesheets" />
       <recent name="D:\Webstorm\WebstormProjects\bnq\markdown\javascripts" />
       <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
       <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地\css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
-      <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\http" />
-      <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -692,12 +696,12 @@
       <workItem from="1537676246136" duration="2179000" />
       <workItem from="1539316123728" duration="1981000" />
       <workItem from="1539913952140" duration="783000" />
-      <workItem from="1543199228388" duration="3376000" />
+      <workItem from="1543199228388" duration="9454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="691366000" />
+    <option name="totallyTimeSpent" value="697444000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,7 +713,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18250951" sideWeight="0.8582251" order="0" side_tool="false" content_ui="combo" />
@@ -718,7 +722,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15074024" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16823688" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22121535" sideWeight="0.1417749" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -763,34 +767,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="258" column="39" lean-forward="true" selection-start-line="258" selection-start-column="39" selection-end-line="258" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/LICENSE.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/11231345861.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/本机图片显示.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1045,32 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc只适应相册/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/算法/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="98" column="333" lean-forward="false" selection-start-line="98" selection-start-column="324" selection-end-line="98" selection-end-column="333" />
-          <folding>
-            <element signature="e#364#2027#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test00/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="50" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/test00/2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1087,10 +1037,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/跨域/浮点数的计算.html">
+    <entry file="file://$PROJECT_DIR$/js/test00/1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="68" column="3" lean-forward="false" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
+        <state relative-caret-position="277">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="50" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/sj 类型判断.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-828">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/原型链，原型继承，借用构造函数继承，组合继承.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/数组去重.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/继生组合式继承.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/算法/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="98" column="333" lean-forward="false" selection-start-line="98" selection-start-column="324" selection-end-line="98" selection-end-column="333" />
+          <folding>
+            <element signature="e#364#2027#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pc只适应相册/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/浮点数的计算.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1501">
+          <caret line="142" column="3" lean-forward="false" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
           <folding />
         </state>
       </provider>
