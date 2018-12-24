@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="text" id="input2">
+<script>
+/*  var user = {};
+  var input1 = document.getElementById("input1");
+  var input2 = document.getElementById("input2");
+
+  Object.defineProperty(user, 'name', {
+    get: function () {
+      return input1.value;
+    },
+    set: function (newValue) {
+      input1.value = newValue;
+    }
+  });
+
+  input1.oninput = function () {
+    input2.value = user.name;
+  };
+
+  input2.oninput = function () {
+    user.name = input2.value;
+    input2.innerHTML = user.name;
+  }*/
+
+
+ var user = {
+   name: ''
+ };
+ var input1 = document.getElementById("input1");
+ var input2 = document.getElementById("input2");
+ Object.defineProperty(user,'name',{
+/*   get: function () {
+     return '0000'
+   },*/
+   set: function (val) {
+     return this.name + val;
+
+   }
+
+ });
+
+  input1.onkeyup = function () {
+
+  }
+
+
+
+</script>
+</body>
+</html>
