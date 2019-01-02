@@ -8,7 +8,13 @@
 <input type="text" id="input1">
 <input type="text" id="input2">
 <script>
-/*  var user = {};
+  /*
+  * 不一定非要同时指定getter和setter。只指定getter意味着属性是不能写，尝试写入属性会被忽略。
+   在严格模式下，尝试写入只指定了getter函数的属性会抛出错误。类似地，只指定setter函数的属性也不能读，否则在非严格模式下会返回undefined，而在严格模式下会抛出错误
+  * */
+
+
+  var user = {};
   var input1 = document.getElementById("input1");
   var input2 = document.getElementById("input2");
 
@@ -27,29 +33,16 @@
 
   input2.oninput = function () {
     user.name = input2.value;
-    input2.innerHTML = user.name;
-  }*/
-
-
- var user = {
-   name: ''
- };
- var input1 = document.getElementById("input1");
- var input2 = document.getElementById("input2");
- Object.defineProperty(user,'name',{
-/*   get: function () {
-     return '0000'
-   },*/
-   set: function (val) {
-     return this.name + val;
-
-   }
-
- });
-
-  input1.onkeyup = function () {
-
   }
+
+
+/*  input1.onkeyup = function (e) {
+    input2.value = input1.value;
+  };
+
+  input2.onkeyup = function () {
+    input1.value = input2.value;
+  }*/
 
 
 
