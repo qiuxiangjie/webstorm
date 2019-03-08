@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  // 例子1
+
+  function add(a, b, c) {
+    return a + b + c;
+  }
+
+  function _add(a) {
+    return function (b) {
+      return function (c) {
+        return a + b + c
+      }
+    }
+  }
+
+  add(1,2,3);  // 6
+  _add(1)(2)(3); // 6
+
+
+
+  // 例子2
+
+  function add2(num){
+    var sum=0;
+    sum= sum+num;
+    return function tempFun(numB){
+      if(arguments.length===0){
+        return sum;
+      }else{
+        sum= sum+ numB;
+        return tempFun;
+      }
+
+    }
+  }
+  add2(1)(2)(3)(); //6
+
+  // 例子3
+  /*
+  * 来源：https://segmentfault.com/q/1010000004342477
+  *
+  * 当一个对象转换成原始值时，先查看对象是否有valueOf方法，如果有并且返回值是一个原始值，
+  * 那么直接返回这个值，否则没有valueOf或返回的不是原始值，那么调用toString方法，返回字符串表示
+  *
+  * */
+
+  function add3(num){
+    var sum=0;
+    sum= sum+num;
+    var tempFun=function(numB){
+      if(arguments.length===0){
+        return sum;
+      }else{
+        sum= sum+ numB;
+        return tempFun;
+      }
+
+    }
+
+    tempFun.valueOf=function(){
+      return sum;
+    }
+    tempFun.toString=function(){
+      return sum+'';
+    }
+
+    return tempFun;
+  }
+
+  var result=add3(2)(3)(4)(5);
+  console.log(+result);//输出14 valueOf
+  console.log(result);//输出14 toString
+
+
+/*  // 简单实现，参数只能从右到左传递
+  function createCurry(func, args) {
+
+    let arity = func.length;
+    let args = args || [];
+
+    return function() {
+      let _args = [].slice.call(arguments);
+      [].push.apply(_args, args);
+
+      // 如果参数个数小于最初的func.length，则递归调用，继续收集参数
+      if (_args.length < arity) {
+        return createCurry.call(this, func, _args);
+      }
+
+      // 参数收集完毕，则执行func
+      return func.apply(this, _args);
+    }
+  }*/
+
+
+
+
+// 简单柯里化通用实现
+  function currying(fn, ...rest1) {
+     // ...rest 表示参数的列表 如 [ '小明', 22, '苹果']
+    return function(...rest2) {
+      return fn.apply(null, rest1.concat(rest2))
+    }
+  }
+
+  function sayHello(name, age, fruit) {
+    console.log(`我叫 ${name},我 ${age} 岁了, 我喜欢吃 ${fruit}`)
+  }
+
+  const curryingShowMsg1 = currying(sayHello, '小明');
+  curryingShowMsg1(22, '苹果'); // 我叫 小明,我 22 岁了, 我喜欢吃 苹果
+
+  const curryingShowMsg2 = currying(sayHello, '小衰', 20);
+  curryingShowMsg2('西瓜'); // 我叫 小衰,我 20 岁了, 我喜欢吃 西瓜
+
+
+
+
+  // 高阶柯里化函数
+
+  function curryingHelper(fn, len) {
+    /*
+    * fn.length 获取的是函数的形参，而非实参，
+    * fn 的实参可以在函数内部通过arguments.length 获取
+    * */
+    const length = len || fn.length;  // 第一遍运行length是函数fn一共需要的参数个数，以后是剩余所需要的参数个数
+    return function(...rest) {
+      return rest.length >= length    // 检查是否传入了fn所需足够的参数
+        ? fn.apply(this, rest)
+        : curryingHelper(
+          currying.apply(this, [fn].concat(rest))
+          , length - rest.length
+        )  // 在通用currying函数基础上
+    }
+  }
+
+  function sayHello2(name, age, fruit) {
+    console.log(`我叫 ${name},我 ${age} 岁了, 我喜欢吃 ${fruit}`)
+  }
+
+  const betterShowMsg = curryingHelper(sayHello2);
+  betterShowMsg('小衰', 20, '西瓜');      // 我叫 小衰,我 20 岁了, 我喜欢吃 西瓜
+  betterShowMsg('小猪')(25, '南瓜');     // 我叫 小猪,我 25 岁了, 我喜欢吃 南瓜
+  betterShowMsg('小明', 22)('倭瓜');     // 我叫 小明,我 22 岁了, 我喜欢吃 倭瓜
+  betterShowMsg('小拽')(28)('冬瓜');     // 我叫 小拽,我 28 岁了, 我喜欢吃 冬瓜
+
+
+
+   /********************柯里化的常用方法 **************************/
+
+   // 1.参数复用
+  /*
+  * 通过柯里化方法，缓存参数到闭包内部参数，然后在函数内部将缓存的参数与
+  * 传入的参数组合后apply/bind/call给函数执行，来实现参数的复用，
+  * 降低适用范围，提高适用性。
+  *
+  * */
+  var currying4 = function(fn) {
+    var args = [].slice.call(arguments, 1); // fn 指官员消化老婆的手段,args 指的是那个合法老婆
+    return function(...rest) {
+      var newArgs = args.concat(...rest); // 已经有的老婆和新搞定的老婆们合成一体，方便控制
+      return fn.apply(null, newArgs) // 这些老婆们用 fn 这个手段消化利用，完成韦小宝前辈的壮举并返回
+    }
+  }
+
+  var getWife = currying4(function() {
+    console.log([...arguments].join(';')) // allwife 就是所有的老婆的，包括暗渡陈仓进来的老婆
+  }, '合法老婆');
+
+  getWife('老婆1', '老婆2', '老婆3');      // 合法老婆;老婆1;老婆2;老婆3
+  getWife('超越韦小宝的老婆');             // 合法老婆;超越韦小宝的老婆
+  getWife('超级老婆');                    // 合法老婆;超级老婆
+
+
+
+  // 2. 提高适用性
+
+  /*
+  * 通用函数解决了兼容性问题，但同时也会带来使用的不便利性，不同的应用场景往往
+  * 要传递很多参数，以达到解决特定问题的目的。有时候应用中，
+  * 同一种规则可能会反复使用，这就可能会造成代码的重复性。
+  *
+  * */
+
+  // 未柯里化前
+  function square(i) { return i * i; }
+  function dubble(i) { return i * 2; }
+  function map(handler, list) { return list.map(handler); }
+
+  map(square, [1, 2, 3, 4, 5]);        // 数组的每一项平方
+  map(square, [6, 7, 8, 9, 10]);
+  map(dubble, [1, 2, 3, 4, 5]);        // 数组的每一项加倍
+  map(dubble, [6, 7, 8, 9, 10]);
+
+  // 柯里化后
+
+
+  var mapSQ = currying(map, square);
+  mapSQ([1, 2, 3, 4, 5]);
+  mapSQ([6, 7, 8, 9, 10]);
+
+  var mapDB = currying(map, dubble);
+  mapDB([1, 2, 3, 4, 5]);
+  mapDB([6, 7, 8, 9, 10]);
+
+
+  /*
+  * 可以看到这里柯里化方法的使用和偏函数比较类似，顺便回顾一下偏函数~
+  * 偏函数是创建一个调用另外一个部分(参数或变量已预制的函数)的函数，
+  * 函数可以根据传入的参数来生成一个真正执行的函数。
+  *
+  * 比如：用偏函数快速创建了一组判断对象类型的方法~
+  * */
+  const isType = function(type) {
+    return function(obj) {
+      return Object.prototype.toString.call(obj) === `[object ${type}]`
+    }
+  };
+  const isString = isType('String');
+  const isFunction = isType('Function')
+
+  /*
+  * 偏函数固定了函数的某个部分，通过传入的参数或者方法返回一个新的函数来接受剩余的参数，
+  * 数量可能是一个也可能是多个
+  * 柯里化是把一个有n个参数的函数变成n个只有1个参数的函数，
+  * 例如：add = (x, y, z) => x + y + z→curryAdd = x => y => z => x + y + z
+  * 当偏函数接受一个参数并且返回了一个只接受一个参数的函数，
+  * 与两个接受一个参数的函数curry()()的柯里化函数，这时候两个概念类似。
+  *
+  * */
+
+
+
+  // 3. 延迟执行
+
+  const curry = function(fn) {
+    const _args = []
+    return function cb(...rest) {
+      if (rest.length === 0) {
+        return fn.apply(this, _args)
+      }
+      _args.push(...rest)
+      return cb
+    }
+  }
+
+  const curryAdd = curry((...T) =>
+    T.reduce((sum, single) => sum += single)
+  )
+  curryAdd(1)
+  curryAdd(2)
+  curryAdd(3)
+  curryAdd(4)
+  curryAdd()   // 最后计算输出:10
+
+
+  //4. Function.prototype.bind 方法也是柯里化应用
+
+  /*
+  * 与 call/apply 方法直接执行不同，bind 方法将第一个参数设置为函
+  * 数执行的上下文，其他参数依次传递给调用方法（函数的主体本身不执行
+  * ，可以看成是延迟执行），并动态创建返回一个新的函数，
+   * 这符合柯里化特点。
+  *
+  * */
+
+  var foo = {x: 888};
+  var bar = function () {
+    console.log(this.x);
+  }.bind(foo);              // 绑定
+  bar();                    // 888
+
+  /*
+  *
+  * 下面是一个 bind 函数的模拟，testBind 创建并返回新的函数，
+  * 在新的函数中将真正要执行业务的函数绑定到实参传入的上下文，
+  * 延迟执行了。*/
+
+
+  Function.prototype.testBind = function(scope) {
+    return () => this.apply(scope)
+  }
+  var foo = { x: 888 }
+  var bar = function() {
+    console.log(this.x)
+  }.testBind(foo)              // 绑定
+  bar()
+
+
+
+
+</script>
+</html>
