@@ -273,11 +273,11 @@
   *
   * */
 
-  var foo = {x: 888};
-  var bar = function () {
+  var foo1 = {x: 888};
+  var bar1 = function () {
     console.log(this.x);
-  }.bind(foo);              // 绑定
-  bar();                    // 888
+  }.bind(foo1);              // 绑定
+  bar1();                    // 888
 
   /*
   *
@@ -289,11 +289,11 @@
   Function.prototype.testBind = function(scope) {
     return () => this.apply(scope)
   }
-  var foo = { x: 888 }
-  var bar = function() {
+  var foo2 = { x: 999 }
+  var bar2 = function() {
     console.log(this.x)
-  }.testBind(foo)              // 绑定
-  bar()
+  }.testBind(foo2)              // 绑定
+  bar2()
 
 
 
