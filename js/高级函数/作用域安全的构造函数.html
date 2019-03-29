@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Person(name, age, job) {
+    if (this instanceof Person) {
+      this.name = name;
+      this.age = age;
+      this.job = job;
+    } else {
+      return new Person(name, age, job);
+    }
+  }
+  var person1 = Person("Nicholas", 29, "Software Engineer");
+  alert(window.name);      //"" alert(person1.name);     //"Nicholas" var person2 = new Person("Shelby", 34, "Ergonomist"); alert(person2.name);     //"Shelby"
+  /*
+  * 调用Person构造函数时无论是否使用new操作符，
+  * 都会返回一个Person的新实例，这就避免了在全局对象上意外设置属性
+  *
+  * */
+</script>
+</body>
+</html>
