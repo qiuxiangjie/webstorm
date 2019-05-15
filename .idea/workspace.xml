@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1153d85-07ce-40bc-a4dc-f677a0c47760" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/高级函数/作用域安全的构造函数.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/高级函数/惰性函数.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/test/vue/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/test/树形结构数据转换.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/安全/read" afterPath="$PROJECT_DIR$/js/安全/read" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/test/柯里化.html" afterPath="$PROJECT_DIR$/js/高级函数/柯里化.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test/原生js实现双向数据绑定.html" afterPath="$PROJECT_DIR$/js/test/原生js实现双向数据绑定.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test/跨域/README.md" afterPath="$PROJECT_DIR$/js/test/跨域/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/test00/2.html" afterPath="$PROJECT_DIR$/js/test00/2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/高级函数/柯里化.html" afterPath="$PROJECT_DIR$/js/高级函数/柯里化.html" />
     </list>
     <ignored path="WebstormProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,24 +28,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="拖放.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/test/拖放.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/test/跨域/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="663">
-                <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+              <first_editor relative-caret-position="603">
+                <caret line="51" column="78" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="78" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -51,86 +41,97 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bmap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bnq7.23/bos地址复查/javascripts/bmap.js">
+      <file leaf-file-name="原生js实现双向数据绑定.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test/原生js实现双向数据绑定.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8177">
-              <caret line="509" column="32" lean-forward="false" selection-start-line="509" selection-start-column="16" selection-end-line="509" selection-end-column="32" />
+            <state relative-caret-position="111">
+              <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-1.7.2_uncompressed.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test/js/jquery-1.7.2_uncompressed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="6570" column="6" lean-forward="false" selection-start-line="6570" selection-start-column="6" selection-end-line="6570" selection-end-column="6" />
               <folding>
-                <element signature="e#3598#5067#0" expanded="false" />
-                <marker date="1496645683345" expanded="true" signature="17160:17177" ph="..." />
-                <marker date="1496645683345" expanded="true" signature="17233:17244" ph="..." />
-                <marker date="1496645683345" expanded="true" signature="17348:17474" ph="..." />
+                <element signature="e#11304#12599#0" expanded="false" />
+                <marker date="1496645683422" expanded="true" signature="35054:35085" ph="..." />
+                <marker date="1496645683422" expanded="true" signature="41015:41047" ph="..." />
+                <marker date="1496645683422" expanded="true" signature="42026:42040" ph="..." />
+                <marker date="1496645683422" expanded="true" signature="43747:43757" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendorder.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/sendorder.html">
+      <file leaf-file-name="树形结构数据转换.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test/树形结构数据转换.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="83" column="71" lean-forward="false" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="71" />
+            <state relative-caret-position="382">
+              <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="惰性函数.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/高级函数/惰性函数.html">
+      <file leaf-file-name="Object.defineProperty.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test/vue/Object.defineProperty.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="30" column="61" lean-forward="false" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="作用域安全的构造函数.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/高级函数/作用域安全的构造函数.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="柯里化.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/高级函数/柯里化.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3500">
-              <caret line="291" column="21" lean-forward="false" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="read" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/安全/read">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apply call.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/test/apply call.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
-              <caret line="48" column="91" lean-forward="false" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="区分slice(),splice(),split(),substring(),substr()使用方法.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/test/区分slice(),splice(),split(),substring(),substr()使用方法.html">
+      <file leaf-file-name="2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/test00/2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/websocket/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wsServer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/websocket/socket.io/wsServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/websocket/socket.io/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="柯里化.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/高级函数/柯里化.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="178" column="23" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -157,6 +158,8 @@
       <find>Submit</find>
       <find>form</find>
       <find>$.ajax</find>
+      <find>return this</find>
+      <find>curry</find>
     </findStrings>
     <dirStrings>
       <dir>D:\github\webstorm</dir>
@@ -168,9 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/checkInvalid.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare2.1/js/reformDetail.js" />
-        <option value="$PROJECT_DIR$/bnq/appShare12.22 - 测试/js/reformDetail.js" />
         <option value="$PROJECT_DIR$/untitled/test/跨域/jsonp.html" />
         <option value="$PROJECT_DIR$/untitled/test/跨域/图片ping.html" />
         <option value="$PROJECT_DIR$/untitled/test/跨域/跨资源共享.html" />
@@ -207,18 +207,21 @@
         <option value="$PROJECT_DIR$/js/算法/index.html" />
         <option value="$PROJECT_DIR$/js/test/跨域/浮点数的计算.html" />
         <option value="$PROJECT_DIR$/js/test/浮点数的计算.html" />
-        <option value="$PROJECT_DIR$/js/test00/2.html" />
         <option value="$USER_HOME$/Documents/WeChat Files/qxj19191616/Files/宏康.html" />
         <option value="$PROJECT_DIR$/js/test/原型链，原型继承，借用构造函数继承，组合继承.html" />
         <option value="$PROJECT_DIR$/js/es6/Promise/README.md" />
         <option value="$USER_HOME$/Documents/WeChat Files/qxj19191616/Files/慕课网.html" />
-        <option value="$PROJECT_DIR$/js/test/原生js实现双向数据绑定.html" />
-        <option value="$PROJECT_DIR$/js/test/跨域/README.md" />
         <option value="$PROJECT_DIR$/js/test/柯里化.html" />
         <option value="$PROJECT_DIR$/js/test/apply call.html" />
         <option value="$PROJECT_DIR$/js/高级函数/惰性函数.html" />
         <option value="$PROJECT_DIR$/js/高级函数/作用域安全的构造函数.html" />
         <option value="$PROJECT_DIR$/js/安全/read" />
+        <option value="$PROJECT_DIR$/js/test/跨域/README.md" />
+        <option value="$PROJECT_DIR$/js/test/vue/index.html" />
+        <option value="$PROJECT_DIR$/js/test00/2.html" />
+        <option value="$PROJECT_DIR$/js/test/原生js实现双向数据绑定.html" />
+        <option value="$PROJECT_DIR$/js/test/树形结构数据转换.html" />
+        <option value="$PROJECT_DIR$/js/高级函数/柯里化.html" />
       </list>
     </option>
   </component>
@@ -236,10 +239,9 @@
     <handled-path value="$PROJECT_DIR$/js/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="x" value="1600" />
+    <option name="width" value="1612" />
+    <option name="height" value="912" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -390,6 +392,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -448,7 +451,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="安全" />
+              <option name="myItemId" value="websocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebstormProjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webstorm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="websocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socket.io" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -480,14 +505,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bnq7.23" />
+              <option name="myItemId" value="53ccc9580001060500000000(1)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="canvas-course" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -763,12 +791,18 @@
       <workItem from="1552264499234" duration="6142000" />
       <workItem from="1553130707466" duration="1294000" />
       <workItem from="1553585141728" duration="1676000" />
-      <workItem from="1553657653678" duration="5713000" />
+      <workItem from="1553657653678" duration="6992000" />
+      <workItem from="1554107645744" duration="7959000" />
+      <workItem from="1555169765953" duration="4257000" />
+      <workItem from="1555379852156" duration="596000" />
+      <workItem from="1556173471303" duration="602000" />
+      <workItem from="1556504151987" duration="1535000" />
+      <workItem from="1557453966900" duration="15170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="772240000" />
+    <option name="totallyTimeSpent" value="803638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -780,16 +814,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="1600" y="0" width="1612" height="912" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15589353" sideWeight="0.8582251" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21092758" sideWeight="0.8582251" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19515477" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12668744" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19897304" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22121535" sideWeight="0.1417749" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -799,6 +833,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785714" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15057114" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -833,79 +868,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/test/css3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/es6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/after.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/websocket/socket.io/wsServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/websocket/socket.io/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/websocket/wsServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/node/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="289">
-            <caret line="7" column="122" lean-forward="false" selection-start-line="7" selection-start-column="122" selection-end-line="7" selection-end-column="122" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq7.23/wxShare/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2193">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq7.23/wxShare/trackDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq7.23/wxShare/review.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/sendlist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -962,24 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/test00/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bnq/bos整改单上传查询/javascripts/reformcheck.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/vue/Object.defineProperty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1032,21 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/test00/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="50" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test00/2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/工作/静脉曲张费用/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1079,21 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/跨域/jsonp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/原生js实现双向数据绑定.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/WeChat Files/qxj19191616/Files/慕课网.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-53">
@@ -1115,7 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1123,7 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="73" column="43" lean-forward="false" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,65 +1047,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/区分slice(),splice(),split(),substring(),substr()使用方法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/跨域/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="663">
-            <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bnq7.23/bos地址复查/javascripts/bmap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8177">
-          <caret line="509" column="32" lean-forward="false" selection-start-line="509" selection-start-column="16" selection-end-line="509" selection-end-column="32" />
-          <folding>
-            <element signature="e#3598#5067#0" expanded="false" />
-            <marker date="1496645683345" expanded="true" signature="17160:17177" ph="..." />
-            <marker date="1496645683345" expanded="true" signature="17233:17244" ph="..." />
-            <marker date="1496645683345" expanded="true" signature="17348:17474" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bnq/bos分配工地/sendorder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="1411">
           <caret line="83" column="71" lean-forward="false" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/高级函数/惰性函数.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="30" column="61" lean-forward="false" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-          <folding />
+        <state relative-caret-position="1054">
+          <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/apply call.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="91" lean-forward="false" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/区分slice(),splice(),split(),substring(),substr()使用方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/跨域/跨资源共享.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/跨域/图片ping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/跨域/jsonp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/高级函数/作用域安全的构造函数.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="361">
           <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/js面向对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bnq7.23/bos地址复查/javascripts/bmap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="453" column="25" lean-forward="false" selection-start-line="453" selection-start-column="20" selection-end-line="453" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1201,18 +1128,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/高级函数/柯里化.html">
+    <entry file="file://$PROJECT_DIR$/js/test/vue/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3500">
-          <caret line="291" column="21" lean-forward="false" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/test/apply call.html">
+    <entry file="file://$PROJECT_DIR$/js/test00/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="48" column="91" lean-forward="false" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
+        <state relative-caret-position="408">
+          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test00/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="50" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test00/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/websocket/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/websocket/socket.io/wsServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/websocket/socket.io/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/vue/Object.defineProperty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/跨域/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="603">
+            <caret line="51" column="78" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="78" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/Carousel8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/原生js实现双向数据绑定.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/树形结构数据转换.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test/js/jquery-1.7.2_uncompressed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="6570" column="6" lean-forward="false" selection-start-line="6570" selection-start-column="6" selection-end-line="6570" selection-end-column="6" />
+          <folding>
+            <element signature="e#11304#12599#0" expanded="false" />
+            <marker date="1496645683422" expanded="true" signature="35054:35085" ph="..." />
+            <marker date="1496645683422" expanded="true" signature="41015:41047" ph="..." />
+            <marker date="1496645683422" expanded="true" signature="42026:42040" ph="..." />
+            <marker date="1496645683422" expanded="true" signature="43747:43757" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/高级函数/柯里化.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="178" column="23" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="23" />
           <folding />
         </state>
       </provider>

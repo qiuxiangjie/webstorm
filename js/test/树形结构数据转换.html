@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var originData = [
+    {
+      parentId:0,
+      id: 1,
+      value: 1,
+    },
+    {
+      parentId:0,
+      id: 2,
+      value: 1,
+    },
+    {
+      parentId:1,
+      id: 3,
+      value: 1,
+    },
+    {
+      parentId:3,
+      id: 4,
+      value: 1,
+    }
+  ];
+
+  var targetData = [
+    {
+      parentId:0,
+      id: 1,
+      value: 1,
+      children: [
+        {
+          parentId:1,
+          id: 3,
+          value: 1,
+          children: [
+            {
+              parentId:3,
+              id: 4,
+              value: 1,
+            }
+          ]
+        },
+      ]
+    },
+    {
+      parentId:0,
+      id: 2,
+      value: 1,
+    },
+  ];
+
+
+
+  function transformTreeData(data) {
+    let map = {};
+    map[0] =  { children: [] };
+
+    data.forEach(function (item, index) {
+      map[item.id] = item
+    });
+    data.forEach(function (item, index) {
+      let t = map[item.parentId];
+      if(!t.children) {
+        t.children = []
+      }
+      t.children.push(item);
+    });
+    return map[0]
+  }
+  console.log(transformTreeData(originData));
+  console.log('hehe=================');
+  console.log(targetData)
+
+
+</script>
+</body>
+</html>

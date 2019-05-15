@@ -81,6 +81,13 @@
   console.log(result);//输出14 toString
 
 
+
+
+
+
+
+
+
 /*  // 简单实现，参数只能从右到左传递
   function createCurry(func, args) {
 
@@ -111,6 +118,10 @@
       return fn.apply(null, rest1.concat(rest2))
     }
   }
+
+
+
+
 
   function sayHello(name, age, fruit) {
     console.log(`我叫 ${name},我 ${age} 岁了, 我喜欢吃 ${fruit}`)
@@ -226,7 +237,7 @@
     }
   };
   const isString = isType('String');
-  const isFunction = isType('Function')
+  const isFunction = isType('Function');
 
   /*
   * 偏函数固定了函数的某个部分，通过传入的参数或者方法返回一个新的函数来接受剩余的参数，
