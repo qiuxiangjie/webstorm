@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    iframe {
+      width: 100%;
+      height: 1000px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <iframe src="http://172.26.6.81:8080/#/login" frameborder="0"></iframe>
+  <script>
+    /*
+    *
+    *
+    * 防止自己的网站被别人iframe
+    * if (window!=parent || top != self) {
+     window.top.location.href = window.location.href;
+    *
+    * */
+
+  </script>
+</div>
+</body>
+</html>
