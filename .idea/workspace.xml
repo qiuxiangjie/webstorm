@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1153d85-07ce-40bc-a4dc-f677a0c47760" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/es6/Proxy/index.html" afterPath="$PROJECT_DIR$/js/es6/Proxy/index.html" />
     </list>
     <ignored path="WebstormProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,18 +102,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/es6/Proxy/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="551">
+              <caret line="190" column="28" lean-forward="false" selection-start-line="190" selection-start-column="21" selection-end-line="190" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeakMap.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/es6/Set/WeakSet/Map/WeakMap.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/es6/Set, WeakSet, Map, WeakMap/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="595">
+              <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -162,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js基础/test/111.html" />
         <option value="$PROJECT_DIR$/js基础/test/after.html" />
         <option value="$PROJECT_DIR$/js基础/test/区分slice(),splice(),split(),substring(),substr()使用方法.html" />
         <option value="$PROJECT_DIR$/js基础/test00/1.html" />
@@ -211,6 +211,7 @@
         <option value="$PROJECT_DIR$/js/test/跨域/README.md" />
         <option value="$PROJECT_DIR$/js/test00/2.html" />
         <option value="$PROJECT_DIR$/js/test/树形结构数据转换.html" />
+        <option value="$PROJECT_DIR$/js/es6/Set, WeakSet, Map, WeakMap/WeakSet/Map/WeakMap.html" />
         <option value="$PROJECT_DIR$/js/es6/Set/WeakSet/Map/WeakMap.html" />
         <option value="$PROJECT_DIR$/js/es6/Proxy/index.html" />
       </list>
@@ -230,8 +231,8 @@
     <handled-path value="$PROJECT_DIR$/js/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1602" />
-    <option name="width" value="1056" />
+    <option name="x" value="1594" />
+    <option name="width" value="1052" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -427,15 +428,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Set" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeakSet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Map" />
+              <option name="myItemId" value="Set, WeakSet, Map, WeakMap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,19 +515,19 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/js/test/node/npm-debug.log" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\webstorm\js\es6\Set, WeakSet, Map, WeakMap" />
+      <recent name="D:\github\webstorm\js\高级函数" />
+      <recent name="D:\github\webstorm\js\test" />
+      <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
+      <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\http" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\github\webstorm\js\test\跨域" />
       <recent name="E:\github\webstorm\untitled\test" />
       <recent name="D:\Webstorm\WebstormProjects\bnq\markdown\stylesheets" />
       <recent name="D:\Webstorm\WebstormProjects\bnq\markdown\javascripts" />
       <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\github\webstorm\js\高级函数" />
-      <recent name="D:\github\webstorm\js\test" />
-      <recent name="D:\Webstorm\WebstormProjects\bnq\bos分配工地" />
-      <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\http" />
-      <recent name="D:\Webstorm\WebstormProjects\untitled\test\node\" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -787,12 +780,12 @@
       <workItem from="1558597349198" duration="588000" />
       <workItem from="1559006903249" duration="4087000" />
       <workItem from="1559201875750" duration="487000" />
-      <workItem from="1559522768204" duration="28844000" />
+      <workItem from="1559522768204" duration="33722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="857122000" />
+    <option name="totallyTimeSpent" value="862000000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,15 +797,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1602" y="0" width="1056" height="1080" extended-state="0" />
+    <frame x="1594" y="0" width="1052" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2524558" sideWeight="0.8582251" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25345168" sideWeight="0.8582251" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1499472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25554383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25554383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22121535" sideWeight="0.1417749" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -822,7 +817,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785714" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15057114" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1202,18 +1196,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/es6/Set/WeakSet/Map/WeakMap.html">
+    <entry file="file://$PROJECT_DIR$/js/es6/Set, WeakSet, Map, WeakMap/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="595">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/es6/Proxy/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="551">
+          <caret line="190" column="28" lean-forward="false" selection-start-line="190" selection-start-column="21" selection-end-line="190" selection-end-column="28" />
           <folding />
         </state>
       </provider>
