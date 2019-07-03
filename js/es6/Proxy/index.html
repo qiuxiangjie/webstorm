@@ -75,11 +75,16 @@
   const queuedObservers = new Set();
 
   const observe = fn => queuedObservers.add(fn);
-  const observable = obj => new Proxy(obj, {set});
+  const observable = obj => new Proxy(obj, {set, get});
 
   function set(target, key, value, receiver) {
     const result = Reflect.set(target, key, value, receiver);
-    queuedObservers.forEach(observer => observer());
+    queuedObservers.forEach(observer => observer(target, key, value, receiver));
+    return result;
+  }
+  function get(target, key, receiver) {
+    const result = Reflect.get(target, key, receiver);
+    say(target, key, receiver);
     return result;
   }
 
@@ -88,11 +93,11 @@
     name: '张三',
     age: 20
   });
-  function print() {
-    console.log(`${person.name}, ${person.age}`)
+  function print(target, key, value, receiver) {
+    console.log(`${key}, ${value}`)
   }
-  function say() {
-    console.log(`${person.name} hello!`)
+  function say(target, key, value, receiver) {
+    console.log(`${key} hello!`)
   }
 
   observe(print);
@@ -178,7 +183,7 @@
   *
   * */
 
-  const service = createWebService('http://example.com/data');
+/*  const service = createWebService('http://example.com/data');
 
   service.employees().then(json => {
     const employees = JSON.parse(json);
@@ -191,6 +196,56 @@
         return () => httpGet(baseUrl+'/' + propKey);
       }
     });
+  }*/
+
+
+  /*************************************************/
+
+  //重写Array,监听数组(当向list中push值的时候，console只执行一次)
+  class NewArray extends Array {
+    constructor(...args) {
+      console.log(...args);
+      super(...args);
+      //console.log(super)
+    }
+
+    push(...args) {
+      //console.log(super.push);
+      super.push(...args);
+      arrayCallback();
+      return this.length;
+    }
+  }
+
+
+  //监控数组如果有值进来，则执行递归方法。
+  let list = new NewArray(),
+    beWorking = false;
+  list.push(1);
+  list.push(2);
+  list.push(3);
+  list.push(4);
+  list.push(5);
+
+  function arrayCallback() {
+    console.log(`數組產生了變化. ${list.length}`);
+    if(!beWorking){//如果递归没有在执行，则执行递归方法；如果递归方法已经开始执行，则该方法不执行。
+      recursionRemove(list);
+    }
+  }
+
+  function recursionRemove(array) {
+    setTimeout(function () {
+      //do something
+      console.log(`删除了元素${array[0]}`);
+
+      array.shift();//删除第一个元素
+      if(array.length == 0){
+        beWorking = false;
+      }else{
+        recursionRemove(array);
+      }
+    }, 2000);
   }
 
 
