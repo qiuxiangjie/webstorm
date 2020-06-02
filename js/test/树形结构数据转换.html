@@ -31,7 +31,7 @@
       data.filter((item) => {
         if (parent.id === item.parentId) {
 
-          if(parent.childre) {
+          if(!parent.childre) {
             parent.childre = [];
           }
 
@@ -51,6 +51,10 @@
 
   var originData1 = [
     {
+      parentId: 1,
+      id: 3,
+    },
+    {
       parentId: 0,
       id: 2,
     },
@@ -58,10 +62,7 @@
       parentId: 2,
       id: 1,
     },
-    {
-      parentId: 1,
-      id: 3,
-    }
+
   ];
 
   var targetData = [
@@ -92,20 +93,24 @@
   ];
 
 
-  function transformTreeData(data) {
+  function transformTreeData(data, parentId = 'parentId') {
     let map = {};
     map[ 0 ] = { children: [] };
 
     data.forEach(function (item, index) {
+      // 获得每一项的指针，并map到id上面
       map[ item.id ] = item
     });
-    console.log(map);
-    data.forEach(function (item, index) {
-      let t = map[ item.parentId ];
+    console.dir(map, {depth:null});
+    data.forEach(function (item, index, arr) {
+      // 找出父级
+      let t = map[ item[parentId] ];
       if (!t.children) {
         t.children = []
       }
+      //  将自己存入到父级（之前获得每一项的指针里面添加子级）
       t.children.push(item);
+      console.log(map[0]);
     });
     return map[ 0 ]
   }
