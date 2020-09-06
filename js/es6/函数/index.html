@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /*
+   *  尾递归
+   *  函数调用自身，称为递归。如果尾调用自身，就称为尾递归。
+   *
+   *  递归非常耗费内存，因为需要同时保存成千上百个调用帧，
+   *  很容易发生“栈溢出”错误（stack overflow）。
+   *  但对于尾递归来说，由于只存在一个调用帧，所以永远不会发生“栈溢出”错误。
+   *
+   *
+   *  注意： 尾递归只能在严格模式下使用，因为在正常模式下，
+   *  函数内部有两个变量（arguments，caller），可以跟踪函数的调用栈
+   * */
+
+  /*  function factorial(n) {
+   if (n === 1) return 1;
+   return n * factorial(n - 1);
+   }
+
+   factorial(5) // 120*/
+  /*
+   * 上面代码是一个阶乘函数，计算n的阶乘，最多需要保存n个调用记录，复杂度 O(n) 。
+   * */
+
+
+
+  // 如果改写成尾递归，只保留一个调用记录，复杂度 O(1)
+  function factorial(n, total) {
+    if (n === 1) return total;
+    return factorial(n - 1, n * total);
+  }
+
+  factorial(5, 1) // 120
+
+
+  /*
+   * 还有一个比较著名的例子，就是计算 Fibonacci 数列，也能充分说明尾递归优化的重要性。
+   * 非尾递归的 Fibonacci 数列实现如下
+   *
+   * */
+
+  /*
+   * function Fibonacci (n) {
+   if ( n <= 1 ) {return 1};
+
+   return Fibonacci(n - 1) + Fibonacci(n - 2);
+   }
+
+   Fibonacci(10) // 89
+   Fibonacci(100) // 超时
+   Fibonacci(500) // 超时
+   *
+   *
+   * */
+
+  // 尾递归优化过的 Fibonacci 数列实现如下
+  function Fibonacci2(n, ac1 = 1, ac2 = 1) {
+    if (n <= 1) {
+      return ac2
+    }
+    ;
+
+    return Fibonacci2(n - 1, ac2, ac1 + ac2);
+  }
+
+  Fibonacci2(100) // 573147844013817200000
+  Fibonacci2(1000) // 7.0330367711422765e+208
+  Fibonacci2(10000) // Infinity
+
+
+
+
+  // Fibonacci 数列另外的优化方式
+  /*
+   * 实现思路： 定义一个缓存数组，存储已经计算过的数列
+   * 每次计算前看看数组里有没有，如果有直接用
+   * 如果没有就计算，然后存在数组，以便下一次计算使用
+   *
+   * */
+
+  var cache = [];
+  function fib(n) {
+    if (cache[ n ] !== undefined) {
+      //看看数组里有没有，如果有直接用
+      return cache[ n ];
+    }
+    if (n <= 2) {
+      cache[ n ] = 1;
+      return 1;
+    }
+    cache.push(fib(n - 1) + fib(n - 2));
+    return cache[ n ];
+  }
+  console.log(fib(5));
+
+
+  /*
+  *
+  * 尾递归优化只在严格模式下生效，那么正常模式下也可以自己实现尾递归优化
+  *
+  * */
+  // 蹦床函数（trampoline）可以将递归执行转为循环执行。
+  function trampoline(f) {
+    while (f && f instanceof Function) {
+      f = f();
+    }
+    return f;
+  }
+
+  /*
+  *
+  * 上面就是蹦床函数的一个实现，它接受一个函数f作为参数。
+  * 只要f执行后返回一个函数，就继续执行。注意，这里是返回一个函数，
+  * 然后执行该函数，而不是函数里面调用函数，这样就避免了递归执行，从而就消除了调用栈过大的问题
+   *
+  * */
+  function sum(x, y) {
+    if (y > 0) {
+      return sum.bind(null, x + 1, y - 1);
+    } else {
+      return x;
+    }
+  }
+
+  trampoline(sum(1, 100000));
+
+  /*
+  * 蹦床函数并不是真正的尾递归优化，下面的实现才是
+  * */
+
+  function tco(f) {
+    var value;
+    var active = false;
+    var accumulated = [];
+
+    return function accumulator() {
+      accumulated.push(arguments);
+      if (!active) {
+        active = true;
+        while (accumulated.length) {
+          value = f.apply(this, accumulated.shift());
+        }
+        active = false;
+        return value;
+      }
+    };
+  }
+
+  var sum = tco(function(x, y) {
+    if (y > 0) {
+      return sum(x + 1, y - 1)
+    }
+    else {
+      return x
+    }
+  });
+
+  sum(1, 100000)
+  // 100001
+
+
+</script>
+</body>
+</html>

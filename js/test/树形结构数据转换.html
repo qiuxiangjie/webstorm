@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var originData = [
+    {
+      parentId: 0,
+      id: 1,
+    },
+    {
+      parentId: 0,
+      id: 2,
+    },
+    {
+      parentId: 1,
+      id: 3,
+    },
+    {
+      parentId: 3,
+      id: 4,
+    }
+  ];
+
+
+  function transformArr(data) {
+    let p = data.filter((parent) => {
+      data.filter((item) => {
+        if (parent.id === item.parentId) {
+
+          if(!parent.childre) {
+            parent.childre = [];
+          }
+
+          parent.childre.push(item);
+
+        }
+      });
+      return parent.paretId === 0;
+    });
+
+
+  }
+  transformArr(originData);
+
+
+
+
+  var originData1 = [
+    {
+      parentId: 1,
+      id: 3,
+    },
+    {
+      parentId: 0,
+      id: 2,
+    },
+    {
+      parentId: 2,
+      id: 1,
+    },
+
+  ];
+
+  var targetData = [
+    {
+      parentId: 0,
+      id: 1,
+      value: 1,
+      children: [
+        {
+          parentId: 1,
+          id: 3,
+          value: 1,
+          children: [
+            {
+              parentId: 3,
+              id: 4,
+              value: 1,
+            }
+          ]
+        },
+      ]
+    },
+    {
+      parentId: 0,
+      id: 2,
+      value: 1,
+    },
+  ];
+
+
+  function transformTreeData(data, parentId = 'parentId') {
+    let map = {};
+    map[ 0 ] = { children: [] };
+
+    data.forEach(function (item, index) {
+      // 获得每一项的指针，并map到id上面
+      map[ item.id ] = item
+    });
+    console.dir(map, {depth:null});
+    data.forEach(function (item, index, arr) {
+      // 找出父级
+      let t = map[ item[parentId] ];
+      if (!t.children) {
+        t.children = []
+      }
+      //  将自己存入到父级（之前获得每一项的指针里面添加子级）
+      t.children.push(item);
+      console.log(map[0]);
+    });
+    return map[ 0 ]
+  }
+  console.log(transformTreeData(originData1));
+  console.log('hehe=================');
+  console.log(targetData)
+
+  /*************************************************************************/
+
+  var pub = { // tree 为当前树的数据源 key为父节点key值
+    treeTransArray: function (tree, key) {
+      return tree.reduce(function (con, item) {
+        var callee = arguments.callee;
+        con.push(item);
+        if (item[ key ] && item[ key ].length > 0) item[ key ].reduce(callee, con);
+        return con;
+      }, []).map(function (item) {
+          item[ key ] = [];
+          return item;
+        })
+    },
+        //数组转树
+        // list 数组数据源 ,key 对应父节点id字符串
+        arrayTransTree: function (list, key) {
+        var tree = list.filter(function (parent) {
+
+
+          var branchArr = list.filter(function (child) {
+            return parent.id === child[ key ];
+          });
+
+
+          parent.nodes = [];
+          if (branchArr.length > 0) {
+            parent.nodes = branchArr;
+          }
+
+          return parent[ key ] === "";
+        });
+
+
+        return tree;
+      }
+    };
+
+
+    var tree = [ {
+      id: "parent",
+      parentId: "",
+      name: "一级节点",
+      childs: [
+        { id: "child1", parentId: "parent", name: "二级节点", childs: [] },
+        { id: "child2", parentId: "parent", name: "二级节点", childs: []
+      } ]
+    } ];
+    var arr1 = [
+      {id: "parent", name: "一级节点", parentId: ""},
+      {id: "child1", name: "二级节点", parentId: "parent"},
+      {id: "child2", name: "二级节点", parentId: "parent"},
+      ];
+    var arr = pub.treeTransArray(tree, 'childs');
+  //输出转换后数组 console.log(arr); var _tree = pub.arrayTransTree(arr,'parentId');//输出转换后树 console.log(_tree);
+
+
+</script>
+</body>
+</html>

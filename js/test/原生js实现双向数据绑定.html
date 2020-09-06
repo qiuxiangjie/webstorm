@@ -14,11 +14,49 @@
   * */
 
 
-  var user = {};
+  var user = {
+    name: ''
+  };
   var input1 = document.getElementById("input1");
   var input2 = document.getElementById("input2");
 
-  Object.defineProperty(user, 'name', {
+
+  Object.defineProperty(user, 'name',  {
+    get: function () {
+      return 2
+
+    },
+    set: function (newVal) {
+      console.log(newVal);
+    }
+
+  });
+
+  input1.oninput = function (val) {
+    console.log(val);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Object.defineProperty(user, 'name', {
     get: function () {
       return input1.value;
     },
@@ -33,7 +71,7 @@
 
   input2.oninput = function () {
     user.name = input2.value;
-  }
+  }*/
 
 
 /*  input1.onkeyup = function (e) {

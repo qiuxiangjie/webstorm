@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+  <style>
+
+    #test *{vertical-align:middle;}
+
+  </style>
+
+<body>
+
+<div
+
+    id="test">
+
+  <img
+
+      src="http://127.0.0.1:7001/wsc/images/message.png"/>
+
+  <span>sdfhsdhfdksfjhtes:</span>
+
+</div>
+<script>
+  window.top.document.getElementsByTagName('div')[0].innerHTML= 3333;
+
+  var a = ['a', '4', 'b', 'a', 'b', 'a']
+  var obj = {}
+  a.forEach(item => {
+    console.log(obj[item])
+    if(obj[item]) {
+      obj[item] += 1
+    } else {
+      obj[item] = 1
+    }
+  });
+</script>
+
+</body>
+
+</html>

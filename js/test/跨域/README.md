@@ -49,6 +49,8 @@
   
 	3、请求非XHR（XMLHttpRequest） ，不支持XHR的新特性
 	
-* 服务端添加允许跨域的代码：response.setHeader("Access-Control-Allow-Origin","*")，具体看 https://www.jianshu.com/p/0c67823550d6
+* CROS:服务端添加允许跨域的代码：response.setHeader("Access-Control-Allow-Origin","*")，具体看 https://www.jianshu.com/p/0c67823550d6
 
-* 通过中间代理服务器实现
+* 通过中间代理服务器实现: nginx/apache
+
+* 通过iframe

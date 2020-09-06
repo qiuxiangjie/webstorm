@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+
+  /*
+  * 一、 Set: 它类似于数组，但是成员的值都是唯一的，没有重复的值。
+  *
+  * Set函数可以接受一个数组（或者具有 iterable 接口的其他数据结构）作为参数，用来初始化
+  *
+  * */
+
+  // 例一
+  const set1 = new Set([1, 2, 3, 4, 4]);
+  [...set1]
+  // [1, 2, 3, 4]
+
+  // 例二
+  const items = new Set([1, 2, 3, 4, 5, 5, 5, 5]);
+  //items.size // 5
+
+  // 例三
+  const set2 = new Set(document.querySelectorAll('div'));
+  //set.size // 56
+
+  // 类似于
+  const set3 = new Set();
+  document
+    .querySelectorAll('div')
+    .forEach(div => set.add(div));
+  //set.size // 56
+
+  /*
+  *
+  * 上面代码中，例一和例二都是Set函数接受数组作为参数，例三是接受类似数组的对象作为参数。
+  *
+  * */
+
+  // 去除数组的重复成员
+  var a = [...new Set([1,3,4,5,4,3,])];
+  var b = Array.from(new Set([1,3,4,5,4,3,]))
+
+
+  /*
+   *
+   *Set 结构的实例有以下属性。
+   Set.prototype.constructor：构造函数，默认就是Set函数。
+   Set.prototype.size：返回Set实例的成员总数。
+
+   *
+   * 方法
+   add(value)：添加某个值，返回 Set 结构本身。
+   delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。
+   has(value)：返回一个布尔值，表示该值是否为Set的成员。
+   clear()：清除所有成员，没有返回值。
+  *
+
+  *
+  * 遍历操作
+   keys()：返回键名的遍历器
+   values()：返回键值的遍历器
+   entries()：返回键值对的遍历器
+   forEach()：使用回调函数遍历每个成员
+
+   *
+  * */
+
+
+  /*
+  * 二、WeakSet: 结构与 Set 类似，也是不重复的值的集合。
+  *
+  * 作用：
+  * WeakSet 适合临时存放一组对象，以及存放跟对象绑定的信息。
+  * 只要这些对象在外部消失，它在 WeakSet 里面的引用就会自动消失
+  *
+  *  与Set的区别：
+  *  1. WeakSet 可以接受一个数组或类似数组的对象作为参数，
+  *     但是成员只能是对象，而不能是其他类型的值
+  *  2. WeakSet 不能遍历，是因为成员都是弱引用，随时可能消失，
+  *     遍历机制无法保证成员的存在，很可能刚刚遍历结束，成员就取不到了。
+  *     WeakSet 的一个用处，是储存 DOM 节点，而不用担心这些节点从文档移除时，会引发内存泄漏
+  *
+  * */
+
+
+
+  /*
+  * 三、 Map: 它类似于对象，也是键值对的集合，但是“键”的范围不限于字符串，
+  * 各种类型的值（包括对象）都可以当作键。也就是说，Object 结构提供了“字符串—值”的对应，
+  * Map 结构提供了“值—值”的对应，是一种更完善的 Hash 结构实现。
+  * 如果你需要“键值对”的数据结构，Map 比 Object 更合适。
+  *
+  *
+  * */
+
+  /*
+  * Map 任何具有 Iterator 接口、且每个成员都是一个双元素的数组的数据结构
+  * （详见《Iterator》一章）都可以当作Map构造函数的参数
+  * */
+  const map = new Map([
+    ['name', '张三'],
+    ['title', 'Author']
+  ]);
+
+  map.size // 2
+  map.has('name') // true
+  map.get('name') // "张三"
+  map.has('title') // true
+  map.get('title') // "Author"
+
+
+
+  /*
+  *
+  * 四、 WeakMap结构与Map结构类似，也是用于生成键值对的集合
+  *
+  * 用途：
+  * 如果你要往对象上添加数据，又不想干扰垃圾回收机制，就可以使用 WeakMap。
+  * 一个典型应用场景是，在网页的 DOM 元素上添加数据，就可以使用WeakMap结构。
+  * 当该 DOM 元素被清除，其所对应的WeakMap记录就会自动被移除
+  *
+  * WeakMap与Map的区别有两点
+  * 1. WeakMap只接受对象作为键名（null除外），不接受其他类型的值作为键名
+  * 2.一是没有遍历操作（即没有keys()、values()和entries()方法），也没有size属性。
+  *
+  *
+  *
+  *
+  *
+  * */
+
+
+
+
+</script>
+</body>
+</html>

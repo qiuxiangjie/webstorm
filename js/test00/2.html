@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <style>
+    .el-textarea {
+      min-height:100px;
+    }
     .el-textarea :-ms-input-placeholder{
       color:red !important;
       background:red ;
+
     }
   </style>
   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -18,10 +22,28 @@
   <p class="p2">234</p>
   <button>1</button>
   <button>2</button>
+  <div>
+    <p>2134324345343243</p>
+    <p>2134324345343243</p>
+    <p>2134324345343243</p>
+    <p>2134324345343243</p>
+    <p>2134324345343243</p>
+    <p>2134324345343243</p>
+    <p>2134324345343243</p>
+  </div>
 </div>
 
 </body>
 <script>
+function test() {
+  if (1) {
+    console.log(1);
+    return
+  }
+  console.log(2);
+}
+
+
   $(function () {
     $('button:first').click(function () {
       var p = $('p:first').remove();
