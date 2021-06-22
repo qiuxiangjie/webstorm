@@ -43,6 +43,8 @@
   },
   "version": "5.2.0",
   "dependencies": {
-    "react": "^15.4.1"
+    "nodejs-websocket": "^1.7.2",
+    "react": "^15.4.1",
+    "socket.io": "^3.0.5"
   }
 }

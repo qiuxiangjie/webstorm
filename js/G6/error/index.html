@@ -1,0 +1,93 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2021-06-18 17:39:41
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2021-06-18 18:00:19
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>系统错误</title>
+  <style>
+  .system-error{
+  background: #fff;
+  color: #19253D;
+  height: 100%;
+  font-size: 14px;
+  }
+  .system-error-main {
+    top: 50%;
+    transform: translate(0, 50%);
+    text-align: center;
+    width: 500px;
+    margin: auto;
+  }
+  .system-error-main img{
+      width: 240px;
+      height: 240px;
+    }
+    .til{
+      color: #19253D;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+    .con{
+      font-size: 14px;
+      color: #8C9BB0;
+      line-height: 20px;
+    }
+    .bottom{
+      margin-top: 40px;
+    }
+    .btn{
+        margin-bottom: 10px;
+        width: 160px;
+        height: 40px;
+        background-color: #2F54EB;
+        color: #fff;
+        display: inline-block;
+        line-height: 40px;
+        border-radius: 4px;
+      }
+      p{
+        padding: 0;
+        margin: 0;
+      }
+      p span{
+          color: rgb(238,238,238);
+          padding: 0 10px;
+        }
+        a{
+          color: #2F54EB;
+          text-decoration:none
+        }
+  </style>
+</head>
+<body>
+  <div class="system-error">
+    <div class="system-error-main">
+      <img src="./img/error.png" alt="">
+      <div class="til">哎呀～～您没有访问权限或页面不存在哦！</div>
+      <div class="con">请检查您账号是否有相关权限，或检查打开的地址是否有误～</div>
+      <div class="bottom">
+        <a class="btn" href="/mall">去首页</a>
+        <p>或者去：<a href="/merchant/buyer/home">买家工作台</a><span>|</span><a href="/merchant/seller/home">卖家工作台</a></p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+<script>
+  function goPage(page) {
+      location.href = page;
+    }
+</script>
+</html>
