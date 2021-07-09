@@ -3,23 +3,37 @@
  * @author: zhoujianxiang
  * @Date: 2021-06-18 15:06:41
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2021-07-02 17:15:33
+ * @LastEditTime: 2021-07-09 09:39:16
  * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
  * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://gw.alipayobjects.com/os/lib/antv/g6/4.3.3/dist/g6.min.js"></script>
+  <!-- <script src="https://gw.alipayobjects.com/os/lib/antv/g6/4.3.3/dist/g6.min.js"></script> -->
+  <script src="https://gw.alipayobjects.com/os/lib/antv/g6/3.8.5/dist/g6.min.js"></script>
   <script src="./data.js"></script>
+  <script src="./event.js"></script>
+  <script src="./animation.js"></script>
+  <style>
+    .g6-tooltip {
+        padding: 10px 6px;
+        color: #444;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+      }
+  </style>
 
   <title>Document</title>
 </head>
 <body>
   <div id="container"></div>
+  <div id="minimap"></div>
   
 </body>
 </html>

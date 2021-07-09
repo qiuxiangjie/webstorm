@@ -1,76 +1,118 @@
-/*
- * @Descripttion: 
- * @author: zhoujianxiang
- * @Date: 2021-06-18 15:08:51
- * @LastEditors: zhoujianxiang
- * @LastEditTime: 2021-07-02 17:16:27
- * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
- * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
- */
-const data = {
-  nodes: [
-    {
-      id: "node1",
-      label: "北京",
-      x: 150,
-      y: 150
-    },
-    {
-      id: "node2",
-      label: "上海",
-      x: 400,
-      y: 150
-    }
-  ],
-  edges: [
-    {
-      source: "node1",
-      target: "node2",
-      label: '我是连线', // 边的文本
-    }
-  ]
-};
+////////////////////////插件//////////////////
+// 实例化 minimap 插件
+const minimap = new G6.Minimap({
+  size: [100, 100],
+  className: 'minimap',
+  type: 'delegate',
+});
+// 实例化 grid 插件
+const grid = new G6.Grid();
 
+// 实例化 toolbar 插件
+const toolbar = new G6.ToolBar();
+
+// 实例化 fisheye 插件
+const fisheye = new G6.Fisheye({
+  trigger: 'mousemove',
+  d: 3,
+  r: 200,
+ // delegateStyle: { stroke: '#000', strokeOpacity: 0.2, lineWidth: 2, fillOpacity: 0.1, fill: '#ccc' },
+  showLabel: false
+});
+
+
+
+
+//////////////////////图表配置/////////////////////////
+
+
+// 实例化图
 const graph = new G6.Graph({
+  plugins: [minimap,grid, toolbar], // 将 minimap 实例配置到图上
   container: "container",
   width: 1000,
   height: 1000,
-  fitView: true, // 图表自适应画布大小
-  fitViewPadding: [20, 40, 50, 20], 
+ // fitView: true, // 图表自适应画布大小
+  //fitViewPadding: [20, 40, 50, 20], // 配合fitView用
   animate: true,
+  layout: {
+    // Object，可选，布局的方法及其配置项，默认为 random 布局。
+    type: layouts[6], // 指定为力导向布局
+    preventOverlap: true, // 防止节点重叠
+    // nodeSize: 30        // 节点大小，用于算法中防止节点重叠时的碰撞检测。由于已经在上一节的元素配置中设置了每个节点的 size 属性，则不需要在此设置 nodeSize。
+    linkDistance: 200, // 指定边距离为100
+  },
   modes: {
     // 支持的 behavior
-    default: ['drag-canvas', 'zoom-canvas','click-select'],
+    default: [ 
+      'zoom-canvas',
+      'click-select',
+     // 'activate-relations',
+      'brush-select',
+      {
+      type: 'drag-node',
+      shouldEnd: (e)=>{
+        return true
+      },
+    },
+    {
+      type: 'tooltip',
+      formatText(model) {
+        return `<div style='color:red'>${model.label}</div>`;
+      },
+      offset: 10,
+    },
+    {
+      type: 'edge-tooltip', // 边提示框
+      formatText(model) {
+        // 边提示框文本内容
+        const text =
+          'source: ' +
+          model.source +
+          '<br/> target: ' +
+          model.target +
+          '<br/> weight: ' +
+          model.weight;
+        return text;
+      },
+    },
+  ],
     edit: ['click-select'],
   },
   nodeStateStyles:{
     hover:{
-      style: {
-        fill: "yellow",
-        lineWidth: 3
-      },
+      fill: "lightsteelblue",
+      lineWidth: 3
     },
     click: {
-      labelCfg: {
-        style: {
-          fill: "#333",
-          fontSize: 20
-        }
-      }
+      stroke: 'red',
+      lineWidth: 5,
+    }
+  },
+  edgeStateStyles:{
+    hover:{
+      fill: "lightsteelblue",
+      lineWidth: 3
+    },
+    click: {
+      stroke: 'red',
+      lineWidth: 5,
     }
   },
   defaultNode: {
-    shape: "ellipse",
+    type: "ellipse",
     //type: 'rect',
-    size: [100],
+    size: [30],
     color: "#5B8FF9",
     style: {
-      fill: "#ccc",
+      fill: "#333",
       lineWidth: 3
     },
     labelCfg: {
+      position: 'top',
+      autoRotate: true, // 边上的标签文本根据边的方向旋转
       style: {
-        fill: "#fff",
+        fill: "blur",
         fontSize: 20
       }
     }
@@ -89,18 +131,19 @@ const main = async () => {
   // );
   const remoteData = dataJson;
 
-  // ...
-  console.log(remoteData)
-  setNodeStyle(remoteData)
+
+ // setNodeStyle(remoteData) // 根据节点数据设置节点样式
+ // setEdgeStyle(remoteData) // 根据节点数据设置边样式
   graph.data(remoteData); // 加载远程数据
   graph.render(); // 渲染
+  addEvent()
 };
 
 function setNodeStyle(data){
   const nodes = data.nodes;
   nodes.forEach((node) => {
     if (!node.style) {
-      node.style = {};
+      node.style = {fill: "#333",};
     }
     switch (
       node.class // 根据节点数据中的 class 属性配置图形
@@ -122,6 +165,19 @@ function setNodeStyle(data){
     }
   });
   return data;
+}
+
+function setEdgeStyle(data){
+  const edges = data.edges;
+  edges.forEach((edge) => {
+    if (!edge.style) {
+      edge.style = {};
+    }
+    edge.style.lineWidth = edge.weight; // 边的粗细映射边数据中的 weight 属性数值
+    edge.style.opacity = 0.6;
+    edge.style.stroke = 'grey';
+  });
+  
 }
 
 main()

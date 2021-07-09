@@ -12,6 +12,14 @@
     window.onload = function(){
         var canvas = document.getElementById('canvas');
         var context= canvas.getContext('2d');
+        let width = canvas.width,height=canvas.height;
+// if (window.devicePixelRatio) {
+//    canvas.style.width = width + "px";
+//    canvas.style.height = height + "px";
+//    canvas.height = height * window.devicePixelRatio;
+//    canvas.width = width * window.devicePixelRatio;
+//    context.scale(window.devicePixelRatio, window.devicePixelRatio);
+// }
 /////////////////////////划线条///////////////////////////////
         context.beginPath();//开始
         context.moveTo(100,100);
@@ -42,23 +50,105 @@
         context.fillStyle='rgba(0,255,0,0.5)';//填充半透明颜色；
         context.fillRect(150,550,200,150);
 ///////////////////////画圆//////////////////////////////////
-        context.lineWidth=2;
+        context.lineWidth=20;
         context.strokeStyle="red";
         context.beginPath();
         context.arc(500,500,50,0,0.5*Math.PI);//x,y,r,
         context.stroke();
 
+        context.strokeStyle="yellow";
         context.beginPath();
         context.arc(650,500,50,0,Math.PI);
         context.stroke();
 
+        context.strokeStyle="green";
         context.beginPath();
         context.arc(800,500,50,0,1.5*Math.PI);
         context.stroke();
 
+        context.strokeStyle="blue";
         context.beginPath();
         context.arc(950,500,50,0,2*Math.PI);
         context.stroke();
+
+
+        //////多色环/////
+        // context.beginPath();
+        // context.strokeStyle="rgba(255,0,0,1)";
+        // context.arc(1100,500,50,0,0.5*Math.PI);
+        // context.stroke();
+
+        // context.beginPath();
+        // context.strokeStyle="yellow";
+        // context.arc(1100,500,50,0.5*Math.PI,1*Math.PI);
+        // context.stroke();
+
+        // context.beginPath();
+        // context.strokeStyle="green";
+        // context.arc(1100,500,50,1*Math.PI,1.5*Math.PI);
+        // context.stroke();
+
+        // context.beginPath();
+        // context.strokeStyle="blue";
+        // context.arc(1100,500,50,1.5*Math.PI,2*Math.PI);
+        // context.stroke();
+
+        function drawArc(arr){
+            context.lineWidth=30;
+            let x = 1200;
+            let y = 500;
+            let r = 80;
+            let speed = 100;
+            let l = arr.length;
+            let minR = 2/l;
+            let optionsArr=[];
+            arr.forEach((item, index) => {
+               
+                optionsArr[index] = {
+                    strokeStyle:item,
+                    sAngle: index*minR*Math.PI,
+                    eAngle: (index+1)*minR*Math.PI
+                }
+                let {strokeStyle, sAngle, eAngle} = optionsArr[index]
+                 // 渲染动画
+                setTimeout(()=>{
+                    setArc(strokeStyle, sAngle, eAngle)
+                },index*speed)
+            });
+
+            function setArc(strokeStyle, sAngle, eAngle){
+                context.beginPath();
+                context.strokeStyle=strokeStyle;
+                context.arc(x,y,r,sAngle,eAngle);
+                context.stroke();
+
+            }
+
+            // 旋转动画
+            setTimeout(()=>{
+                let i = l-1;
+                let j = 0;
+                setInterval(() => {    
+                    if(j>=l-1){
+                        j=0
+                    }
+                    console.log(j)
+                    let curr = optionsArr[j];
+                    let prev = optionsArr[j-1<0?i:j-1];
+                    setArc('#eee',curr.sAngle,curr.eAngle)
+                    setArc(prev.strokeStyle,prev.sAngle,prev.eAngle)
+                j++
+                }, 80);
+            },l*speed)
+
+            
+
+        }
+        let colorArr = ['red','yellow','green', 'blue','red','yellow','green', 'blue','red','yellow','green', 'blue']
+        drawArc(colorArr)
+
+
+
 
 
 
