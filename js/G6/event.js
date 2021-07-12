@@ -3,7 +3,7 @@
  * @author: zhoujianxiang
  * @Date: 2021-07-07 17:58:22
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2021-07-09 10:46:16
+ * @LastEditTime: 2021-07-12 16:02:49
  * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
  * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
  */
@@ -44,27 +44,39 @@ function addEvent(){
           graph.setItemState(edgeItem, 'click', true);
         });
 
+        // 边经过事件
+        graph.on('edge:mouseenter', (evt) => {
+          const { item } = evt;
+          graph.setItemState(item, 'hover', true);
+        });
+        
+        graph.on('edge:mouseleave', (evt) => {
+          const { item } = evt;
+          console.log('edge:mouseleave')
+          graph.setItemState(item, 'hover', false);
+        });
+
 
         /////////////////////交互动画////////////////////////////////
 
-        // 监听节点的 mouseenter 事件
-          graph.on('node:mouseenter', (ev) => {
-            // 获得当前鼠标操作的目标节点
-            const node = ev.item;
-            // 获得目标节点的所有相关边
-            const edges = node.getEdges();
-            // 将所有相关边的 running 状态置为 true，此时将会触发自定义节点的 setState 函数
-            edges.forEach((edge) => graph.setItemState(edge, 'running', true));
-          });
+        // // 监听节点的 mouseenter 事件
+        //   graph.on('node:mouseenter', (ev) => {
+        //     // 获得当前鼠标操作的目标节点
+        //     const node = ev.item;
+        //     // 获得目标节点的所有相关边
+        //     const edges = node.getEdges();
+        //     // 将所有相关边的 running 状态置为 true，此时将会触发自定义节点的 setState 函数
+        //     edges.forEach((edge) => graph.setItemState(edge, 'running', true));
+        //   });
 
-          // 监听节点的 mouseleave 事件
-          graph.on('node:mouseleave', (ev) => {
-            // 获得当前鼠标操作的目标节点
-            const node = ev.item;
-            // 获得目标节点的所有相关边
-            const edges = node.getEdges();
-            // 将所有相关边的 running 状态置为 false，此时将会触发自定义节点的 setState 函数
-            edges.forEach((edge) => graph.setItemState(edge, 'running', false));
-          });
+        //   // 监听节点的 mouseleave 事件
+        //   graph.on('node:mouseleave', (ev) => {
+        //     // 获得当前鼠标操作的目标节点
+        //     const node = ev.item;
+        //     // 获得目标节点的所有相关边
+        //     const edges = node.getEdges();
+        //     // 将所有相关边的 running 状态置为 false，此时将会触发自定义节点的 setState 函数
+        //     edges.forEach((edge) => graph.setItemState(edge, 'running', false));
+        //   });
 
 }

@@ -37,7 +37,7 @@ const graph = new G6.Graph({
   animate: true,
   layout: {
     // Object，可选，布局的方法及其配置项，默认为 random 布局。
-    type: layouts[6], // 指定为力导向布局
+    type: layouts[2], // 指定为力导向布局
     preventOverlap: true, // 防止节点重叠
     // nodeSize: 30        // 节点大小，用于算法中防止节点重叠时的碰撞检测。由于已经在上一节的元素配置中设置了每个节点的 size 属性，则不需要在此设置 nodeSize。
     linkDistance: 200, // 指定边距离为100
@@ -49,6 +49,14 @@ const graph = new G6.Graph({
       'click-select',
      // 'activate-relations',
       'brush-select',
+      // {
+      //   type: 'collapse-expand', // 只试用树形
+      //   onChange: function onChange(item, collapsed) {
+      //     const data = item.get('model');
+      //     data.collapsed = collapsed;
+      //     return true;
+      //   },
+      // },
       {
       type: 'drag-node',
       shouldEnd: (e)=>{
@@ -62,20 +70,20 @@ const graph = new G6.Graph({
       },
       offset: 10,
     },
-    {
-      type: 'edge-tooltip', // 边提示框
-      formatText(model) {
-        // 边提示框文本内容
-        const text =
-          'source: ' +
-          model.source +
-          '<br/> target: ' +
-          model.target +
-          '<br/> weight: ' +
-          model.weight;
-        return text;
-      },
-    },
+    // {
+    //   type: 'edge-tooltip', // 边提示框
+    //   formatText(model) {
+    //     // 边提示框文本内容
+    //     const text =
+    //       'source: ' +
+    //       model.source +
+    //       '<br/> target: ' +
+    //       model.target +
+    //       '<br/> weight: ' +
+    //       model.weight;
+    //     return text;
+    //   },
+    // },
   ],
     edit: ['click-select'],
   },
@@ -91,13 +99,15 @@ const graph = new G6.Graph({
   },
   edgeStateStyles:{
     hover:{
-      fill: "lightsteelblue",
+      fill: "yellow",
       lineWidth: 3
     },
     click: {
       stroke: 'red',
       lineWidth: 5,
-    }
+    },
+
+
   },
   defaultNode: {
     type: "ellipse",
@@ -109,7 +119,7 @@ const graph = new G6.Graph({
       lineWidth: 3
     },
     labelCfg: {
-      position: 'top',
+      position: 'bottom',
       autoRotate: true, // 边上的标签文本根据边的方向旋转
       style: {
         fill: "blur",
@@ -119,8 +129,22 @@ const graph = new G6.Graph({
   },
   defaultEdge: {
     style: {
-      stroke: "#000",
-      opacity: 0.2
+     // endArrow: true,
+      endArrow: {
+        path: 'M 0,0 L 8,4 L 8,-4 Z',
+        fill: '#e2e2e2',
+        },
+      // stroke: "#000",
+      // opacity: 0.2
+    },
+      labelCfg: {
+      position: 'middle',
+      autoRotate: true, // 边上的标签文本根据边的方向旋转
+      style: {
+        stroke: '#fff',
+        lineWidth:2,
+        fontSize: 14
+      }
     }
   }
 });
