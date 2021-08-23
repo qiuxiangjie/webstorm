@@ -1,0 +1,67 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2021-08-23 10:54:39
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2021-08-23 11:31:22
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>a域页面</title>
+    <style>
+        .myIframe {
+            width: 500px;
+            height: 300px;
+            border: ridge;
+            border-color: burlywood;
+            margin: 15px 0 0 0;
+        }
+        button {
+            color: #fff;
+            background-color: #2d8cf0;
+            border-color: #2d8cf0;
+            border-radius: 4px;
+            font-family: inherit;
+            text-transform: none;
+            display: inline-block;
+            padding: 6px 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="aaaaa">
+        <button onclick="send()">Send Message To Iframe</button>
+    </div>
+    
+    <iframe id="proxy" class="myIframe" src="file:///D:/github/webstorm/js/test/onmessage%E9%80%9A%E4%BF%A1/b.html" ></iframe>
+
+    <div style="margin-top: 16px;">
+      <button onclick="openPage()">OPen B</button>
+      <button onclick="sendOpenB()">send B</button>
+   </div>
+    
+    <script type="text/javascript">
+    // iframe 传值
+        function send(){
+            var iframe= document.getElementById("proxy");
+            if (iframe){
+                iframe.contentWindow.postMessage("AAAAA","*");
+                //iframe.contentWindow.postMessage("AAAAA", "http://localhost:8081");
+            }
+        }
+
+        // 新开页面传值
+        let B;
+        function openPage(){
+          B = window.open('./b.html', '_blank')
+        }
+        function sendOpenB(){
+          B.postMessage({a:123}, '*')
+        }
+    </script>
+</body>
+</html>

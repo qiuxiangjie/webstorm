@@ -1,0 +1,43 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2021-08-23 10:55:17
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2021-08-23 10:55:27
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>b域页面</title>
+    <style>
+        .btitle {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .bclass {
+            width: 100%;
+            height: 100px;
+            background-color: #3c536b4a;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bbbbb">
+        <div class="btitle">
+            <span>I am b page!</span>
+        </div>
+        <div id="bContent" class="bclass">
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        window.onmessage = function(e){
+            console.info("received from A is: " + e.data);
+        }
+    </script>
+</body>
+</html>
