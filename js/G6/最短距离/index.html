@@ -1,0 +1,148 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2021-07-14 09:01:29
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2021-08-06 14:31:54
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://gw.alipayobjects.com/os/lib/antv/g6/4.3.3/dist/g6.min.js"></script> -->
+  <script src="https://gw.alipayobjects.com/os/lib/antv/g6/3.8.5/dist/g6.min.js"></script>
+  <script src="./data.js"></script>
+  <title>Document</title>
+  <style>
+    html, body, .container {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="container" class="container"></div>
+  
+</body>
+<script>
+const tipDiv = document.createElement('div');
+tipDiv.innerHTML = `Press 'shift' and click two nodes to select begin and end nodes. 按住 'shift' 并点选两个节点作为起点和终点。`;
+document.getElementById('container').appendChild(tipDiv);
+
+const button = document.createElement('button');
+button.innerHTML = `查看最短路径`;
+document.getElementById('container').appendChild(button);
+
+const container = document.getElementById('container');
+const width = container.scrollWidth;
+const height = (container.scrollHeight || 500) - 40;
+
+const graph = new G6.Graph({
+  container: 'container',
+  width,
+  height,
+  linkCenter: true,
+  modes: {
+    default: ['click-select', 'drag-canvas', 'drag-node', 'zoom-canvas',
+    // {
+    //   type:'activate-relations',
+    //   shouldUpdate(e){
+    //     console.log(e)
+    //     return true
+    //   },
+    // }
+  ],
+  },
+  nodeStateStyles: {
+    inactive: {
+     // opacity: 0.3,
+      //stroke: '#f00'
+    },
+  },
+  fitView: true,
+});
+    let data = dataJson;
+    const clearStates = () => {
+      graph.getNodes().forEach((node) => {
+        graph.clearItemStates(node);
+      });
+      graph.getEdges().forEach((edge) => {
+        graph.clearItemStates(edge);
+      });
+    };
+
+    graph.on('canvas:click', (e) => {
+      clearStates();
+    });
+
+    graph.data(data);
+    graph.render();
+
+    button.addEventListener('click', (e) => {
+      const selectedNodes = graph.findAllByState('node', 'selected');
+      if (selectedNodes.length !== 2) {
+        alert('Please select TWO nodes!\n\r请选择有且两个节点！');
+        return;
+      }
+      clearStates();
+      const { findShortestPath } = G6.Algorithm;
+      // path 为其中一条最短路径，allPath 为所有的最短路径
+      console.log(new Date().getTime())
+      const { path, allPath } = findShortestPath(
+        graph,
+        selectedNodes[0].getID(),
+        selectedNodes[1].getID(),
+      );
+      console.log(new Date().getTime())
+
+      const pathNodeMap = {};
+      path.forEach((id) => {
+        const pathNode = graph.findById(id);
+        pathNode.toFront(); // 元素的层级设置到最上层，即当有元素重叠时，将元素置于顶层
+        graph.setItemState(pathNode, 'highlight', true); //设置元素状态。支持单个状态多值的情况，
+        pathNodeMap[id] = true;
+      });
+
+      graph.getEdges().forEach((edge) => {
+        const edgeModel = edge.getModel();
+        const source = edgeModel.source;
+        const target = edgeModel.target;
+        const sourceInPathIdx = path.indexOf(source);
+        const targetInPathIdx = path.indexOf(target);
+        if (sourceInPathIdx === -1 || targetInPathIdx === -1) return;
+        
+        if (Math.abs(sourceInPathIdx - targetInPathIdx) === 1) {
+          graph.setItemState(edge, 'highlight', true);
+          edge.toFront()
+        } else {
+          graph.setItemState(edge, 'inactive', true);
+        }
+      });
+      graph.getNodes().forEach((node) => {
+        if (!pathNodeMap[node.getID()]) {
+          graph.setItemState(node, 'inactive', true);
+          graph.updateItem(node, {
+          // 节点的样式
+          label: '666',
+          style: {
+            opacity: 0.2,
+            fill: 'blue'
+          }
+        });
+        }
+      });
+    });
+
+if (typeof window !== 'undefined')
+  window.onresize = () => {
+    if (!graph || graph.get('destroyed')) return;
+    if (!container || !container.scrollWidth || !container.scrollHeight) return;
+    graph.changeSize(container.scrollWidth, container.scrollHeight - 40);
+  };
+
+
+</script>
+</html>

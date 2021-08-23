@@ -3,13 +3,13 @@
  * @author: zhoujianxiang
  * @Date: 2021-07-02 16:51:19
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2021-07-12 15:48:17
+ * @LastEditTime: 2021-07-16 17:53:40
  * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
  * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
  */
 let dataJson = {
   "nodes": [
-    {"id": "0", "label": "n0", "class": "c0","type": 'circle-animate', },
+    {"id": "0", "label": "n01231231231231", "class": "c0","type": 'circle-animate', },
     {"id": "1", "label": "n1", "class": "c0", 'type': 'inner-animate',size: [40, 40],'img':
     'data:image/webp;base64,UklGRq4FAABXRUJQVlA4IKIFAABwHwCdASo8ADwAPiEMhEGhhv6rQAYAgS2NHsdCq/4D8AOoA64OEUAj/XPxVwyvRGvyO/gGxN/t3oK/1X6zesX3L/p/RP/2HCgKAB9AGeAbCB+AGwAbQBtA/8c/m/4PYHTonm+SzRH6B9sv2i/rOZC+G/ln9l/ML/GdoD7APcA/TD+09QDzAfrX+vHYM9AD+Uf0zrAPQA/bH0vv2t+CH9qf2R+A39e6X098/I7IAcLcs8Gjmc/9T7gPbX9H+wJ+rPVV9En9ZmBI5oUiYhkYHIVjRr9hzCTPcV5Rs/wjjIHkxPgtr/3ALZSuUm146HHwqQVA23hnnqH/4aJ/k4v4hU6RBZ0AAAD+//8ARPyL9yWIlAbWBAD0oKSqlYWreuRa3Oj02u+TvSQS8iwMYewUYTWLDNp9wOlFJaWnqE+za35UwUXuDAT6T0I4fwY+u+qrRVhl+S1ir4X7BQiNswug5AX+MjQcXEeUwfSIEUT+DFPCr+BUiwTbFxLni7fv61vRbmXoauLz4tiqOFTzEGP8tNXP5+H7mZVGfNjIxapT3FGUtqBdp/SD5cTOYOkn2fawkpqpCSqf2+CfiGWtIF673fEzlk/hIbWDhQ81C/ddxLn609d/5efckbdZ8HZbhhVmM82/Uat7CFmw1SH5xCxRxEEhjpf1EP1Xn5q9VZfm1+OFTab/MN67Xha8K//5oVBlMgZALE653X0fas/+2xMqiyCu5Wa7PHsCwbBwqROfNmzi4LPOTjkFPHVKDD1Nfj4/sul6cANdF68rf2jszlyZsUUoLTP7H3swSroc3ssNXSRVAcYd7+iBZpfoAYWvKgnr+Hv62fHZX5ZbjYbYzVjq6fsXkubto858NuUx4+ILb5y7dP6W3/IYVeUSF0yZseKIZhOMs9BBf5uB2Y3Ott//+1OG7hYINzcqigrzWAOJbSmVw3G0ULywkobx+rvfk8VmZFzQGgP/+4T74mp/vsZyM1NLguiTO2gNO05tcpXwveq5mrcweXrJ/bRZDmU2KBrnXhkXq+735c+UHTFq4h4jMOPm5shKioB6XaqhUf3DJlMg8937g/SKjrgD0H5sNm0/k4FfilBbcrsjc3dd6cwEYJo3CNhe3SpNJ2geNXyV4/hq/BZXZ1kiVknjmf5cUx7Tv/9Sb+fQ/DgAsRNSz1wiVodiLjP7aVrkxbWx5gJ8U/j0o1Ipm/nyDZRPrQXmbPAcy1eDDejxTDBKe42ElHpC2QlFdhOedsp4i9QVjt8EqWGy1YzPaGqZhCVg/LWt8/+4BmiCzNGtpR21MGJf4kI/n/1sbe36e1QBCBAx4EVfTM82ZM2lh0P189e7eY0A3NzXWVrUek8SEn+DYYCQeEaC5hDHGreFHT1baY6KyrFx3G9oMm3fLrCqmNjFRnZa3LB/5m8FgCpq9B/1OCLRE5GzVTZnVzj/4V38PgCIpX16Kznijf01+MkDeS9oCF2hEXQ9tr+mPLrjGy4Cg5fyLgyCj1fUq33nMf79Svli2h83m3gqkoxJcXvBetFQP8V/gRjBNGmFXK5TfwLhbolWEjDqUGK3n+hxzQLif9zreYO88EIRTUNbzE1/Sn7rBEtjB0uawNje5OubWsB62SOlMZoZpxrDbMb4UvQrODPhSafmhcYe9zm/dHxssMfUthhDKjyMhoRhngPjbzfGXmIV2Omgrn/zbefK/PawUGSH6x4Qk4HCN4/X8S+XCf51JJtOQeHST/yfwg69uMkE07SONnhGUrL6j5oQn6JI+zkaH/H/P/Ti/pfOTfAWxQNiMvWX08mqbuUweFSQ/G5YUP/uCvZAXutf1+Nhl2jj/n4/fPOihPjwvfFnnjOaQvs9PSpF33d+396LASZ3IID/4UP4pf9eOMXw82ccoUUUHX6MfBWyBDvARCrdPmerUwKwW+lBIAe1dsAAAA=='},
     {"id": "2", "label": "n2", "class": "c0" ,"type": 'background-animate'},
@@ -31,7 +31,7 @@ let dataJson = {
     // {"id": "18", "label": "n18", "class": "c2","x": 492, "y": 123 },
   ],
   "edges": [
-    {"source": "0", "target": "1", "label": "e0-1", "weight": 1,type: 'circle-running' },
+    {"source": "0", "target": "1", "label": "e0-11231231321123", "weight": 1,type: 'circle-running' },
     {"source": "0", "target": "2", "label": "e0-2", "weight": 2, type: 'line-dash' },
     {"source": "0", "target": "3", "label": "e0-3", "weight": 3, type: 'line-growth' },
     {"source": "0", "target": "4", "label": "e0-4", "weight": 1.4,type: 'can-running'},
@@ -63,6 +63,52 @@ let dataJson = {
     // {"source": "18", "target": "19", "label": "e18-19", "weight": 1.6 }
   ]
 }
+
+const dataJson2 = {
+  nodes: [
+    {
+      id: 'node1',
+      label: 'node1',
+    },
+    {
+      id: 'node2',
+      label: 'node2',
+    },
+  ],
+  edges: [
+    {
+      source: 'node1',
+      target: 'node2',
+    },
+  ],
+};
+
+const dataJson3 = {
+  nodes: [
+    {
+      id: 'node1',
+      label: 'node1123123',
+    },
+    {
+      id: 'node2',
+      label: 'node2',
+    },
+    {
+      id: 'node3',
+      label: 'node3',
+    },
+  ],
+  edges: [
+    {
+      source: 'node1',
+      target: 'node2',
+    },
+    {
+      source: 'node2',
+      target: 'node3',
+    },
+  ],
+};
 
 const layouts = {
   1: 'random',

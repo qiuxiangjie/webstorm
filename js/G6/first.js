@@ -28,26 +28,34 @@ const fisheye = new G6.Fisheye({
 
 // 实例化图
 const graph = new G6.Graph({
-  plugins: [minimap,grid, toolbar], // 将 minimap 实例配置到图上
+  plugins: [minimap,grid,], // 将 minimap 实例配置到图上
   container: "container",
   width: 1000,
   height: 1000,
  // fitView: true, // 图表自适应画布大小
   //fitViewPadding: [20, 40, 50, 20], // 配合fitView用
-  animate: true,
+ animate: true,
+  // layout: {
+  //   // Object，可选，布局的方法及其配置项，默认为 random 布局。
+  //   type: layouts[2], // 指定为力导向布局
+  //   preventOverlap: true, // 防止节点重叠
+  //   // nodeSize: 30        // 节点大小，用于算法中防止节点重叠时的碰撞检测。由于已经在上一节的元素配置中设置了每个节点的 size 属性，则不需要在此设置 nodeSize。
+  //   linkDistance: 200, // 指定边距离为100
+  // },
   layout: {
-    // Object，可选，布局的方法及其配置项，默认为 random 布局。
-    type: layouts[2], // 指定为力导向布局
-    preventOverlap: true, // 防止节点重叠
-    // nodeSize: 30        // 节点大小，用于算法中防止节点重叠时的碰撞检测。由于已经在上一节的元素配置中设置了每个节点的 size 属性，则不需要在此设置 nodeSize。
-    linkDistance: 200, // 指定边距离为100
+    type: 'force',
+    linkDistance: 100,
+    preventOverlap: true,
+    nodeStrength: -30,
+    edgeStrength: 0.1
   },
+ // fitCenter: true,
   modes: {
     // 支持的 behavior
     default: [ 
       'zoom-canvas',
       'click-select',
-     // 'activate-relations',
+      'activate-relations',
       'brush-select',
       // {
       //   type: 'collapse-expand', // 只试用树形
@@ -128,6 +136,7 @@ const graph = new G6.Graph({
     }
   },
   defaultEdge: {
+    type:'quadratic',
     style: {
      // endArrow: true,
       endArrow: {
@@ -138,7 +147,7 @@ const graph = new G6.Graph({
       // opacity: 0.2
     },
       labelCfg: {
-      position: 'middle',
+    //  position: 'middle',
       autoRotate: true, // 边上的标签文本根据边的方向旋转
       style: {
         stroke: '#fff',
@@ -154,6 +163,7 @@ const main = async () => {
   //   'http://127.0.0.1:8081/data.json',
   // );
   const remoteData = dataJson;
+  //const remoteData = demoData;
 
 
  // setNodeStyle(remoteData) // 根据节点数据设置节点样式
@@ -205,3 +215,23 @@ function setEdgeStyle(data){
 }
 
 main()
+var i=3
+document.getElementById('update').onclick = () => {
+  // arr = [dataJson, dataJson2, dataJson3]
+  // graph.changeData(arr[Math.ceil(Math.random()*3)])
+  dataJson2.nodes = [...dataJson2.nodes,
+    {
+      id: 'node' + i,
+      label: 'node' + i,
+    },
+  ]
+  dataJson2.edges = [...dataJson2.edges,{
+    source: 'node1',
+    target: 'node' + i,
+  },]
+  i++;
+  graph.changeData(dataJson2)
+
+
+
+}
