@@ -1,0 +1,55 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2021-11-09 09:10:56
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2021-11-09 09:35:05
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery.js"></script>
+</head>
+<body>
+  <input id="password"/>
+  </body>
+  <script>
+　　$(function(){
+　　　　disabledRememberPassword('#password');
+　　　　//或者
+　　　　disabledRememberPassword($('#password'));
+　　});
+  function disabledRememberPassword(el) {
+        var _el = typeof el === 'object' ? el : $(el);
+        if (!_el || _el.length == 0)
+            return;
+        _el.each(function (index, item) {
+            $(item).attr('ilength', 0).attr('autocomplete', 'off').attr('type', 'text').attr('readonly', 'readonly').val('').on('focus', function () {
+                this.type != 'password' ? this.type = 'password' : 1;
+            }).on('mouseout', function () {
+                this.setAttribute('readonly', 'readonly');
+            }).on('mouseover', function () {
+                this.removeAttribute('readonly');
+            }).on('input', function () {
+                this.setAttribute('ilength', this.value.length > item.attributes['ilength'].value ? ++item.attributes['ilength'].value : --item.attributes['ilength'].value);
+            });
+            var clear = () => {
+                !item.value ? setTimeout(check, 500) : (item.value = '', setTimeout(clear, 100));
+            };
+            var check = () => {
+                item.value.length != item.attributes['ilength'].value ? (item.setAttribute('ilength', 0), item.value.length == 0 ? setTimeout(check, 500) : (layer.tips('检测到密码输入异常，已自动拦截', item, {
+                    tips: [2, '#000000'],
+                    time: 2000
+                }), clear())) : setTimeout(check, 500);
+            };
+            check();
+        });
+    }
+  </script>
+</html>

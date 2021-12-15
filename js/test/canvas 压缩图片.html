@@ -1,0 +1,54 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2021-12-10 14:12:18
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2021-12-10 14:21:00
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas图片压缩测试</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>压缩前图片</h2>
+    <img id="originalImg" src="./images/banner1.jpg">
+    <h2>压缩后图片</h2>
+    <img id="compressedImg" src="">
+</div>
+<script>
+    $(document).ready(function(){
+        compressImg(300,0.2)
+    });
+    function compressImg(width,quality ) {
+        // 图片压缩方法，接受2个参数
+        // width：压缩后图片宽度,高度按比例计算
+        // quality：压缩比例参数，范围0-1
+        var img=$("#originalImg")[0];//获取图像元素
+        var height=width/img.width*img.height;
+        //生成canvas
+        var canvas = document.createElement('canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.width = width;
+        canvas.height = height;
+        //通过canvas drawImage方法绘制图片
+        ctx.drawImage(img,0,0,width,height);//后四个为位置参数，左上角x,y坐标，右下角x,y坐标
+        //通过canvas toDataURl方法获取图像base64编码，quality为压缩质量参数，值越小图像越模糊
+        var base64 = canvas.toDataURL('image/jpeg', quality);
+        //测试展示
+        $("#compressedImg").attr("src",base64)
+        //获取到base64后可做进一步处理，如传到后端并储存
+    }
+</script>
+<style>
+    #originalImg{
+        width: 300px;
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2021-09-29 11:22:02
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2021-10-09 14:34:13
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <button onclick="test()">dianji</button>
+  </div>
+  <script>
+    setTimeout(function () {
+        alert('timer handler', )
+    }, 2000)
+    
+    function test () {
+      document.addEventListener('click', function (e) {
+            alert('click handler2', Date.now())
+        }, false)
+  
+        var startTime = Date.now()
+        console.log(startTime)
+        while (Date.now() - startTime < 5000){
+          console.log(Date.now(), startTime)
+        }
+    }
+  
+  </script>
+</body>
+</html>
