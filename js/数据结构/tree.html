@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+ *二叉树的节点对象
+ */
+function Node() {
+  this.text = '';      //节点的文本
+  this.leftChild = null;  //节点的左孩子引用
+  this.rightChild = null;  //节点右孩子引用
+}
+
+// ********************递归构建二叉树 ******************************************
+
+//在构建好二叉树节点之后我们紧接着用递归来构建二叉树
+
+var charecters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+function buildTree(node, i) {
+    var leftIndex = 2*i+1,             //左孩子节点的索引
+      rightIndex = 2*i+2;             //右孩子节点的索引
+    if(leftIndex < charecters.length) {       //判断索引的长度是否超过了charecters数组的大小
+      var childNode = new Node();         //创建一个新的节点对象
+      childNode.text = charecters[leftIndex];   //给节点赋值
+      node.leftChild = childNode;         //给当前节点node加入左孩子节点
+      buildTree(childNode, leftIndex);      //递归创建左孩子
+    }
+    if(rightIndex < charecters.length) {      //下面注释参照上面的构建左孩子的节点
+      var childNode = new Node();
+      childNode.text = charecters[rightIndex];
+      node.rightChild = childNode;
+      buildTree(childNode, rightIndex);
+    }
+}
+
+
+// ********************递归构建二叉树 end******************************************
+
+
+// ********************非递归构建二叉树  start ******************************************
+function createBinaryTree() {
+    var root;
+    var len = charecters.length,        //数组的长度
+      index = 0,               //索引从0开始
+      nodes = new Array();          //创建一个临时数组，用于存放二叉树节点
+    //循环创建二叉树节点存放到数组中
+    for (var i = 0 ; i < charecters.length ; i++) {
+      var node = new Node();
+      node.text = charecters[i];
+      nodes.push(node);
+    }
+    debugger
+    //循环建立二叉树子节点的引用
+    while(index < len) {
+      var leftIndex = 2*index+1,       //当前节点左孩子索引
+        rightIndex = 2*index+2;       //当前节点右孩子索引
+      //给当前节点添加左孩子
+      nodes[index].leftChild = nodes[leftIndex];
+      //给当前节点添加右孩子
+      nodes[index].rightChild = nodes[rightIndex];
+      index++;
+    }
+    root = nodes[0];
+    return root;
+}
+console.log(createBinaryTree())
+
+// ********************非递归构建二叉树  end ******************************************
+
+
+
+//下面构造二叉树
+var node = new Node();
+node.text = charecters[0];
+buildTree(node, 0);  //索引i是从0开始构建
+
+
+
+// 给定一个二叉树，找出其最大深度。
+
+// 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数
+
+var maxDepth = function(root) {
+    if(!root) return 0
+    let max = 0
+
+    const dfs = (root, cLevel) => {
+        if(!root.leftChild && !root.rightChild) max = Math.max(max, cLevel)
+
+        root.leftChild && dfs(root.leftChild, cLevel + 1)
+        root.rightChild && dfs(root.rightChild, cLevel + 1)
+    }
+    dfs(root, 1)
+    return max 
+};
+console.log(node)
+console.log(maxDepth(node))
+
+</script>
+</html>
