@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+
+<script>
+    // ////////////////监听本页面的localStorage变化////////////////
+    const signSetItem = localStorage.setItem;
+    localStorage.setItem = function (key, val) {
+      const setEvent = new Event('setItemEvent');
+      setEvent.key = key;
+      setEvent.value = val;
+      window.dispatchEvent(setEvent);
+      signSetItem.apply(this, arguments);
+    };
+
+    window.addEventListener('setItemEvent', (e) => {
+      console.log(e)        
+    });
+
+
+    /////////////////////// 监听其他页面的localStorage变化/////////////////////
+    window.addEventListener('storage',  (e) => {
+      console.log(e)    
+    });
+
+   
+    /////////////////////////////////////////////////////////////////
+    localStorage.setItem('aaa', 123)
+
+</script>
+</html>
