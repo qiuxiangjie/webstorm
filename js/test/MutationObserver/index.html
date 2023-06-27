@@ -1,0 +1,56 @@
+<!--
+ * @Author: zhoujianxiang 453139846@qq.com
+ * @Date: 2023-06-27 11:17:19
+ * @LastEditors: zhoujianxiang 453139846@qq.com
+ * @LastEditTime: 2023-06-27 11:46:24
+ * @FilePath: \webstorm\js\test\MutationObserver\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="some-id">123</div>
+  
+</body>
+
+<script>
+ // 选择需要观察变动的节点
+ const targetNode = document.getElementById('some-id');
+
+// 观察器的配置（需要观察什么变动）
+const config = { attributes: true, childList: true, subtree: true };
+
+// 当观察到变动时执行的回调函数
+const callback = function(mutationsList, observer) {
+  debugger;
+    // Use traditional 'for loops' for IE 11
+    for(let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+        }
+        else if (mutation.type === 'attributes') {
+            console.log('The ' + mutation.attributeName + ' attribute was modified.');
+        }
+    }
+};
+
+// 创建一个观察器实例并传入回调函数
+const observer = new MutationObserver(callback);
+
+// 以上述配置开始观察目标节点
+observer.observe(targetNode, config);
+
+targetNode.innerText = '666'
+
+// 之后，可停止观察
+// observer.disconnect();
+
+</script>
+</html>
