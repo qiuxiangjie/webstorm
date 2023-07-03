@@ -1,12 +1,4 @@
-<!--
- * @Descripttion: 
- * @author: zhoujianxiang
- * @Date: 2021-09-29 11:22:02
- * @LastEditors: zhoujianxiang
- * @LastEditTime: 2021-10-09 14:34:13
- * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
- * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
--->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +12,102 @@
     <button onclick="test()">dianji</button>
   </div>
   <script>
+/* 
+浏览器：
+常见的宏任务有：script（整体代码）/setTimout/setInterval/setImmediate(node 独有)/requestAnimationFrame(浏览器独有)/IO/UI render（浏览器独有）
+
+常见的微任务有：process.nextTick(node 独有)/Promise.then()/Object.observe/MutationObserver
+
+
+浏览器的事件循环由一个宏任务队列+多个微任务队列组成。
+
+首先，执行第一个宏任务：全局 Script 脚本。产生的的宏任务和微任务进入各自的队列中。执行完 Script 后，把当前的微任务队列清空。完成一次事件循环。
+
+接着再取出一个宏任务，同样把在此期间产生的回调入队。再把当前的微任务队列清空。以此往复。
+
+宏任务队列只有一个，而每一个宏任务都有一个自己的微任务队列，每轮循环都是由一个宏任务+多个微任务组成。
+
+**************************************************
+
+node：
+node 的事件循环比浏览器复杂很多。由 6 个宏任务队列+6 个微任务队列组成。
+
+其执行规律是：在一个宏任务队列全部执行完毕后，去清空一次微任务队列，然后到下一个等级的宏任务队列，以此往复。
+
+一个宏任务队列搭配一个微任务队列。六个等级的宏任务全部执行完成，才是一轮循环。
+
+其中需要关注的是：Timers、Poll、Check 阶段，因为我们所写的代码大多属于这三个阶段。
+
+Timers：定时器 setTimeout/setInterval；
+
+Poll ：获取新的 I/O 事件, 例如操作读取文件等；
+
+Check：setImmediate 回调函数在这里执行；
+除此之外，node 端微任务也有优先级先后：
+
+process.nextTick;
+
+promise.then 等;
+清空微任务队列时，会先执行 process.nextTick，然后才是微任务队列中的其他。下面这段代码可以佐证浏览器和 node 的差异：
+
+原文链接：https://blog.csdn.net/weixin_45730243/article/details/125673846
+*/
+
+
+console.log('Script开始')
+setTimeout(() => {
+  console.log('第一个回调函数，宏任务1')
+  Promise.resolve().then(function() {
+    console.log('第四个回调函数，微任务2')
+  })
+}, 0)
+setTimeout(() => {
+  console.log('第二个回调函数，宏任务2')
+  Promise.resolve().then(function() {
+    console.log('第五个回调函数，微任务3')
+  })
+}, 0)
+Promise.resolve().then(function() {
+  console.log('第三个回调函数，微任务1')
+})
+console.log('Script结束')
+
+
+/* 
+node端：
+Script开始
+Script结束
+第三个回调函数，微任务1
+第一个回调函数，宏任务1
+第二个回调函数，宏任务2
+第四个回调函数，微任务2
+第五个回调函数，微任务3
+
+浏览器
+Script开始
+Script结束
+第三个回调函数，微任务1
+第一个回调函数，宏任务1
+第四个回调函数，微任务2
+第二个回调函数，宏任务2
+第五个回调函数，微任务3
+
+
+可以看出，在 node 端要等当前等级的所有宏任务完成，才能轮到微任务：第四个回调函数，微任务2在两个 setTimeout 完成后才打印。
+
+因为浏览器执行时是一个宏任务+一个微任务队列，而 node 是一整个宏任务队列+一个微任务队列。
+
+node 端的事件循环比浏览器更复杂，它的宏任务分为六个优先级，微任务分为两个优先级。
+node 端的执行规律是一个宏任务队列搭配一个微任务队列，而浏览器是一个单独的宏任务搭配一个微任务队列。
+但是在 node11 之后，node 和浏览器的规律趋同。
+
+node11.x 之前，其事件循环的规则就如上文所述：先取出完一整个宏任务队列中全部任务，然后执行一个微任务队列。
+
+但在 11.x 之后，node 端的事件循环变得和浏览器类似：先执行一个宏任务，然后是一个微任务队列。但依然保留了宏任务队列和微任务队列的优先级。
+
+*/
+
+
     setTimeout(function () {
         alert('timer handler', )
     }, 2000)
