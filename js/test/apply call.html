@@ -113,6 +113,28 @@
   * */
 
 
+
+//  手写 apply
+
+Function.prototype.applyFn = function (targetObject, argsArray) {
+      if (typeof argsArray === 'undefined' || argsArray === null) {
+        argsArray = []
+      }
+ 
+      if (typeof targetObject === 'undefined' || targetObject === null) {
+        targetObject = window
+      }
+ 
+      targetObject = new Object(targetObject)
+ 
+      const targetFnKey = Symbol()    // 防止属性名与目标对象原有属性名重复
+      targetObject[targetFnKey] = this // 函数体内this指向调用applyFn的函数
+ 
+      const result = targetObject[targetFnKey](...argsArray) // 把方法加入到目标对象去调用
+      delete targetObject[targetFnKey] 
+      return result
+
+}
 </script>
 </body>
 </html>

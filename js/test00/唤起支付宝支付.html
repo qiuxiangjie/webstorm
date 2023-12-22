@@ -1,0 +1,31 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2022-10-18 10:39:56
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2022-10-18 10:39:57
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<h1>点击以下按钮唤起收银台支付</h1>
+<a href="javascript:void(0)" class="tradeno">支付宝交易号唤起支付</a>
+<script>
+function ready(callback) {
+  // 如果jsbridge已经注入则直接调用
+  if (window.AlipayJSBridge) {
+    callback && callback();
+  } else {
+    // 如果没有注入则监听注入的事件
+    document.addEventListener('AlipayJSBridgeReady', callback, false);
+  }
+}
+ready(function(){
+  document.querySelector('.tradeno').addEventListener('click', function() {
+    AlipayJSBridge.call("tradePay", {
+      tradeNO: "201802282100100427058809844"
+    }, function(result) {
+      alert(JSON.stringify(result));
+    });
+  });
+});
+</script>

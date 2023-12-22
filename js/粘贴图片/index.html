@@ -1,0 +1,86 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2023-04-10 10:57:56
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2023-04-11 09:34:36
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<html>
+	<head>
+		<title>test chrome paste image</title>
+		<style>
+			#non-editable img{
+				width: 30px;
+			}
+			#editable {
+				margin-top: 20px;
+				width: 400px;
+				height: 300px;
+				border: 1px dashed blue;
+        padding: 10px;
+			}
+			
+			#editable img{
+				width: 30px;
+			}
+      .con{ width: 400px; height: 400px; border: 1px solid #4ec844; outline: none;}
+      .con:empty::before{ content: '说点啥好呢？'; color: gray; } 
+      .con:focus::before{ content:none;}
+		</style>
+	</head>
+	<body>
+		<h2>在浏览器中测试图像粘贴</h2>
+		<div id="non-editable">
+			<p>复制下面的img，然后粘贴到下面的区域</p>
+			<img
+				src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594274150060&di=2aa0fa4d85cb448430e9dcc27db1d9e9&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg" />
+		</div>
+		<div id="editable" contenteditable="true" class="con"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	window.onload = function() {
+		function paste_img(e) {
+      debugger;
+      console.log(e);
+      console.log(e.clipboardData.getData('text/plain'),e.clipboardData.getData('text/html'))
+			if (e.clipboardData.items) {
+				// google-chrome 
+				console.log('support clipboard Data items(谷歌浏览器 ...)');
+				
+				ele = e.clipboardData.items;
+				for (var i = 0; i < ele.length; ++i) {
+					if (ele[i].kind == 'file' && ele[i].type.indexOf('image/') !== -1) {
+						var blob = ele[i].getAsFile();
+						window.URL = window.URL || window.webkitURL;
+						var blobUrl = window.URL.createObjectURL(blob);
+						console.log(blobUrl);
+ 
+						var new_img = document.createElement('img');
+						new_img.setAttribute('src', blobUrl);
+						var new_img_intro = document.createElement('p');
+						new_img_intro.innerHTML =
+							'粘贴的img url: <br /><a target="_blank" href="' + blobUrl +
+							'">' + blobUrl + '</a>';
+ 
+						document.getElementById('editable').appendChild(new_img);
+						document.getElementById('editable').appendChild(new_img_intro);
+					}
+ 
+				}
+			} else {
+				alert('non-chrome');
+			}
+		}
+		document.getElementById('editable').onpaste = function(e) {
+      console.log(e)
+			paste_img(e);
+			return false;
+		};
+    document.getElementById('editable').onkeyup = function(e) {
+      console.log(document.getElementById('editable').innerHTML)
+    };
+	}
+</script>

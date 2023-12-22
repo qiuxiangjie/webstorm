@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    /**
+     * @param {number[]} nums
+     * @return {number[][]}
+     */
+    var threeSum = function (nums) {
+        if (nums == null || !nums.length || nums.length < 3) {
+            return [];
+        }
+        // 先排序
+        nums.sort((a, b) => a - b);
+        let result = [];
+        for (let i = 0; i < nums.length - 2; i++) {
+            //nums[k]>0，说明后面的元素肯定也大于0，最后结果肯定>0，故直接跳出
+            if (nums[i] > 0) {
+                break;
+            }
+            //如果当前元素和前面一个元素一样，忽略重复元素
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            let start = i + 1;
+            let end = nums.length - 1;
+            while (start < end) {
+                let sum = nums[i] + nums[start] + nums[end];
+                //如果三数之和>0，说明最右边的值太大了
+                if (sum > 0) {
+                    end--;
+                    while (start < end && nums[end + 1] == nums[end]) {
+                        end--;
+                    }
+                } else if (sum < 0) {
+                    start++;
+                    while (start < end && nums[start - 1] == nums[start]) {
+                        start++;
+                    }
+                } else {
+                    result.push([nums[i], nums[start], nums[end]]);
+                    start++;
+                    end--;
+                    //同时左指针往右移动，右指针往左移动，
+                    //如果移动过程中碰到重复元素，则继续移动
+                    while (start < end && nums[start - 1] == nums[start]) {
+                        start++;
+                    }
+                    while (start < end && nums[end + 1] == nums[end]) {
+                        end--;
+                    }
+                }
+            }
+        }
+        return result;
+    };
+
+    let arr1 = [1,2,3,4,5,3,0,-2,-3,-4,32,3,-3,-3,-3]
+    // let nums = [-1, 0, 1, 2, -1, -4]
+    let s =  threeSum(arr1)
+    console.log(s)
+    // console.log(threeSum(nums))
+</script>
+</html>

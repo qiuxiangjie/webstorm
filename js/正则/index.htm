@@ -1,0 +1,33 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2023-03-17 16:06:52
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2023-03-17 16:07:06
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+function toThousandFilter(num) {
+  let str = (+num || 0).toFixed(2).toString();
+  if (str.indexOf('.') > 0) {
+    return str.replace(/^-?\d+/g, m => {
+      return m.replace(/(?=(?!\b)(\d{3})+$)/g, ',')
+    })
+  } else {
+    return str.replace(/^-?\d+/g, m => m.replace(/(?=(?!\b)(\d{3})+$)/g, ',')) + '.00'
+  }
+}
+    
+  </script>
+</body>
+</html>

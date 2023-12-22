@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+
+
+
+  // 这个答案和隐式转换没有关系，可以说它能考察你的找茬能力，注意if里面的空格，
+  // 它是一个Unicode空格字符，不被ECMA脚本解释为空格字符(这意味着它是标识符的有效字符)
+var aﾠ = 1;
+var a = 2;
+var ﾠa = 3;
+if(aﾠ==1 && a== 2 &&ﾠa==3) {
+    console.log("Why hello there!")
+}
+
+
+
+
+/* 
+如果原始类型的值和对象比较，对象会转为原始类型的值，再进行比较。
+对象转换成原始类型的值，算法是先调用valueOf方法；如果返回的还是对象，再接着调用toString方法。
+我们每次比较时候都会执行方法返回 a 的 i 属性同时也改变 i 的值,所以上面 if 执行完以后 a 的 i 属性已经变为了 4，
+这里也表现出了 == 比较是有可能会对变量带来副作用的
+*/
+var a = {
+  i: 1,
+  toString: function () {
+    return a.i++;
+  },
+  valueOf: function(){
+    return 1
+  }
+}
+
+if(a == 1 && a == 2 && a == 3) {
+  console.log('Hello World!');
+}
+
+
+
+/* 
+
+我们知道 array 也属于对象，应该和对象的规则一样。关于 array 的原型链上的 toString 方法
+对于数组对象，toString 方法返回一个字符串，该字符串由数组中的每个元素的 toString() 返回值经调用 join() 方法连接（由逗号隔开）组成。
+可以看到数组 toString 会调用本身的 join 方法，这里把自己的join方法该写为shift,每次返回第一个元素，而且原数组删除第一个值，正好可以使判断成立。
+这里 == 比较也带来的副作用
+*/
+var a = [1,2,3];
+a.join = a.shift;
+console.log(a == 1 && a == 2 && a == 3);
+
+
+// 利用with 关键字
+// with 也是被严重建议不使用的对象，这里也是利用它的特性在代码块里面利用对象的 get 方法动态返回 i.
+var i = 0;
+
+with({
+  get a() {
+    return ++i;
+  }
+}) {
+  if (a == 1 && a == 2 && a == 3)
+    console.log("wohoo");
+}
+
+
+// 我们知道我们用的全局变量也相当于 window 对象上的一个属性，这里用defineProperty 定义了 a的 get 也使得其动态返回值。和with 有一些类似。
+
+delete a
+var val = 0;
+Object.defineProperty(window, 'a', {
+  get: function() {
+    return ++val;
+  }
+});
+if (a == 1 && a == 2 && a == 3) {
+  console.log('yay');
+}
+
+
+// es6的Symbol特性: ES6 引入了一种新的原始数据类型Symbol，表示独一无二的值。
+// 除了定义自己使用的 Symbol 值以外，ES6 还提供了 11 个内置的 Symbol 值，指向语言内部使用的方法。
+//Symbol.toPrimitive就是其中一个，它指向一个方法，表示该对象被转为原始类型的值时，会调用这个方法，返回该对象对应的原始类型值。
+//这里就是改变这个属性，把它的值改为一个 闭包 返回的函数。
+var a = {
+  [Symbol.toPrimitive]: (i => () => ++i) (0)
+};
+
+console.log(a == 1 && a == 2 && a == 3);
+</script>
+  
+</body>
+</html>

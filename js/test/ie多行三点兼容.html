@@ -1,0 +1,79 @@
+<!--
+ * @Descripttion: 
+ * @author: zhoujianxiang
+ * @Date: 2021-12-15 15:23:59
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2022-03-03 17:13:05
+ * @Copyright: 2020 cheworld.com Inc. All rights reserved. 版权所有
+ * 深圳市万普合信科技有限公司（91440300MA5FUB0P88） 注意：仅限于公司内部传阅，禁止外泄以及用于其他的商业目的
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .ellipsis {
+            overflow: hidden;
+            max-height: 50px;
+            line-height: 25px;
+            margin: 10px;
+        }
+        .ellipsis:before {
+            content:"";
+            float: left;
+            width: 5px;
+            height: 50px;
+        }
+        .ellipsis > *:first-child {
+            float: right;
+            width: 100%;
+            /* margin-left: -5px; */
+            margin-left: -30px;
+        }
+        .ellipsis > *:first-child p{
+            word-break: break-all;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+        .ellipsis-after {
+            content: "\02026";
+            box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            float: right;
+            position: relative;
+            top: -25px;
+            left: 100%;
+            width: 50px;
+            margin-left: -50px;
+            /* padding-right: 5px; */
+            padding-right: 30px;
+            text-align: right;
+            background-size: 100% 100%;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAABCAMAAACfZeZEAAAABGdBTUEAALGPC/xhBQAAAwBQTFRF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wDWRdwAAAP90Uk5TgsRjMZXhS30YrvDUP3Emow1YibnM9+ggOZxrBtpRRo94gxItwLOoX/vsHdA2yGgL8+TdKUK8VFufmHSGgAQWJNc9tk+rb5KMCA8aM0iwpWV6dwP9+fXuFerm3yMs0jDOysY8wr5FTldeoWKabgEJ8RATG+IeIdsn2NUqLjQ3OgBDumC3SbRMsVKsValZplydZpZpbJOQco2KdYeEe36BDAL8/vgHBfr2CvTyDu8R7esU6RcZ5ecc4+Af3iLcJSjZ1ivT0S/PMs3LNck4x8U7wz7Bv0G9RLtHuEq1TbJQr1OtVqqnWqRdoqBhnmSbZ5mXapRtcJGOc4t2eYiFfH9AS7qYlgAAARlJREFUKM9jqK9fEGS7VNrDI2+F/nyB1Z4Fa5UKN4TbbeLY7FW0Tatkp3jp7mj7vXzl+4yrDsYoVx+JYz7mXXNSp/a0RN25JMcLPP8umzRcTZW77tNyk63tdprzXdmO+2ZdD9MFe56Y9z3LUG96mcX02n/CW71JH6Qmf8px/cw77ZvVzB+BCj8D5vxhn/vXZh6D4uzf1rN+Cc347j79q/zUL25TPrJMfG/5LvuNZP8rixeZz/mf+vU+Vut+5NL5gPOeb/sd1dZbTs03hBuvmV5JuaRyMfk849nEM7qnEk6IHI8/qn049hB35QGHiv0yZXuMdkXtYC3ebrglcqvYxoj1muvC1nDlrzJYGbpcdHHIMo2FwYv+j3QAAOBSfkZYITwUAAAAAElFTkSuQmCC);       
+            background: -webkit-gradient(linear, left top, right top,from(rgba(255, 255, 255, 0)), to(white), color-stop(50%, white));
+            background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);       
+            background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+            background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+        }
+    </style>
+    <body>
+        <div class="ellipsis">
+        　　<div>
+                上水一幅小型住宅地今日中午截標。現場所見，截至中午12時，最少接獲14份標書，包括其士國際(00025.HK)、宏安地產(01243.HK)、華寶實業、建灝地產
+        　　</div>
+        　　<span class="ellipsis-after"> ... </span>
+        </div>
+    </body>
+</html>

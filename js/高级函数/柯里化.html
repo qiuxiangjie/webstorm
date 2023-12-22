@@ -44,6 +44,27 @@
   }
   add2(1)(2)(3)(); //6
 
+
+
+
+  
+  function add22(...num){
+    var sum=0;
+    if(!num.length){ return sum}
+    sum= sum+num.reduce((prev, curr)=> pre + curr);
+    return function tempFun(...numB){
+      if(arguments.length===0){
+        return sum;
+      }else{
+        sum= sum+ numB.reduce((prev, curr)=> pre + curr);
+        return tempFun;
+      }
+    }
+  }
+
+  add22(1)(2)(3)(); //6
+  add22(1,2)(3)(4)(); //10
+
   // 例子3
   /*
   * 来源：https://segmentfault.com/q/1010000004342477

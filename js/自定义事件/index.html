@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" id="btn">点我</button>
+</body>
+
+<script>
+  // https://www.qyyshop.com/info/339882.html
+
+
+var eve = new Event('msg');
+document.addEventListener('msg', function(event){
+  console.log('hello1');
+})
+document.addEventListener('msg', function(event){
+  console.log('hello2');
+})
+document.dispatchEvent(eve); // hello
+
+
+//除此之外，事件还能传递自定义信息：
+
+var event = new CustomEvent('myEvent', {detail: { hello: "World" }  });
+
+
+document.addEventListener("myEvent", function(e){
+  console.log(e.detail);
+})
+document.dispatchEvent(event);
+
+</script>
+</html>

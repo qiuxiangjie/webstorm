@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>合并图片</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="300"></canvas>
+    <img id="image1" src="./images/banner1.jpg" style="display: none;">
+    <img id="image2" src="./images/banner2.jpg" style="display: none;">
+    <button id="mergeButton">合并图片</button>
+</body>
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const image1 = document.getElementById('image1');
+    const image2 = document.getElementById('image2');
+    const mergeButton = document.getElementById('mergeButton');
+
+    mergeButton.addEventListener('click', function () {
+        // 绘制第一张图片
+        ctx.drawImage(image1, 0, 0);
+
+        // 绘制第二张图片（可以设置合适的位置和大小）
+        ctx.drawImage(image2, 100, 100);
+
+        // 导出合并后的图片为 Data URL
+        const mergedDataURL = canvas.toDataURL('image/png');
+
+        // 显示或使用 Data URL
+        const mergedImage = new Image();
+        mergedImage.src = mergedDataURL;
+        document.body.appendChild(mergedImage);
+    });
+</script>
+
+</html>
