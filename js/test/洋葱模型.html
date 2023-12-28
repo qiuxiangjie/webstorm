@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+</body>
+
+<script>
+    class TaskProd{
+        constructor(){
+
+            this._taskList = [];
+            this._next = () =>{}
+
+
+        }
+        addTask(task){
+            this._taskList.push(task)
+
+            
+
+        }
+        run(){
+            this._taskList.forEach(fun => fun(this._next))
+        }
+    }
+
+    const task = new TaskProd();
+    task.addTask(async (next)=>{
+        console.log('start 1');
+        await next()
+        console.log('end 1')
+
+
+    })
+    task.addTask(() => {
+        console.log(2)
+    })
+    task.addTask(() => {
+        console.log(3)
+    })
+    task.run()
+</script>
+</html>

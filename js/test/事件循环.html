@@ -9,7 +9,7 @@
 </head>
 <body>
   <div>
-    <button onclick="test()">dianji</button>
+    <!-- <button onclick="test()">dianji</button> -->
   </div>
   <script>
 /* 
@@ -54,23 +54,23 @@ promise.then 等;
 */
 
 
-console.log('Script开始')
-setTimeout(() => {
-  console.log('第一个回调函数，宏任务1')
-  Promise.resolve().then(function() {
-    console.log('第四个回调函数，微任务2')
-  })
-}, 0)
-setTimeout(() => {
-  console.log('第二个回调函数，宏任务2')
-  Promise.resolve().then(function() {
-    console.log('第五个回调函数，微任务3')
-  })
-}, 0)
-Promise.resolve().then(function() {
-  console.log('第三个回调函数，微任务1')
-})
-console.log('Script结束')
+// console.log('Script开始')
+// setTimeout(() => {
+//   console.log('第一个回调函数，宏任务1')
+//   Promise.resolve().then(function() {
+//     console.log('第四个回调函数，微任务2')
+//   })
+// }, 0)
+// setTimeout(() => {
+//   console.log('第二个回调函数，宏任务2')
+//   Promise.resolve().then(function() {
+//     console.log('第五个回调函数，微任务3')
+//   })
+// }, 0)
+// Promise.resolve().then(function() {
+//   console.log('第三个回调函数，微任务1')
+// })
+// console.log('Script结束')
 
 
 /* 
@@ -108,21 +108,79 @@ node11.x 之前，其事件循环的规则就如上文所述：先取出完一�
 */
 
 
-    setTimeout(function () {
-        alert('timer handler', )
-    }, 2000)
+    // setTimeout(function () {
+    //     alert('timer handler', )
+    // }, 2000)
     
-    function test () {
-      document.addEventListener('click', function (e) {
-            alert('click handler2', Date.now())
-        }, false)
+    // function test () {
+    //   document.addEventListener('click', function (e) {
+    //         alert('click handler2', Date.now())
+    //     }, false)
   
-        var startTime = Date.now()
-        console.log(startTime)
-        while (Date.now() - startTime < 5000){
-          console.log(Date.now(), startTime)
+    //     var startTime = Date.now()
+    //     console.log(startTime)
+    //     while (Date.now() - startTime < 5000){
+    //       console.log(Date.now(), startTime)
+    //     }
+    // }
+// 
+
+//   1.
+//   then方法必定会返回一个新的Promise
+// 可理解为 后续处理也是一个任务
+//   2． 新任务的状态取决于后续处理：
+// 。若没有相关的后续处理，新任务的状态和前任务一致，数据为前任务的数据
+// 。若有后续处理但还未执行，新任务挂起。
+// 。若后续处理执行了，则根据后续处理的情况确定新任务的状态
+// •后续处理执行无错，新任务的状态为完成，数据为后续处理的返回值
+// 。后续处理执行有错，新任务的状态为失败，数据为异常对象
+// •后续执行后返回的是一个任务对象，新任务的状态和数据与该任务对象一致
+
+
+
+    async function async1() {
+        console.log("async1 start");    // 2
+        try {
+          await async2();
+        } catch (e) {
+          console.log(e);             // 6
         }
-    }
+        console.log("async1 end");      // 7
+
+      }
+
+      async function async2() {
+        console.log('async2');      // 3
+        throw new Error('hack1');
+      }
+
+      console.log("script start");  // 1
+
+      setTimeout(function () {
+        console.log("settimeout");     //  最后
+      }, 0);
+
+      try {
+        async1().catch((e) => {
+          console.error(e);       // 不执行
+        });
+      } catch (e) {
+        console.error(e);       // 不执行
+      }
+
+      new Promise(function (resolve) {
+        console.log("promise1");      // 4
+        resolve();
+      }).then(function () {
+        console.log("promise2");    // 8
+      });
+
+      console.log('script end');      // 5  同步结束
+
+      // 如何非侵入式捕获 hack1 错误
+      window.onerror = function (err,) {
+        console.log('err', err);
+      };
   
   </script>
 </body>
