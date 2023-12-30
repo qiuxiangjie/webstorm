@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // async function getUser(){
+    //     return await fetch('js/1.json')
+    // }
+    // async function m1(){
+    //     // ...
+    //     const data = await getUser();
+    //     return data;
+    // }
+    // async function m2() {
+    //     // ...
+    //     const data = await m1();
+    //     return data;
+    // }
+    // async function m3() {
+    //     // ...
+    //     const data = await m2();
+    //     console.log(data)
+    //     return data;
+    // }
+    // async function main (){
+    //     const data = await m3 ();
+    //     return data;
+    // }
+    // 消除异步的传染性;
+
+
+
+     function getUser(){
+    return  fetch('js/1.json')
+    }
+     function m1(){
+        // ...
+        const data =  getUser();
+        return data;
+    }
+     function m2() {
+        // ...
+        const data =  m1();
+        return data;
+    }
+     function m3() {
+        // ...
+        const data =  m2();
+        return data;
+    }
+     function main (){
+        console.log('begin')
+        const data =  m3 ();
+        console.log(data)
+        return data;
+    }
+    function run(func){
+        // 1.改动fetch
+        let oldFetch = window.fetch;
+        let cache = {
+            status: 'pendding',
+            value: ''
+        };
+        function  newFetch (...args){
+            if(cache.status === 'fulfilled'){
+                return cache.value;
+            }
+            if(cache.status === 'rejected') {
+                throw new Error (cache.value);
+            }
+         const p = oldFetch(...args).then((res) => res.json()).then(res => {
+                cache = {
+                    status: 'fulfilled',
+                    value: res
+                }
+            }).catch(e => {
+                cache = {
+                    status: 'rejected',
+                    value: e
+                }
+            })
+            //  抛出错误
+            throw p;
+        }
+        window.fetch = newFetch;
+
+        // 2.执行函数
+        try {
+          func()
+        } catch (error) {
+            // 判断是否为promise 最好是使用promise的A+规范
+            if(error instanceof Promise){
+                error.finally(() => {
+                    window.fetch = newFetch;
+                    func();
+                    window.fetch = oldFetch
+                })
+            }
+        }
+
+
+        // 4. 改回fetch 
+        window.fetch = oldFetch;
+    }
+    run(main)
+
+</script>
+</html>
