@@ -24,7 +24,7 @@
     this.age=age;
   }
   /*定义一个学生类*/
-  functionStudent(name,age,grade)
+  function Student(name,age,grade)
   {
     Person.apply(this,arguments);
     this.grade=grade;
@@ -32,7 +32,7 @@
   //创建一个学生类
   var student=new Student("zhangsan",21,"一年级");
   //测试
-  alert("name:"+student.name+"\n"+"age:"+student.age+"\n"+"grade:"+student.grade);
+  console.log("name:"+student.name+"\n"+"age:"+student.age+"\n"+"grade:"+student.grade);
   //大家可以看到测试结果name:zhangsan age:21  grade:一年级
   //学生类里面我没有给name和age属性赋值啊,为什么又存在这两个属性的值呢,这个就是apply的神奇之处.
 
@@ -122,10 +122,10 @@ Function.prototype.applyFn = function (targetObject, argsArray) {
       }
  
       if (typeof targetObject === 'undefined' || targetObject === null) {
-        targetObject = window
+        targetObject = globalThis // 兼容 js 和 node.js
       }
  
-      targetObject = new Object(targetObject)
+      targetObject = new Object(targetObject)// 能把原始类型转化为基本包装类（基本数据类型对应的类型）
  
       const targetFnKey = Symbol()    // 防止属性名与目标对象原有属性名重复
       targetObject[targetFnKey] = this // 函数体内this指向调用applyFn的函数
@@ -135,6 +135,13 @@ Function.prototype.applyFn = function (targetObject, argsArray) {
       return result
 
 }
+function fun1(a,b){
+  console.log(a,b);
+  console.log(this)
+}
+fun1.applyFn()
+
+console.log(Math.min.applyFn(null, [1, 3, 5, 6, 7]))
 </script>
 </body>
 </html>

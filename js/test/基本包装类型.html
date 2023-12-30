@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+//     基本包装类型
+//         基本包装类型是特殊的引用类型。每当读取一个基本类型值的时候，后台就会创建一个对应的基本包装类型的对象，从而可以调用属性、方法来进行后续操作。
+
+//         ECMAScript还提供了三种基本包装类型：Number、String、Boolean。
+
+//         代码现状
+//         我们经常写类似这样的代码，基本类型的变量可以当做对象一样调用属性、方法，但这又不是一个真正的对象只是一个变量而已，那么这是为什么呢？
+
+           var str = "hello world";
+            console.log(str.length);     // 11
+             console.log(str.toUpperCase());// HELLO WORLD
+//         其实为了便于操作基本数据类型的值，JavaScript 中的基本数据类型的值会在后台创建一个对应的基本包装类型对象，除了 null 和 undefined 所有的基本类型都有对应的包装类型。
+
+//         如上代码，后台会自动完成下列的处理：
+
+//         执行到第二行时：
+
+// 创建 String 类型的一个实例；
+//         在实例上调用指定的属性；
+//         销毁这个实例；
+//         执行到第三行时：
+
+// 创建 String 类型的一个实例；
+//         在实例上调用指定的方法；
+//         销毁这个实例；
+//         可以将以上三个步骤想象成是执行了下列ECMAScript代码：
+
+//         复制代码
+//         复制代码
+//         1 // 执行到第二行时
+//         2 var str = new String("hello world");
+//         3 str.length;
+//         4 str = null;
+//         5
+//         6 // 执行到第三行时
+//         7 var str = new String("hello world");
+//         8 str.toUpperCase();
+//         9 str = null;
+//         复制代码
+//         复制代码
+//         这样以上代码中字符串就变得跟对象一样了，同理分别适用与Boolean、Number类型对应的基本数据类型；
+
+//         现在是不是明白原来这个这个基本包装类型其实就是基本数据类型对应的类型
+
+//         类型映射关系
+// string	String
+// number	Number
+//         布尔类型（true、false）	Boolean
+//         注意：
+
+//         并不是包装类型提供了方法，而是javascript 引擎后台创建了对应基本包装类型的实例（对象）
+
+//         每当读取一个基本类型值的时候，后台就会创建一个对应的基本包装类型对象 如：
+
+//         1 var str = new String("hello world");
+//         2  str.length;
+//         3  str = null;
+
+//         引用类型对象与基本包装类型对象的区别
+//         主要区别就是这两种对象的生命周期不同。
+
+//         通过以上代码块我们知道基本包装类型自动创建的对象在对象被调用的时刻存在，调用完后就被销毁了，而使用new关键字创建的引用类型的实例，对象在当前作用域都存在。
+
+//         //基本包装类型对象
+//         1 var s = 'some';
+//         2 s.age = 'Joel';
+//         3 console.log(s.age);//undefined
+//         如上代码在给字符串s添加age属性，但是当代码执行到第三行时name属性已经被销毁了，当代码执行第三行时，又创建了一个String 实例，但是这个实例并没有age属性所以输出undefined；
+
+//         //显示实例化包装类型
+//         1 var s = new String('some');
+//         2 s.age = 'Joel';
+//         3 console.log(s.age);//Joel
+//         总结
+//         1、每个基本数据类型都映射到同名的基本包装类型（除了null、undefined）。
+//         2、在读取基本类型值时, 就会创建对应的基本包装类型对象，从而方便了数据操作。
+//         3、操作基本包装类的对象一经执行完毕，就会立即销毁。
+//         来源：https://www.cnblogs.com/qq666666/p/7727324.html
+
+
+Object() // 能把基本类型转化为基本包装类，传入引用类型直接返回
+
+Object(2) // Number {2}
+
+</script>
+</html>
