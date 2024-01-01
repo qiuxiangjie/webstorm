@@ -32,7 +32,17 @@
     //     const data = await m3 ();
     //     return data;
     // }
+
+
     // 消除异步的传染性;
+
+//  与react的内置组件suspense的原理一致，
+//  不过基本逻辑还是比较简单，即是:
+//  抛出异常
+//  捕获，添加回调
+//  展示 fallback
+//  加载完成，执行回调
+//  展示加载完成后的组件
 
 
 
@@ -99,12 +109,10 @@
                 error.finally(() => {
                     window.fetch = newFetch;
                     func();
-                    window.fetch = oldFetch
+                    window.fetch = oldFetch;
                 })
             }
         }
-
-
         // 4. 改回fetch 
         window.fetch = oldFetch;
     }
