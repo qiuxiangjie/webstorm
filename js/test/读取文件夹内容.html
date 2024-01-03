@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height:  100%;
+        }
+        .flex {
+            display: flex;
+            height: 100%;
+        }
+        .left {
+            height: 100%;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            height: 100%;
+        }
+        .direction{
+            display: inline-block;
+            color: red;
+        }
+        .left ul {
+
+            height: 0;
+            overflow-y: hidden;
+        }
+         .left li {
+            cursor: pointer;
+            user-select: none;
+        }
+        li.open > ul {
+           height: auto;
+        }
+        li.open>.direction{
+            transform: rotate(90deg);
+        }
+        .right {
+            padding: 40px 20px;
+        }
+    </style>
+    <script src="./js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <button id="button">打开文件夹</button>
+    <div class="flex">
+        <ul class="left" id="left">
+
+        </ul>
+        <div class="right" id="right">
+
+        </div>
+    </div>
+</body>
+
+<script>
+
+let btn = document.getElementById('button')
+btn.onclick = async () =>{
+    // 打开文件夹选择器
+  const handle =  await showDirectoryPicker();
+  console.log(handle)
+  // 拿到文件夹信息
+  await processHandle(handle);
+  console.log(handle);
+
+  // 渲染到目录
+  let fileMap = {};
+  let i = 0;
+  let leftDom = renderDirectory(handle);
+  console.log(leftDom);
+  let left = document.getElementById('left')
+  left.innerHTML = leftDom;
+
+  // 绑定点击事件
+
+  left.onclick = async (e) => {
+    console.log(e)
+    const hasChildren = e.target.getElementsByTagName('ul').length;
+    if(hasChildren){
+        // 是文件夹
+        e.target.classList.toggle('open')
+    } else {
+        // 是文件
+        let id = e.target.getAttribute("id");
+        console.log(id);
+        let file = await fileMap[id].getFile();
+        const fileText = await asReadFile(file);
+        console.log(fileText.target.result);
+        let rightDom = document.getElementById('right');
+        rightDom.innerText = fileText.target.result
+
+
+
+    }
+  }
+
+
+
+  // 拿文件内容
+//   let fileHandle = handle.children[6];
+//   let file = await fileHandle.getFile();
+//   console.log(file);
+//   readFile(file, (e) => {
+//     console.log(e.target.result)
+//   })
+//   const fileText = await asReadFile(file);
+//   console.log(fileText.target.result)
+
+  // 处理文件夹句柄
+  async function processHandle(handle) {
+    if(handle.kind === 'file') {
+        return
+    }
+    handle.children = [];
+    const iter = await handle.entries();
+    console.log(iter)
+    for await (const enter of iter) {
+        console.log(enter)
+        await processHandle(enter[1])
+        handle.children.push(enter[1])
+    }
+    console.log(11)
+  }
+  // 读取文件里面的内容
+   function readFile(file, cb){
+    let fileReader = new FileReader();
+    fileReader.onload = cb;
+    fileReader.readAsText(file);
+  }
+  // 读取文件里面的内容
+   function asReadFile(file){
+    return new Promise((resolve, reject ) => {
+        let fileReader = new FileReader();
+        fileReader.onload = resolve;
+        fileReader.readAsText(file);
+    })
+  }
+
+    // 渲染左侧列表
+    function renderDirectory(dir) {
+        console.log(dir)
+        let children = dir.children?.length ? `<ul>${dir.children.reduce((prev, curr) => {
+            return prev + renderDirectory(curr)
+        },'')}</ul>` : '';
+        console.log(children)
+        fileMap[++i] = dir;
+        let li = `<li id='${i}'>${children ? '<span class="direction"> > </span>' : ''}${dir.name}${children}</li>`;
+        return li
+    }
+}
+
+</script>
+</html>
