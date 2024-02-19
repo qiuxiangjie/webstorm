@@ -1,41 +1,42 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
     <span id="preserve6fef77db90a5425d88295afbd10cd6b0" class="wlWriterPreserve">
         </span>
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!-----------------------------测试代码开始-------------------------------->
+    <script src="./js/jQuery1.9.0.js"></script>
+    <!-----------------------------源锟斤拷肟�-------------------------------->
 <body>
 
-<div id='p1' style="width: 500px;height: 500px;background: #ccc">点击p1
-    <div id='p2' style="width: 300px;height: 300px;background: #a9ea00">点击p2
-        <p id="p3" style="width: 100px;height: 100px;background: red" >点击p3
-            <a id="p4" style="width: 50px;height: 50px;background: cornflowerblue" >点击p4</a>
+<div id='p1' style="width: 500px;height: 500px;background: #ccc">p1
+    <div id='p2' style="width: 300px;height: 300px;background: #a9ea00">p2
+        <p id="p3" style="width: 100px;height: 100px;background: red" >p3
+            <a id="p4" style="width: 50px;height: 50px;background: cornflowerblue" >p4</a>
+            <button id="btn">鎸夐挳</button>
         </p>
     </div>
 </div>
+
 
 
 <span id="preserveb9ecaab22cdb41c6a7304037eafcee32" class="wlWriterPreserve"><script type="text/javascript">
 
     var p1 = $('#p1');
     p1.on('click',function(){
-        alert('灰')
+        console.log('p1')
     });
 
     var p2 = $('#p2');
     p2.on('click','a,p',function(e){
-        alert(e.currentTarget.nodeName)
+        console.log(e.currentTarget.nodeName)
     });
 
     p2.on('click',function(e){
-        alert('默认事件1');
+        console.log('默录锟�1');
     });
 
     var p3 = $('#p3');
     p3.on('click',function(){
-        //alert('红');
+        //console.log('锟斤拷');
         //return false;
         //event.preventDefault();
         //e.stopPropagation();
@@ -44,6 +45,43 @@
     })
 
 </script></span>
-<!-----------------------------测试结束-------------------------------------->
+<!-----------------------------越-------------------------------------->
+
+<script>
+    function fetchData(){
+        return new Promise((resolve, reject) =>{
+            resolve({
+                someCondition: true
+            })
+            setTimeout(() => {
+               
+                resolve({
+                    someCondition: false
+                })
+            }, 0)
+        })
+    }
+    let button = document.getElementById('btn')
+    button.addEventListener('click', async function (event) {
+            // event.preventDefault(); // 闃绘榛樿琛屼负
+            // event.stopPropagation(); // 闃绘浜嬩欢鍐掓场
+
+            try {
+                // 寮傛鑾峰彇鏁版嵁
+                const data = await fetchData();
+                console.log(3)
+
+                // 鍒ゆ柇鏁版嵁鏄惁婊¤冻鏉′欢锛屽鏋滄弧瓒虫潯浠跺垯涓嶉樆姝㈠啋娉★紝鍚﹀垯闃绘鍐掓场
+                if (data.someCondition) {
+                    // 鏉′欢婊¤冻锛屼笉闃绘鍐掓场
+                } else {
+                    // 鏉′欢涓嶆弧瓒筹紝闃绘鍐掓场
+                    event.stopPropagation();
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        });
+</script>
 </body>
 </html>

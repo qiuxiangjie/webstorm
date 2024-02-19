@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    import localforage from 'localforage';  // 修改这里的路径
+    localforage.setItem('somekey', 'some value').then(function () {
+        // 当值被存储后，可执行其他操作
+        return localforage.getItem('somekey');
+    }).then(function (value) {
+        console.log(value);
+    }).catch(function (err) {
+        console.log(err);
+    });
+</script>
+
+</html>

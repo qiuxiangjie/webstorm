@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>等比缩放的 div</title>
+    <style>
+        .container {
+            width: 400px;
+            /* 容器的宽度 */
+            padding-top: 56.25%;
+            /* 16:9 的宽高比例 */
+            background-color: lightgray;
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            等比缩放的 div
+        </div>
+    </div>
+</body>
+
+</html>

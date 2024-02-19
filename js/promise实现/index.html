@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./promise.ts"></script>
+  <script src="./promise.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -17,7 +17,37 @@
   // promise有三种状态： pending(等待态)，fulfiled(成功态)，rejected(失败态)；状态一旦改变，就不会再变。
   // 创造promise实例后，它会立即执行。
 
+p = new MyPromise((resolve, reject) => {
 
+  resolve(123)
+  setTimeout(() => {
+    resolve(456)
+  }, 1000)
+  });
+    // p.then(res => {
+    //   console.log('22', res)
+    // }).catch(e => {
+    //   console.log(e)
+    // })
+
+    // p.then(res => {
+    //   console.log('22', res)
+    // }).catch(e => {
+    //   console.log(e)
+    // })
+    // p.then(222).then(res => {
+    //   console.log('11', res)
+    // });
+
+    p.then(()=> new MyPromise((re, rj) => {
+      rj(999)
+    })).then(res => {
+      console.log('11', res)
+    }, err => {
+      console.log('err', err)
+    });
+
+  console.log(p)
 
 </script>
 </html>
