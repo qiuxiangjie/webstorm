@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="my-class0" id="my0"><span>Hello, World!</span></div>
+</body>
+
+<script>
+    // // 创建一个新的DOMParser实例
+    //     const parser = new DOMParser();
+
+    //     // 解析HTML字符串
+    //     const doc = parser.parseFromString(htmlString, 'text/html');
+
+    //     // 获取解析后的HTML文档中的body元素
+    //     const body = doc.body;
+
+    //     // 创建一个新的div元素，用于将解析后的HTML内容附加到其中
+    //     const container = document.createElement('div');
+
+    //     // 将body元素的内容复制到容器中
+    //     while (body.firstChild) {
+    //         container.appendChild(body.firstChild);
+    //     }
+
+    //     // 获取容器中的文本内容
+    //     const textContent = container.textContent;
+
+    //     // 将文本内容设置到目标元素中
+    //     targetElement.textContent = textContent;
+
+
+
+        // 假设我们有以下HTML字符串
+            const htmlString = '<div class="my-class" id="my"><span>Hello, World!</span></div>';
+
+            // 创建一个空的虚拟DOM对象
+            const virtualDOM = {
+                type: 'div',
+                props: {
+                    className: 'my-class',
+                    children: [],
+                },
+            };
+
+            // 创建一个函数来递归地将DOM元素转换为虚拟DOM对象
+            function convertToVirtualDOM(domElement) {
+                const virtualNode = {
+                    type: domElement.tagName.toLowerCase(),
+                    props: {},
+                    children: [],
+                };
+
+                // 将DOM元素的属性复制到虚拟DOM对象
+                for (let i = 0; i < domElement.attributes.length; i++) {
+                    const attr = domElement.attributes[i];
+                    virtualNode.props[attr.name] = attr.value;
+                }
+
+                // 如果有子元素，则递归地转换它们
+                if (domElement.hasChildNodes()) {
+                    for (let i = 0; i < domElement.childNodes.length; i++) {
+                        const childNode = domElement.childNodes[i];
+                        if (childNode.nodeType === 1) { // 只处理元素节点
+                            virtualNode.children.push(convertToVirtualDOM(childNode));
+                        } else if (childNode.nodeType === 3) { // 处理文本节点
+                            virtualNode.children.push({
+                                type: 'text',
+                                props: {
+                                    nodeValue: childNode.nodeValue,
+                                },
+                            });
+                        }
+                    }
+                }
+
+                return virtualNode;
+            }
+
+            // 将HTML字符串转换为DOM元素
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = htmlString;
+
+            // 将DOM元素转换为虚拟DOM对象
+            const virtualDOMOfHtmlString = convertToVirtualDOM(tempDiv.firstChild);
+
+            // 输出虚拟DOM对象，以验证结果
+            console.log(virtualDOMOfHtmlString);
+
+
+
+            // 获取 performance 对象
+                const performance = window.performance;
+
+                // 创建一个时间戳来记录页面加载开始的时间
+                const startTime = performance.now();
+
+                // 监听 first-contentful-paint 事件
+                performance.timing.firstContentfulPaint = 0; // 初始化 FCP 时间戳
+
+                // 监听 first-contentful-paint 事件
+                window.addEventListener('first-contentful-paint', (event) => {
+                    // 获取 first-contentful-paint 事件触发时的时间戳
+                    constfcpTime = event.timeStamp;
+
+                    // 计算 FCP 相对于页面加载开始的时间
+                    const fcpDuration = fcpTime - startTime;
+
+                    // 打印 FCP 的值
+                    console.log('First Contentful Paint:', fcpDuration, 'milliseconds');
+
+                    // 可以在这里发送 fcpDuration 到性能监控服务
+                    // sendToPerformanceMonitoringService(fcpDuration);
+                });
+</script>
+</html>

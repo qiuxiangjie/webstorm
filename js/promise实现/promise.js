@@ -10,9 +10,13 @@ class MyPromise{
         return  typeof promise === 'object' &&  promise !== null && promise.then
     }
     static createMicroTask(fn) {
-        setTimeout(() => {
-            fn()
-        }, 0);
+        let observer = new MutationObserver(fn);
+        let textNode = document.createTextNode(1)
+        observer.observe(textNode, {
+            characterData: true
+        })
+        textNode.data = 2
+
      }
 
     
