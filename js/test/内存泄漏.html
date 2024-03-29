@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击按钮</button>
+    <div id="result">等待执行</div>
+    
+</body>
+<script>
+    const btnDom = document.getElementById('btn');
+    const resDom = document.getElementById('result');
+   
+    function fn (){
+        const obj = {a: 'hello' }
+        function test (){
+            return { b : obj.a}
+        }
+        return function(){
+            return obj.a
+        }
+    }
+    function fn1 (){
+        return {}
+    }
+    
+    btnDom.addEventListener('click', () =>{
+         const obj = {};
+        let i = 1000000
+        while (i) {
+            obj[i--] = fn()
+        }
+    resDom.innerText = '执行完成'
+    })
+
+</script>
+</html>
