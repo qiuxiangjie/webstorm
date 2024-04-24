@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>requestAnimationFrame_yyds</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            background-color: #ccc;
+        }
+
+        .box1,
+        .box2 {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            line-height: 160px;
+            text-align: center;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .box1 {
+            top: 40px;
+            background: red;
+        }
+
+        .box2 {
+            top: 210px;
+            background: green;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <button class="btn"> let's go!</button>
+    <div class="box1">定时器动画</div>
+    <div class="box2">请求动画帧</div>
+    <script>
+        // 动画思路：不断修改dom元素的left值，使其运动起来（动画）
+        let box1 = document.querySelector('.box1')
+        let box2 = document.querySelector('.box2')
+
+        // setInterval定时器方式
+        function setIntervalFn() {
+            let timer = null
+            box1.style.left = '0px'
+            timer = setInterval(() => {
+                let leftVal = parseInt(box1.style.left)
+                if (leftVal >= 720) {
+                    clearInterval(timer)
+                } else {
+                    box1.style.left = leftVal + 1 + 'px'
+                }
+            }, 17)
+        }
+
+        // requestAnimationFrame请求动画帧方式
+        function requestAnimationFrameFn() {
+            let timer = null // 可注掉
+            box2.style.left = '0px'
+            function callbackFn() {
+                let leftVal = parseInt(box2.style.left)
+                if (leftVal >= 720) {
+                    // 不再继续递归调用即可，就不会继续执行了，下面这个加不加都无所谓，因为影响不到
+                    // cancelAnimationFrame取消请求动画帧，用的极少，看下，下文中的回到顶部组件
+                    // 大家会发现并没有使用到这个api（这样写只是和clearInterval做一个对比）
+                    // 毕竟，正常情况下，requestAnimationFrame会自动停下来
+                    cancelAnimationFrame(timer) // 可注掉（很少用到）
+                } else {
+                    box2.style.left = leftVal + 1 + 'px'
+                    window.requestAnimationFrame(callbackFn)
+                }
+            }
+            window.requestAnimationFrame(callbackFn)
+        }
+
+        // 动画绑定
+        let btn = document.querySelector('.btn')
+        btn.addEventListener('click', () => {
+            setIntervalFn()
+            requestAnimationFrameFn()
+        })
+    </script>
+</body>
+
+</html>

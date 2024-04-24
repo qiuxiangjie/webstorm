@@ -1,22 +1,23 @@
 //  import express from 'express';
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require("express");
+const app = express();
+const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 
-function getUserInfo () {
+function getUserInfo() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve({name: 'copyer', sex: 'man'})
-    }, 1000)
-  })
+      resolve({ name: "copyer", sex: "man" });
+    }, 1000);
+  });
 }
 
-app.get('/list', (req, res, next) => {
+app.get("/list", (req, res, next) => {
+  console.log("请求");
   const list = [
     { id: "1", content: "列表1" },
     { id: "2", content: "列表2" },
@@ -24,8 +25,8 @@ app.get('/list', (req, res, next) => {
   next();
   res.json({
     list,
-    userInfo: req?.userInfo // 返回用户信息，需要通过下个中间件来获取
-  })
+    userInfo: req?.userInfo, // 返回用户信息，需要通过下个中间件来获取
+  });
 });
 
 app.use(async (req, res, next) => {
@@ -35,8 +36,6 @@ app.use(async (req, res, next) => {
   req.userInfo = data; // 设置用户信息
 });
 
-
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-
+  console.log(`Example app listening on port ${port}`);
+});

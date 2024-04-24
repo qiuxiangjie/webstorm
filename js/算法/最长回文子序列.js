@@ -8,6 +8,7 @@ function longestPalindromeSubseq(str) {
     for (let i = 0; i < strLen; i++) {
         dp[i][i] = 1;
     }
+    
     console.log(dp);
     for (let i = strLen-1; i >= 0; i--){
         for (let j = i + 1; j < strLen; j++) {

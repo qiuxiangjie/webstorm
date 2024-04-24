@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #main {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+            #test {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: red;
+                /* transition: left .3s; */
+            }
+            style {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="test"></div>
+        </div>
+    </body>
+
+    <script>
+        let doc = document.getElementById("test");
+        setTimeout(() => {
+           run()
+        }, 100);
+        function run() {
+            for(let i = 0; i < 100; i++){
+                setTimeout(() => {
+                    console.log(i,doc.clientLeft)
+                    doc.style.left = i + "px";
+                },  i*4)
+            }
+        }
+    </script>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //给定两个版本号version1和version2，实现一个函数比较它们的大小，如果version1>version2返回1，如果version1 < version2返回-1，其他返回0
+
+    // 示例1:
+    // version1 = "0.1"， version2 = "1.1"，返回 -1
+    // 示例2：
+    // version1 = "2.200.3"，version2  = “2.2.0”，返回1
+    // 示例3:
+    // version1 = "1.8"，version2  = “1.8”，返回0
+
+    function compareVersion(version1, version2) {
+      let i = 0
+      let j = 0
+      while (i < version1.length || j < version2.length) {
+        let str1 = ''
+        while (i < version1.length && version1[i] !== '.') {
+          str1 += version1[i]
+        }
+
+        let str2 = ''
+        while (j < version2.length && version2[j] !== '.') {
+          str2 += version2[j]
+        }
+
+        if (+str1 > +str2) {
+          return 1
+        }
+        if (+str1 < +str2) {
+          return -1
+        }
+        i++
+        j++
+      }
+      return 0
+    }
+  </script>
+</html>

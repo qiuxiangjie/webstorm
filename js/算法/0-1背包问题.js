@@ -1,3 +1,10 @@
+/**
+ * 
+ * @param {Array} weight 质量列表   
+ * @param {Array} value 价值列表
+ * @param {Number} packageWight 背包的质量
+ * @returns  最大背包能装的最大价值
+ */
 function package(weight, value, packageWight) {
     let result = [];
     let next = [];
@@ -42,3 +49,4 @@ function package(weight, value, packageWight) {
     
 const max = package([2, 3, 1, 5], [4, 6, 8, 2], 9);
 console.log(max)
+
